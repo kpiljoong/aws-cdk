@@ -1,0 +1,6118 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"BX4F7aT9+7wxC86p95uUwWwsZp+zIlRCjmnV8TrJsXs="}
+
+@aws-cdk/aws-ses
+================
+
+.. mdinclude:: ./__aws-cdk_aws-ses.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.SES/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.SES" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.SES --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.SES" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/ses/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:ses:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="ses" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>ses</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:ses:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='ses', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-ses/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-ses@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-ses": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-ses@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-ses/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-ses@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-ses": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-ses@0.26.0
+
+
+
+.. py:module:: @aws-cdk/aws-ses
+
+CfnConfigurationSet
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnConfigurationSet(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnConfigurationSet;
+
+      .. code-tab:: javascript
+
+         const { CfnConfigurationSet } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnConfigurationSet } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::ConfigurationSet`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: configurationSetName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnConfigurationSetEventDestination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnConfigurationSetEventDestination(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination;
+
+      .. code-tab:: javascript
+
+         const { CfnConfigurationSetEventDestination } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnConfigurationSetEventDestination } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::ConfigurationSetEventDestination`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestinationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestinationProps`\  *(readonly)*
+
+   .. py:class:: CloudWatchDestinationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConfigurationSetEventDestination.CloudWatchDestinationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConfigurationSetEventDestination.CloudWatchDestinationProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: dimensionConfigurations
+
+         `CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.DimensionConfigurations`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:class:: DimensionConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConfigurationSetEventDestination.DimensionConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConfigurationSetEventDestination.DimensionConfigurationProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: defaultDimensionValue
+
+         `CfnConfigurationSetEventDestination.DimensionConfigurationProperty.DefaultDimensionValue`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: dimensionName
+
+         `CfnConfigurationSetEventDestination.DimensionConfigurationProperty.DimensionName`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: dimensionValueSource
+
+         `CfnConfigurationSetEventDestination.DimensionConfigurationProperty.DimensionValueSource`
+
+
+
+         :type: string
+
+
+   .. py:class:: EventDestinationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConfigurationSetEventDestination.EventDestinationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConfigurationSetEventDestination.EventDestinationProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: matchingEventTypes
+
+         `CfnConfigurationSetEventDestination.EventDestinationProperty.MatchingEventTypes`
+
+
+
+         :type: string[]
+
+
+      .. py:attribute:: cloudWatchDestination
+
+         `CfnConfigurationSetEventDestination.EventDestinationProperty.CloudWatchDestination`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty`\  *(optional)*
+
+
+      .. py:attribute:: enabled
+
+         `CfnConfigurationSetEventDestination.EventDestinationProperty.Enabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: kinesisFirehoseDestination
+
+         `CfnConfigurationSetEventDestination.EventDestinationProperty.KinesisFirehoseDestination`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnConfigurationSetEventDestination.EventDestinationProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: KinesisFirehoseDestinationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: deliveryStreamArn
+
+         `CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.DeliveryStreamARN`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: iamRoleArn
+
+         `CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.IAMRoleARN`
+
+
+
+         :type: string
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnConfigurationSetEventDestinationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnConfigurationSetEventDestinationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps;
+
+      .. code-tab:: javascript
+
+         // CfnConfigurationSetEventDestinationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnConfigurationSetEventDestinationProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::ConfigurationSetEventDestination`
+
+
+
+
+
+   .. py:attribute:: configurationSetName
+
+      `AWS::SES::ConfigurationSetEventDestination.ConfigurationSetName`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: eventDestination
+
+      `AWS::SES::ConfigurationSetEventDestination.EventDestination`
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnConfigurationSetEventDestination.EventDestinationProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+CfnConfigurationSetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnConfigurationSetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnConfigurationSetProps;
+
+      .. code-tab:: javascript
+
+         // CfnConfigurationSetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnConfigurationSetProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::ConfigurationSet`
+
+
+
+
+
+   .. py:attribute:: name
+
+      `AWS::SES::ConfigurationSet.Name`
+
+
+
+      :type: string *(optional)*
+
+
+CfnReceiptFilter
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptFilter(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptFilter;
+
+      .. code-tab:: javascript
+
+         const { CfnReceiptFilter } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptFilter } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::ReceiptFilter`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnReceiptFilterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptFilterProps`\  *(readonly)*
+
+
+   .. py:attribute:: receiptFilterName
+
+      :type: string *(readonly)*
+
+   .. py:class:: FilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptFilter.FilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptFilter.FilterProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: ipFilter
+
+         `CfnReceiptFilter.FilterProperty.IpFilter`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnReceiptFilter.IpFilterProperty`\ 
+
+
+      .. py:attribute:: name
+
+         `CfnReceiptFilter.FilterProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: IpFilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptFilter.IpFilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptFilter.IpFilterProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: cidr
+
+         `CfnReceiptFilter.IpFilterProperty.Cidr`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: policy
+
+         `CfnReceiptFilter.IpFilterProperty.Policy`
+
+
+
+         :type: string
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnReceiptFilterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptFilterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptFilterProps;
+
+      .. code-tab:: javascript
+
+         // CfnReceiptFilterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptFilterProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::ReceiptFilter`
+
+
+
+
+
+   .. py:attribute:: filter
+
+      `AWS::SES::ReceiptFilter.Filter`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnReceiptFilter.FilterProperty`\ 
+
+
+CfnReceiptRule
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptRule(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptRule;
+
+      .. code-tab:: javascript
+
+         const { CfnReceiptRule } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptRule } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::ReceiptRule`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRuleProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRuleProps`\  *(readonly)*
+
+
+   .. py:attribute:: receiptRuleName
+
+      :type: string *(readonly)*
+
+   .. py:class:: ActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.ActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.ActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: addHeaderAction
+
+         `CfnReceiptRule.ActionProperty.AddHeaderAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.AddHeaderActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: bounceAction
+
+         `CfnReceiptRule.ActionProperty.BounceAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.BounceActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: lambdaAction
+
+         `CfnReceiptRule.ActionProperty.LambdaAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.LambdaActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: s3Action
+
+         `CfnReceiptRule.ActionProperty.S3Action`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.S3ActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: snsAction
+
+         `CfnReceiptRule.ActionProperty.SNSAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.SNSActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: stopAction
+
+         `CfnReceiptRule.ActionProperty.StopAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.StopActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: workmailAction
+
+         `CfnReceiptRule.ActionProperty.WorkmailAction`
+
+
+
+         :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.WorkmailActionProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: AddHeaderActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.AddHeaderActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.AddHeaderActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: headerName
+
+         `CfnReceiptRule.AddHeaderActionProperty.HeaderName`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: headerValue
+
+         `CfnReceiptRule.AddHeaderActionProperty.HeaderValue`
+
+
+
+         :type: string
+
+
+   .. py:class:: BounceActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.BounceActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.BounceActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: message
+
+         `CfnReceiptRule.BounceActionProperty.Message`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: sender
+
+         `CfnReceiptRule.BounceActionProperty.Sender`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: smtpReplyCode
+
+         `CfnReceiptRule.BounceActionProperty.SmtpReplyCode`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: statusCode
+
+         `CfnReceiptRule.BounceActionProperty.StatusCode`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.BounceActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: LambdaActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.LambdaActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.LambdaActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: functionArn
+
+         `CfnReceiptRule.LambdaActionProperty.FunctionArn`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: invocationType
+
+         `CfnReceiptRule.LambdaActionProperty.InvocationType`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.LambdaActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: RuleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.RuleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.RuleProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: actions
+
+         `CfnReceiptRule.RuleProperty.Actions`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.ActionProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: enabled
+
+         `CfnReceiptRule.RuleProperty.Enabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnReceiptRule.RuleProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: recipients
+
+         `CfnReceiptRule.RuleProperty.Recipients`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: scanEnabled
+
+         `CfnReceiptRule.RuleProperty.ScanEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: tlsPolicy
+
+         `CfnReceiptRule.RuleProperty.TlsPolicy`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: S3ActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.S3ActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.S3ActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: bucketName
+
+         `CfnReceiptRule.S3ActionProperty.BucketName`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: kmsKeyArn
+
+         `CfnReceiptRule.S3ActionProperty.KmsKeyArn`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: objectKeyPrefix
+
+         `CfnReceiptRule.S3ActionProperty.ObjectKeyPrefix`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.S3ActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SNSActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.SNSActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.SNSActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: encoding
+
+         `CfnReceiptRule.SNSActionProperty.Encoding`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.SNSActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: StopActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.StopActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.StopActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: scope
+
+         `CfnReceiptRule.StopActionProperty.Scope`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.StopActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: WorkmailActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReceiptRule.WorkmailActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReceiptRule.WorkmailActionProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: organizationArn
+
+         `CfnReceiptRule.WorkmailActionProperty.OrganizationArn`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: topicArn
+
+         `CfnReceiptRule.WorkmailActionProperty.TopicArn`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnReceiptRuleProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptRuleProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptRuleProps;
+
+      .. code-tab:: javascript
+
+         // CfnReceiptRuleProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptRuleProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::ReceiptRule`
+
+
+
+
+
+   .. py:attribute:: rule
+
+      `AWS::SES::ReceiptRule.Rule`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.RuleProperty`\ 
+
+
+   .. py:attribute:: ruleSetName
+
+      `AWS::SES::ReceiptRule.RuleSetName`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: after
+
+      `AWS::SES::ReceiptRule.After`
+
+
+
+      :type: string *(optional)*
+
+
+CfnReceiptRuleSet
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptRuleSet(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptRuleSet;
+
+      .. code-tab:: javascript
+
+         const { CfnReceiptRuleSet } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptRuleSet } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::ReceiptRuleSet`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRuleSetProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRuleSetProps`\  *(readonly)*
+
+
+   .. py:attribute:: receiptRuleSetName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnReceiptRuleSetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReceiptRuleSetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps;
+
+      .. code-tab:: javascript
+
+         // CfnReceiptRuleSetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnReceiptRuleSetProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::ReceiptRuleSet`
+
+
+
+
+
+   .. py:attribute:: ruleSetName
+
+      `AWS::SES::ReceiptRuleSet.RuleSetName`
+
+
+
+      :type: string *(optional)*
+
+
+CfnTemplate
+^^^^^^^^^^^
+
+.. py:class:: CfnTemplate(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnTemplate;
+
+      .. code-tab:: javascript
+
+         const { CfnTemplate } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { CfnTemplate } from '@aws-cdk/aws-ses';
+
+
+
+   A CloudFormation `AWS::SES::Template`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ses.CfnTemplateProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnTemplateProps`\  *(readonly)*
+
+
+   .. py:attribute:: templateId
+
+      :type: string *(readonly)*
+
+   .. py:class:: TemplateProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SES;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTemplate.TemplateProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTemplate.TemplateProperty } from '@aws-cdk/aws-ses';
+
+
+
+
+
+      .. py:attribute:: htmlPart
+
+         `CfnTemplate.TemplateProperty.HtmlPart`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: subjectPart
+
+         `CfnTemplate.TemplateProperty.SubjectPart`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: templateName
+
+         `CfnTemplate.TemplateProperty.TemplateName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: textPart
+
+         `CfnTemplate.TemplateProperty.TextPart`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnTemplateProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnTemplateProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.CfnTemplateProps;
+
+      .. code-tab:: javascript
+
+         // CfnTemplateProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnTemplateProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for defining a `AWS::SES::Template`
+
+
+
+
+
+   .. py:attribute:: template
+
+      `AWS::SES::Template.Template`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ses.CfnTemplate.TemplateProperty`\  *(optional)*
+
+
+DropSpamReceiptRule
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DropSpamReceiptRule(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.DropSpamReceiptRule;
+
+      .. code-tab:: javascript
+
+         const { DropSpamReceiptRule } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { DropSpamReceiptRule } from '@aws-cdk/aws-ses';
+
+
+
+   A rule added at the top of the rule set to drop spam/virus.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleProps`\ 
+
+   .. py:attribute:: rule
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRule`\  *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+EmailEncoding (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EmailEncoding
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.EmailEncoding;
+
+      .. code-tab:: javascript
+
+         const { EmailEncoding } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { EmailEncoding } from '@aws-cdk/aws-ses';
+
+
+
+   The type of email encoding to use for a SNS action.
+
+
+
+   .. py:data:: Base64
+
+   Base 64
+
+
+
+   .. py:data:: UTF8
+
+   UTF-8
+
+
+
+
+IReceiptRule (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IReceiptRule
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.IReceiptRule;
+
+      .. code-tab:: javascript
+
+         // IReceiptRule is an interface
+
+      .. code-tab:: typescript
+
+         import { IReceiptRule } from '@aws-cdk/aws-ses';
+
+
+
+   A receipt rule.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: name
+
+      The name of the receipt rule.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-ses.ReceiptRuleImportProps
+
+      Exports this receipt rule from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IReceiptRuleAction (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IReceiptRuleAction
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.IReceiptRuleAction;
+
+      .. code-tab:: javascript
+
+         // IReceiptRuleAction is an interface
+
+      .. code-tab:: typescript
+
+         import { IReceiptRuleAction } from '@aws-cdk/aws-ses';
+
+
+
+   An abstract action for a receipt rule.
+
+
+
+
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+      :abstract: Yes
+
+
+IReceiptRuleSet (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IReceiptRuleSet
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.IReceiptRuleSet;
+
+      .. code-tab:: javascript
+
+         // IReceiptRuleSet is an interface
+
+      .. code-tab:: typescript
+
+         import { IReceiptRuleSet } from '@aws-cdk/aws-ses';
+
+
+
+   A receipt rule set.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: name
+
+      The receipt rule set name.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addRule(id, [options]) -> @aws-cdk/aws-ses.ReceiptRule
+
+      Adds a new receipt rule in this rule set. The new rule is added after
+
+      the last added rule unless `after` is specified.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleOptions`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: export() -> @aws-cdk/aws-ses.ReceiptRuleSetImportProps
+
+      Exports this receipt rule set from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+LambdaInvocationType (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaInvocationType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.LambdaInvocationType;
+
+      .. code-tab:: javascript
+
+         const { LambdaInvocationType } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { LambdaInvocationType } from '@aws-cdk/aws-ses';
+
+
+
+   The type of invocation to use for a Lambda Action.
+
+
+
+   .. py:data:: Event
+
+   The function will be invoked asynchronously.
+
+
+
+   .. py:data:: RequestResponse
+
+   The function will be invoked sychronously. Use RequestResponse only when
+
+   you want to make a mail flow decision, such as whether to stop the receipt
+
+   rule or the receipt rule set.
+
+
+
+
+ReceiptFilter
+^^^^^^^^^^^^^
+
+.. py:class:: ReceiptFilter(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptFilter;
+
+      .. code-tab:: javascript
+
+         const { ReceiptFilter } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptFilter } from '@aws-cdk/aws-ses';
+
+
+
+   A receipt filter. When instantiated without props, it creates a
+
+   block all receipt filter.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptFilterProps`\  *(optional)*
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ReceiptFilterPolicy (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptFilterPolicy
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptFilterPolicy;
+
+      .. code-tab:: javascript
+
+         const { ReceiptFilterPolicy } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptFilterPolicy } from '@aws-cdk/aws-ses';
+
+
+
+   The policy for the receipt filter.
+
+
+
+   .. py:data:: Allow
+
+   Allow the ip address or range.
+
+
+
+   .. py:data:: Block
+
+   Block the ip address or range.
+
+
+
+
+ReceiptFilterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptFilterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptFilterProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptFilterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptFilterProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptFilter.
+
+
+
+
+
+   .. py:attribute:: ip
+
+      The ip address or range to filter.
+
+
+
+      :type: string *(optional)*
+      :default: 0.0.0.0/0
+
+
+   .. py:attribute:: name
+
+      The name for the receipt filter.
+
+
+
+      :type: string *(optional)*
+      :default: a CloudFormation generated name
+
+
+   .. py:attribute:: policy
+
+      The policy for the filter.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptFilterPolicy`\  *(optional)*
+      :default: Block
+
+
+ReceiptRule
+^^^^^^^^^^^
+
+.. py:class:: ReceiptRule(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRule;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRule } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRule } from '@aws-cdk/aws-ses';
+
+
+
+   A new receipt rule.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRule`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-ses.IReceiptRule
+
+      Import an exported receipt rule.
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-ses.IReceiptRule`\ 
+
+
+   .. py:method:: addAction(action)
+
+      Adds an action to this receipt rule.
+
+
+
+      :param action: 
+      :type action: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-ses.ReceiptRuleImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRule.export`
+
+      Exports this receipt rule from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleImportProps`\ 
+
+
+   .. py:attribute:: name
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRule.name`
+
+      The name of the receipt rule.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ReceiptRuleActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Properties for a receipt rule action.
+
+
+
+
+
+   .. py:attribute:: addHeaderAction
+
+      Adds a header to the received email.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.AddHeaderActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: bounceAction
+
+      Rejects the received email by returning a bounce response to the sender and,
+
+      optionally, publishes a notification to Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.BounceActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: lambdaAction
+
+      Calls an AWS Lambda function, and optionally, publishes a notification to
+
+      Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.LambdaActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: s3Action
+
+      Saves the received message to an Amazon S3 bucket and, optionally, publishes
+
+      a notification to Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.S3ActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: snsAction
+
+      Publishes the email content within a notification to Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.SNSActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: stopAction
+
+      Terminates the evaluation of the receipt rule set and optionally publishes a
+
+      notification to Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.StopActionProperty`\  *(optional)*
+
+
+   .. py:attribute:: workmailAction
+
+      Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.CfnReceiptRule.WorkmailActionProperty`\  *(optional)*
+
+
+ReceiptRuleAddHeaderAction
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleAddHeaderAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleAddHeaderAction;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleAddHeaderAction } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleAddHeaderAction } from '@aws-cdk/aws-ses';
+
+
+
+   Adds a header to the received email
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleAddHeaderActionProps`\ 
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+ReceiptRuleAddHeaderActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleAddHeaderActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleAddHeaderActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleAddHeaderActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleAddHeaderActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleAddHeaderAction.
+
+
+
+
+
+   .. py:attribute:: name
+
+      The name of the header to add. Must be between 1 and 50 characters,
+
+      inclusive, and consist of alphanumeric (a-z, A-Z, 0-9) characters
+
+      and dashes only.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: value
+
+      The value of the header to add. Must be less than 2048 characters,
+
+      and must not contain newline characters ("\r" or "\n").
+
+
+
+      :type: string
+
+
+ReceiptRuleBounceAction
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleBounceAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleBounceAction;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleBounceAction } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleBounceAction } from '@aws-cdk/aws-ses';
+
+
+
+   Rejects the received email by returning a bounce response to the sender and,
+
+   optionally, publishes a notification to Amazon SNS.
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionProps`\ 
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+   .. py:attribute:: props
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionProps`\  *(readonly)*
+
+
+ReceiptRuleBounceActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleBounceActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleBounceActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleBounceActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleBounceActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleBounceAction.
+
+
+
+
+
+   .. py:attribute:: sender
+
+      The email address of the sender of the bounced email. This is the address
+
+      from which the bounce message will be sent.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: template
+
+      The template containing the message, reply code and status code.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\ 
+
+
+   .. py:attribute:: topic
+
+      The SNS topic to notify when the bounce action is taken.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(optional)*
+      :default: no notification
+
+
+ReceiptRuleBounceActionTemplate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleBounceActionTemplate(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleBounceActionTemplate;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleBounceActionTemplate } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleBounceActionTemplate } from '@aws-cdk/aws-ses';
+
+
+
+   A bounce action template.
+
+
+
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplateProps`\ 
+
+   .. py:attribute:: MailboxDoesNotExist
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: MailboxFull
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: MessageContentRejected
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: MessageTooLarge
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: TemporaryFailure
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleBounceActionTemplate`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: message
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: smtpReplyCode
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: statusCode
+
+      :type: string *(optional)* *(readonly)*
+
+
+ReceiptRuleBounceActionTemplateProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleBounceActionTemplateProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleBounceActionTemplateProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleBounceActionTemplateProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleBounceActionTemplateProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleBounceActionTemplate.
+
+
+
+
+
+   .. py:attribute:: message
+
+      Human-readable text to include in the bounce message.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: smtpReplyCode
+
+      The SMTP reply code, as defined by RFC 5321.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: statusCode
+
+      The SMTP enhanced status code, as defined by RFC 3463.
+
+
+
+      :type: string *(optional)*
+
+
+ReceiptRuleImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleImportProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleImportProps } from '@aws-cdk/aws-ses';
+
+
+
+
+
+   .. py:attribute:: name
+
+      The name of the receipt rule.
+
+
+
+      :type: string
+
+
+ReceiptRuleLambdaAction
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleLambdaAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleLambdaAction;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleLambdaAction } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleLambdaAction } from '@aws-cdk/aws-ses';
+
+
+
+   Calls an AWS Lambda function, and optionally, publishes a notification to
+
+   Amazon SNS.
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleLambdaActionProps`\ 
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+   .. py:attribute:: props
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleLambdaActionProps`\  *(readonly)*
+
+
+ReceiptRuleLambdaActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleLambdaActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleLambdaActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleLambdaActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleLambdaActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleLambdaAction.
+
+
+
+
+
+   .. py:attribute:: function
+
+      The Lambda function to invoke.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:attribute:: invocationType
+
+      The invocation type of the Lambda function.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.LambdaInvocationType`\  *(optional)*
+      :default: Event
+
+
+   .. py:attribute:: topic
+
+      The SNS topic to notify when the Lambda action is taken.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(optional)*
+      :default: no notification
+
+
+ReceiptRuleOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleOptions;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleOptions } from '@aws-cdk/aws-ses';
+
+
+
+   Options to add a receipt rule to a receipt rule set.
+
+
+
+
+
+   .. py:attribute:: actions
+
+      An ordered list of actions to perform on messages that match at least
+
+      one of the recipient email addresses or domains specified in the
+
+      receipt rule.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ [] *(optional)*
+
+
+   .. py:attribute:: after
+
+      An existing rule after which the new rule will be placed.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.IReceiptRule`\  *(optional)*
+      :default: the new rule is inserted at the beginning of the rule list
+
+
+   .. py:attribute:: enabled
+
+      Whether the rule is active.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: name
+
+      The name for the rule
+
+
+
+      :type: string *(optional)*
+      :default: a CloudFormation generated name
+
+
+   .. py:attribute:: recipients
+
+      The recipient domains and email addresses that the receipt rule applies to.
+
+
+
+      :type: string[] *(optional)*
+      :default: match all recipients under all verified domains.
+
+
+   .. py:attribute:: scanEnabled
+
+      Wheter to scan for spam and viruses.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: tlsPolicy
+
+      The TLS policy
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.TlsPolicy`\  *(optional)*
+      :default: Optional
+
+
+ReceiptRuleProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRule.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleOptions`\ 
+
+
+   .. py:attribute:: ruleSet
+
+      The name of the rule set that the receipt rule will be added to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleSet`\ 
+
+
+   .. py:attribute:: actions
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.actions>`
+
+      An ordered list of actions to perform on messages that match at least
+
+      one of the recipient email addresses or domains specified in the
+
+      receipt rule.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ [] *(optional)*
+
+
+   .. py:attribute:: after
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.after>`
+
+      An existing rule after which the new rule will be placed.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.IReceiptRule`\  *(optional)*
+      :default: the new rule is inserted at the beginning of the rule list
+
+
+   .. py:attribute:: enabled
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.enabled>`
+
+      Whether the rule is active.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.name>`
+
+      The name for the rule
+
+
+
+      :type: string *(optional)*
+      :default: a CloudFormation generated name
+
+
+   .. py:attribute:: recipients
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.recipients>`
+
+      The recipient domains and email addresses that the receipt rule applies to.
+
+
+
+      :type: string[] *(optional)*
+      :default: match all recipients under all verified domains.
+
+
+   .. py:attribute:: scanEnabled
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.scanEnabled>`
+
+      Wheter to scan for spam and viruses.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: tlsPolicy
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ses.ReceiptRuleOptions <@aws-cdk/aws-ses.ReceiptRuleOptions.tlsPolicy>`
+
+      The TLS policy
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.TlsPolicy`\  *(optional)*
+      :default: Optional
+
+
+ReceiptRuleS3Action
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleS3Action(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleS3Action;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleS3Action } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleS3Action } from '@aws-cdk/aws-ses';
+
+
+
+   Saves the received message to an Amazon S3 bucket and, optionally, publishes
+
+   a notification to Amazon SNS.
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleS3ActionProps`\ 
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+   .. py:attribute:: props
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleS3ActionProps`\  *(readonly)*
+
+
+ReceiptRuleS3ActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleS3ActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleS3ActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleS3ActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleS3ActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleS3Action.
+
+
+
+
+
+   .. py:attribute:: bucket
+
+      The S3 bucket that incoming email will be saved to.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-s3.IBucket`\ 
+
+
+   .. py:attribute:: kmsKey
+
+      The master key that SES should use to encrypt your emails before saving
+
+      them to the S3 bucket.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)*
+      :default: no encryption
+
+
+   .. py:attribute:: objectKeyPrefix
+
+      The key prefix of the S3 bucket.
+
+
+
+      :type: string *(optional)*
+      :default: no prefix
+
+
+   .. py:attribute:: topic
+
+      The SNS topic to notify when the S3 action is taken.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(optional)*
+      :default: no notification
+
+
+ReceiptRuleSet
+^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSet(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSet;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleSet } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSet } from '@aws-cdk/aws-ses';
+
+
+
+   A new receipt rule set.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetBase`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleSet`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetProps`\  *(optional)*
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-ses.IReceiptRuleSet
+
+      Import an exported receipt rule set.
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleSet`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-ses.ReceiptRuleSetImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.ReceiptRuleSetBase.export`
+
+      Exports this receipt rule set from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetImportProps`\ 
+
+
+   .. py:attribute:: name
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleSet.name`
+
+      The receipt rule set name.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDropSpamRule()
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ses.ReceiptRuleSetBase <@aws-cdk/aws-ses.ReceiptRuleSetBase.addDropSpamRule>`
+
+      Adds a drop spam rule
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: addRule(id, [options]) -> @aws-cdk/aws-ses.ReceiptRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ses.ReceiptRuleSetBase <@aws-cdk/aws-ses.ReceiptRuleSetBase.addRule>`
+
+      Adds a new receipt rule in this rule set. The new rule is added after
+
+      the last added rule unless `after` is specified.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleOptions`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRule`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ReceiptRuleSetBase
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSetBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSetBase;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleSetBase } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSetBase } from '@aws-cdk/aws-ses';
+
+
+
+   A new or imported receipt rule set.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleSet`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:method:: addDropSpamRule()
+
+      Adds a drop spam rule
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: addRule(id, [options]) -> @aws-cdk/aws-ses.ReceiptRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleSet.addRule`
+
+      Adds a new receipt rule in this rule set. The new rule is added after
+
+      the last added rule unless `after` is specified.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleOptions`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRule`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-ses.ReceiptRuleSetImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleSet.export`
+
+      Exports this receipt rule set from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSetImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: name
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleSet.name`
+
+      The receipt rule set name.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ReceiptRuleSetImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSetImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSetImportProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleSetImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSetImportProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for an ImportedReceiptRuleSet.
+
+
+
+
+
+   .. py:attribute:: name
+
+      The receipt rule set name.
+
+
+
+      :type: string
+
+
+ReceiptRuleSetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSetProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleSetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSetProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleSet.
+
+
+
+
+
+   .. py:attribute:: dropSpam
+
+      Whether to add a first rule to stop processing messages
+
+      that have at least one spam indicator.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: name
+
+      The name for the receipt rule set.
+
+
+
+      :type: string *(optional)*
+      :default: a CloudFormation generated name
+
+
+   .. py:attribute:: rules
+
+      The list of rules to add to this rule set. Rules are added in the same
+
+      order as they appear in the list.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleOptions`\ [] *(optional)*
+
+
+ReceiptRuleSnsAction
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSnsAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSnsAction;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleSnsAction } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSnsAction } from '@aws-cdk/aws-ses';
+
+
+
+   Publishes the email content within a notification to Amazon SNS.
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSnsActionProps`\ 
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+   .. py:attribute:: props
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleSnsActionProps`\  *(readonly)*
+
+
+ReceiptRuleSnsActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleSnsActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleSnsActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleSnsActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleSnsActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleSnsAction.
+
+
+
+
+
+   .. py:attribute:: topic
+
+      The SNS topic to notify.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\ 
+
+
+   .. py:attribute:: encoding
+
+      The encoding to use for the email within the Amazon SNS notification.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-ses.EmailEncoding`\  *(optional)*
+      :default: UTF-8
+
+
+ReceiptRuleStopAction
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleStopAction([props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleStopAction;
+
+      .. code-tab:: javascript
+
+         const { ReceiptRuleStopAction } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleStopAction } from '@aws-cdk/aws-ses';
+
+
+
+   Terminates the evaluation of the receipt rule set and optionally publishes a
+
+   notification to Amazon SNS.
+
+
+
+   :implements: :py:class:`~@aws-cdk/aws-ses.IReceiptRuleAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleStopActionProps`\  *(optional)*
+
+   .. py:method:: render() -> @aws-cdk/aws-ses.ReceiptRuleActionProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-ses.IReceiptRuleAction.render`
+
+      Renders the action specification
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleActionProps`\ 
+
+
+   .. py:attribute:: props
+
+      :type: :py:class:`~@aws-cdk/aws-ses.ReceiptRuleStopActionProps`\  *(optional)* *(readonly)*
+
+
+ReceiptRuleStopActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReceiptRuleStopActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.ReceiptRuleStopActionProps;
+
+      .. code-tab:: javascript
+
+         // ReceiptRuleStopActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ReceiptRuleStopActionProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a ReceiptRuleStopAction.
+
+
+
+
+
+   .. py:attribute:: topic
+
+      The SNS topic to notify when the stop action is taken.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(optional)*
+
+
+TlsPolicy (enum)
+^^^^^^^^^^^^^^^^
+
+.. py:class:: TlsPolicy
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.TlsPolicy;
+
+      .. code-tab:: javascript
+
+         const { TlsPolicy } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { TlsPolicy } from '@aws-cdk/aws-ses';
+
+
+
+   The type of TLS policy for a receipt rule.
+
+
+
+   .. py:data:: Optional
+
+   Do not check for TLS.
+
+
+
+   .. py:data:: Require
+
+   Bounce emails that are not received over TLS.
+
+
+
+
+WhiteListReceiptFilter
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: WhiteListReceiptFilter(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.WhiteListReceiptFilter;
+
+      .. code-tab:: javascript
+
+         const { WhiteListReceiptFilter } = require('@aws-cdk/aws-ses');
+
+      .. code-tab:: typescript
+
+         import { WhiteListReceiptFilter } from '@aws-cdk/aws-ses';
+
+
+
+   A white list receipt filter.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ses.WhiteListReceiptFilterProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+WhiteListReceiptFilterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: WhiteListReceiptFilterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SES;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ses.WhiteListReceiptFilterProps;
+
+      .. code-tab:: javascript
+
+         // WhiteListReceiptFilterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { WhiteListReceiptFilterProps } from '@aws-cdk/aws-ses';
+
+
+
+   Construction properties for a WhiteListReceiptFilter.
+
+
+
+
+
+   .. py:attribute:: ips
+
+      A list of ip addresses or ranges to white list.
+
+
+
+      :type: string[]
+
+

@@ -1,0 +1,3527 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"c/TelavESe8aq9s+RvIvSMZkMdpJq3ZUrUrwkROxNnw="}
+
+@aws-cdk/aws-appsync
+====================
+
+.. mdinclude:: ./__aws-cdk_aws-appsync.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.AppSync/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.AppSync" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.AppSync --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.AppSync" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/appsync/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:appsync:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="appsync" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>appsync</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:appsync:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='appsync', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-appsync/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-appsync@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-appsync": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-appsync@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-appsync/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-appsync@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-appsync": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-appsync@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-appsync
+
+CfnApiKey
+^^^^^^^^^
+
+.. py:class:: CfnApiKey(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnApiKey;
+
+      .. code-tab:: javascript
+
+         const { CfnApiKey } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnApiKey } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::ApiKey`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnApiKeyProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: apiKey
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: apiKeyArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnApiKeyProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApiKeyProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApiKeyProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnApiKeyProps;
+
+      .. code-tab:: javascript
+
+         // CfnApiKeyProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApiKeyProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::ApiKey`
+
+
+
+
+
+   .. py:attribute:: apiId
+
+      `AWS::AppSync::ApiKey.ApiId`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: description
+
+      `AWS::AppSync::ApiKey.Description`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: expires
+
+      `AWS::AppSync::ApiKey.Expires`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+CfnDataSource
+^^^^^^^^^^^^^
+
+.. py:class:: CfnDataSource(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnDataSource;
+
+      .. code-tab:: javascript
+
+         const { CfnDataSource } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnDataSource } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::DataSource`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnDataSourceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dataSourceArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dataSourceName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnDataSourceProps`\  *(readonly)*
+
+   .. py:class:: AuthorizationConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.AuthorizationConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.AuthorizationConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: authorizationType
+
+         `CfnDataSource.AuthorizationConfigProperty.AuthorizationType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: awsIamConfig
+
+         `CfnDataSource.AuthorizationConfigProperty.AwsIamConfig`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.AwsIamConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: AwsIamConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.AwsIamConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.AwsIamConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: signingRegion
+
+         `CfnDataSource.AwsIamConfigProperty.SigningRegion`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: signingServiceName
+
+         `CfnDataSource.AwsIamConfigProperty.SigningServiceName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: DynamoDBConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.DynamoDBConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.DynamoDBConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: awsRegion
+
+         `CfnDataSource.DynamoDBConfigProperty.AwsRegion`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: tableName
+
+         `CfnDataSource.DynamoDBConfigProperty.TableName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: useCallerCredentials
+
+         `CfnDataSource.DynamoDBConfigProperty.UseCallerCredentials`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ElasticsearchConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.ElasticsearchConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.ElasticsearchConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: awsRegion
+
+         `CfnDataSource.ElasticsearchConfigProperty.AwsRegion`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: endpoint
+
+         `CfnDataSource.ElasticsearchConfigProperty.Endpoint`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: HttpConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.HttpConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.HttpConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: endpoint
+
+         `CfnDataSource.HttpConfigProperty.Endpoint`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: authorizationConfig
+
+         `CfnDataSource.HttpConfigProperty.AuthorizationConfig`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.AuthorizationConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: LambdaConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.LambdaConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.LambdaConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: lambdaFunctionArn
+
+         `CfnDataSource.LambdaConfigProperty.LambdaFunctionArn`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: RdsHttpEndpointConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.RdsHttpEndpointConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.RdsHttpEndpointConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: awsRegion
+
+         `CfnDataSource.RdsHttpEndpointConfigProperty.AwsRegion`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: awsSecretStoreArn
+
+         `CfnDataSource.RdsHttpEndpointConfigProperty.AwsSecretStoreArn`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: dbClusterIdentifier
+
+         `CfnDataSource.RdsHttpEndpointConfigProperty.DbClusterIdentifier`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: databaseName
+
+         `CfnDataSource.RdsHttpEndpointConfigProperty.DatabaseName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: schema
+
+         `CfnDataSource.RdsHttpEndpointConfigProperty.Schema`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: RelationalDatabaseConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataSource.RelationalDatabaseConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataSource.RelationalDatabaseConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: relationalDatabaseSourceType
+
+         `CfnDataSource.RelationalDatabaseConfigProperty.RelationalDatabaseSourceType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: rdsHttpEndpointConfig
+
+         `CfnDataSource.RelationalDatabaseConfigProperty.RdsHttpEndpointConfig`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.RdsHttpEndpointConfigProperty`\  *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDataSourceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDataSourceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnDataSourceProps;
+
+      .. code-tab:: javascript
+
+         // CfnDataSourceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDataSourceProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::DataSource`
+
+
+
+
+
+   .. py:attribute:: apiId
+
+      `AWS::AppSync::DataSource.ApiId`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: name
+
+      `AWS::AppSync::DataSource.Name`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      `AWS::AppSync::DataSource.Type`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: description
+
+      `AWS::AppSync::DataSource.Description`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dynamoDbConfig
+
+      `AWS::AppSync::DataSource.DynamoDBConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.DynamoDBConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: elasticsearchConfig
+
+      `AWS::AppSync::DataSource.ElasticsearchConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.ElasticsearchConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: httpConfig
+
+      `AWS::AppSync::DataSource.HttpConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.HttpConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: lambdaConfig
+
+      `AWS::AppSync::DataSource.LambdaConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.LambdaConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: relationalDatabaseConfig
+
+      `AWS::AppSync::DataSource.RelationalDatabaseConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnDataSource.RelationalDatabaseConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: serviceRoleArn
+
+      `AWS::AppSync::DataSource.ServiceRoleArn`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnFunctionConfiguration
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnFunctionConfiguration(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration;
+
+      .. code-tab:: javascript
+
+         const { CfnFunctionConfiguration } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnFunctionConfiguration } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::FunctionConfiguration`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnFunctionConfigurationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: functionConfigurationArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: functionConfigurationDataSourceName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: functionConfigurationFunctionArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: functionConfigurationFunctionId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: functionConfigurationName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnFunctionConfigurationProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnFunctionConfigurationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnFunctionConfigurationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnFunctionConfigurationProps;
+
+      .. code-tab:: javascript
+
+         // CfnFunctionConfigurationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnFunctionConfigurationProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::FunctionConfiguration`
+
+
+
+
+
+   .. py:attribute:: apiId
+
+      `AWS::AppSync::FunctionConfiguration.ApiId`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dataSourceName
+
+      `AWS::AppSync::FunctionConfiguration.DataSourceName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: description
+
+      `AWS::AppSync::FunctionConfiguration.Description`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: functionVersion
+
+      `AWS::AppSync::FunctionConfiguration.FunctionVersion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: name
+
+      `AWS::AppSync::FunctionConfiguration.Name`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: requestMappingTemplate
+
+      `AWS::AppSync::FunctionConfiguration.RequestMappingTemplate`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: requestMappingTemplateS3Location
+
+      `AWS::AppSync::FunctionConfiguration.RequestMappingTemplateS3Location`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: responseMappingTemplate
+
+      `AWS::AppSync::FunctionConfiguration.ResponseMappingTemplate`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: responseMappingTemplateS3Location
+
+      `AWS::AppSync::FunctionConfiguration.ResponseMappingTemplateS3Location`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnGraphQLApi
+^^^^^^^^^^^^^
+
+.. py:class:: CfnGraphQLApi(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnGraphQLApi;
+
+      .. code-tab:: javascript
+
+         const { CfnGraphQLApi } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnGraphQLApi } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::GraphQLApi`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLApiProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: graphQlApiApiId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: graphQlApiArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: graphQlApiGraphQlUrl
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLApiProps`\  *(readonly)*
+
+   .. py:class:: LogConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnGraphQLApi.LogConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnGraphQLApi.LogConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: cloudWatchLogsRoleArn
+
+         `CfnGraphQLApi.LogConfigProperty.CloudWatchLogsRoleArn`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: fieldLogLevel
+
+         `CfnGraphQLApi.LogConfigProperty.FieldLogLevel`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: OpenIDConnectConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnGraphQLApi.OpenIDConnectConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnGraphQLApi.OpenIDConnectConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: authTtl
+
+         `CfnGraphQLApi.OpenIDConnectConfigProperty.AuthTTL`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: clientId
+
+         `CfnGraphQLApi.OpenIDConnectConfigProperty.ClientId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: iatTtl
+
+         `CfnGraphQLApi.OpenIDConnectConfigProperty.IatTTL`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: issuer
+
+         `CfnGraphQLApi.OpenIDConnectConfigProperty.Issuer`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: UserPoolConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnGraphQLApi.UserPoolConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnGraphQLApi.UserPoolConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: appIdClientRegex
+
+         `CfnGraphQLApi.UserPoolConfigProperty.AppIdClientRegex`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: awsRegion
+
+         `CfnGraphQLApi.UserPoolConfigProperty.AwsRegion`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: defaultAction
+
+         `CfnGraphQLApi.UserPoolConfigProperty.DefaultAction`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: userPoolId
+
+         `CfnGraphQLApi.UserPoolConfigProperty.UserPoolId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnGraphQLApiProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnGraphQLApiProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnGraphQLApiProps;
+
+      .. code-tab:: javascript
+
+         // CfnGraphQLApiProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnGraphQLApiProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::GraphQLApi`
+
+
+
+
+
+   .. py:attribute:: authenticationType
+
+      `AWS::AppSync::GraphQLApi.AuthenticationType`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: name
+
+      `AWS::AppSync::GraphQLApi.Name`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: logConfig
+
+      `AWS::AppSync::GraphQLApi.LogConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLApi.LogConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: openIdConnectConfig
+
+      `AWS::AppSync::GraphQLApi.OpenIDConnectConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLApi.OpenIDConnectConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: userPoolConfig
+
+      `AWS::AppSync::GraphQLApi.UserPoolConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLApi.UserPoolConfigProperty`\  *(optional)* *(readonly)*
+
+
+CfnGraphQLSchema
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnGraphQLSchema(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnGraphQLSchema;
+
+      .. code-tab:: javascript
+
+         const { CfnGraphQLSchema } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnGraphQLSchema } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::GraphQLSchema`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLSchemaProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: graphQlSchemaId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnGraphQLSchemaProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnGraphQLSchemaProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnGraphQLSchemaProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps;
+
+      .. code-tab:: javascript
+
+         // CfnGraphQLSchemaProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnGraphQLSchemaProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::GraphQLSchema`
+
+
+
+
+
+   .. py:attribute:: apiId
+
+      `AWS::AppSync::GraphQLSchema.ApiId`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: definition
+
+      `AWS::AppSync::GraphQLSchema.Definition`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: definitionS3Location
+
+      `AWS::AppSync::GraphQLSchema.DefinitionS3Location`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnResolver
+^^^^^^^^^^^
+
+.. py:class:: CfnResolver(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnResolver;
+
+      .. code-tab:: javascript
+
+         const { CfnResolver } = require('@aws-cdk/aws-appsync');
+
+      .. code-tab:: typescript
+
+         import { CfnResolver } from '@aws-cdk/aws-appsync';
+
+
+
+   A CloudFormation `AWS::AppSync::Resolver`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-appsync.CfnResolverProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-appsync.CfnResolverProps`\  *(readonly)*
+
+
+   .. py:attribute:: resolverArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: resolverFieldName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: resolverTypeName
+
+      :type: string *(readonly)*
+
+   .. py:class:: PipelineConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.AppSync;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnResolver.PipelineConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnResolver.PipelineConfigProperty } from '@aws-cdk/aws-appsync';
+
+
+
+
+
+      .. py:attribute:: functions
+
+         `CfnResolver.PipelineConfigProperty.Functions`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnResolverProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnResolverProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.AppSync;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.appsync.CfnResolverProps;
+
+      .. code-tab:: javascript
+
+         // CfnResolverProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnResolverProps } from '@aws-cdk/aws-appsync';
+
+
+
+   Properties for defining a `AWS::AppSync::Resolver`
+
+
+
+
+
+   .. py:attribute:: apiId
+
+      `AWS::AppSync::Resolver.ApiId`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: fieldName
+
+      `AWS::AppSync::Resolver.FieldName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: typeName
+
+      `AWS::AppSync::Resolver.TypeName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dataSourceName
+
+      `AWS::AppSync::Resolver.DataSourceName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: kind
+
+      `AWS::AppSync::Resolver.Kind`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: pipelineConfig
+
+      `AWS::AppSync::Resolver.PipelineConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-appsync.CfnResolver.PipelineConfigProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: requestMappingTemplate
+
+      `AWS::AppSync::Resolver.RequestMappingTemplate`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: requestMappingTemplateS3Location
+
+      `AWS::AppSync::Resolver.RequestMappingTemplateS3Location`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: responseMappingTemplate
+
+      `AWS::AppSync::Resolver.ResponseMappingTemplate`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: responseMappingTemplateS3Location
+
+      `AWS::AppSync::Resolver.ResponseMappingTemplateS3Location`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+

@@ -1,0 +1,492 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"PBj4Q2lVSizTbuqnnbT33OSn0zR1O3PHQANicr2X+oA="}
+
+AWS Region-Specific Information Directory
+=========================================
+
+.. mdinclude:: ./__aws-cdk_region-info.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.RegionInfo/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.RegionInfo" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.RegionInfo --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.RegionInfo" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/cdk-region-info/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:cdk-region-info:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="cdk-region-info" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>cdk-region-info</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:cdk-region-info:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='cdk-region-info', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/region-info/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/region-info@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/region-info": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/region-info@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/region-info/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/region-info@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/region-info": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/region-info@0.26.0
+
+
+
+.. py:module:: @aws-cdk/region-info
+
+Default
+^^^^^^^
+
+.. py:class:: Default
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.RegionInfo;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.regioninfo.Default;
+
+      .. code-tab:: javascript
+
+         const { Default } = require('@aws-cdk/region-info');
+
+      .. code-tab:: typescript
+
+         import { Default } from '@aws-cdk/region-info';
+
+
+
+   Provides default values for certain regional information points.
+
+
+
+
+   .. py:staticmethod:: servicePrincipal(service, region, urlSuffix) -> string
+
+      Computes a "standard" AWS Service principal for a given service, region and suffix. This is useful for example when
+
+      you need to compute a service principal name, but you do not have a synthesize-time region literal available (so
+
+      all you have is `{ "Ref": "AWS::Region" }`). This way you get the same defaulting behavior that is normally used
+
+      for built-in data.
+
+
+
+      :param service: the name of the service (s3, s3.amazonaws.com, ...)
+      :type service: string
+      :param region: the region in which the service principal is needed.
+      :type region: string
+      :param urlSuffix: the URL suffix for the partition in which the region is located.
+      :type urlSuffix: string
+      :rtype: string
+
+
+Fact
+^^^^
+
+.. py:class:: Fact
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.RegionInfo;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.regioninfo.Fact;
+
+      .. code-tab:: javascript
+
+         const { Fact } = require('@aws-cdk/region-info');
+
+      .. code-tab:: typescript
+
+         import { Fact } from '@aws-cdk/region-info';
+
+
+
+   A database of regional information.
+
+
+
+
+   .. py:staticmethod:: find(region, name) -> string
+
+      Retrieves a fact from this Fact database.
+
+
+
+      :param region: the name of the region (e.g: `us-east-1`)
+      :type region: string
+      :param name: the name of the fact being looked up (see the `FactName` class for details)
+      :type name: string
+      :return: the fact value if it is known, and `undefined` otherwise.
+      :rtype: string *(optional)*
+
+
+   .. py:staticmethod:: register(fact, [allowReplacing])
+
+      Registers a new fact in this Fact database.
+
+
+
+      :param fact: the new fact to be registered.
+      :type fact: :py:class:`~@aws-cdk/region-info.IFact`\ 
+      :param allowReplacing: whether new facts can replace existing facts or not.
+      :type allowReplacing: boolean *(optional)*
+
+
+   .. py:staticmethod:: unregister(region, name, [value])
+
+      Removes a fact from the database.
+
+
+
+      :param region: the region for which the fact is to be removed.
+      :type region: string
+      :param name: the name of the fact to remove.
+      :type name: string
+      :param value: the value that should be removed (removal will fail if the value is specified, but does not match the current stored value).
+      :type value: string *(optional)*
+
+
+FactName
+^^^^^^^^
+
+.. py:class:: FactName()
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.RegionInfo;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.regioninfo.FactName;
+
+      .. code-tab:: javascript
+
+         const { FactName } = require('@aws-cdk/region-info');
+
+      .. code-tab:: typescript
+
+         import { FactName } from '@aws-cdk/region-info';
+
+
+
+   All standardized fact names.
+
+
+
+
+   .. py:staticmethod:: servicePrincipal(service) -> string
+
+      The name of the regional service principal for a given service.
+
+
+
+      :param service: the service name, either simple (e.g: `s3`, `codedeploy`) or qualified (e.g: `s3.amazonaws.com`). The `.amazonaws.com` and `.amazonaws.com.cn` domains are stripped from service names, so they are canonicalized in that respect.
+      :type service: string
+      :rtype: string
+
+
+   .. py:attribute:: cdkMetadataResourceAvailable
+
+      Whether the AWS::CDK::Metadata CloudFormation Resource is available in-region or not. The value is a boolean
+
+      modelled as `YES` or `NO`.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: domainSuffix
+
+      The domain suffix for a region (e.g: 'amazonaws.com`)
+
+         *
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: partition
+
+      The name of the partition for a region (e.g: 'aws', 'aws-cn', ...)
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: s3StaticWebsiteEndpoint
+
+      The endpoint used for hosting S3 static websites
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+IFact (interface)
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: IFact
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.RegionInfo;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.regioninfo.IFact;
+
+      .. code-tab:: javascript
+
+         // IFact is an interface
+
+      .. code-tab:: typescript
+
+         import { IFact } from '@aws-cdk/region-info';
+
+
+
+   A fact that can be registered about a particular region.
+
+
+
+
+
+   .. py:attribute:: name
+
+      The name of this fact. Standardized values are provided by the `Facts` class.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: region
+
+      The region for which this fact applies.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: value
+
+      The value of this fact.
+
+
+
+      :type: string *(readonly)*
+
+
+RegionInfo
+^^^^^^^^^^
+
+.. py:class:: RegionInfo
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.RegionInfo;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.regioninfo.RegionInfo;
+
+      .. code-tab:: javascript
+
+         const { RegionInfo } = require('@aws-cdk/region-info');
+
+      .. code-tab:: typescript
+
+         import { RegionInfo } from '@aws-cdk/region-info';
+
+
+
+   Information pertaining to an AWS region.
+
+
+
+
+   .. py:staticmethod:: get(name) -> @aws-cdk/region-info.RegionInfo
+
+      Obtain region info for a given region name.
+
+
+
+      :param name: the name of the region (e.g: us-east-1)
+      :type name: string
+      :rtype: :py:class:`~@aws-cdk/region-info.RegionInfo`\ 
+
+
+   .. py:method:: servicePrincipal(service) -> string
+
+      The name of the service principal for a given service in this region.
+
+
+
+      :param service: the service name (e.g: s3.amazonaws.com)
+      :type service: string
+      :rtype: string *(optional)*
+
+
+   .. py:attribute:: cdkMetadataResourceAvailable
+
+      Whether the `AWS::CDK::Metadata` CloudFormation Resource is available in this region or not.
+
+
+
+      :type: boolean *(readonly)*
+
+
+   .. py:attribute:: name
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: domainSuffix
+
+      The domain name suffix (e.g: amazonaws.com) for this region.
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: partition
+
+      The name of the ARN partition for this region (e.g: aws).
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: s3StaticWebsiteEndpoint
+
+      The endpoint used by S3 static website hosting in this region (e.g: s3-static-website-us-east-1.amazonaws.com)
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+

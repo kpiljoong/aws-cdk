@@ -1,0 +1,3244 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"qcIP9KHJ4T9U5j+rcV07tISxQA/mLecejMPxoaQQBFc="}
+
+@aws-cdk/aws-elasticache
+========================
+
+.. mdinclude:: ./__aws-cdk_aws-elasticache.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.ElastiCache/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.ElastiCache" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.ElastiCache --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.ElastiCache" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/elasticache/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:elasticache:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="elasticache" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>elasticache</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:elasticache:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='elasticache', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-elasticache/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-elasticache@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-elasticache": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-elasticache@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-elasticache/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-elasticache@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-elasticache": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-elasticache@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-elasticache
+
+CfnCacheCluster
+^^^^^^^^^^^^^^^
+
+.. py:class:: CfnCacheCluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnCacheCluster;
+
+      .. code-tab:: javascript
+
+         const { CfnCacheCluster } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnCacheCluster } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::CacheCluster`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnCacheClusterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: cacheClusterConfigurationEndpointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cacheClusterConfigurationEndpointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cacheClusterName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cacheClusterRedisEndpointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cacheClusterRedisEndpointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnCacheClusterProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnCacheClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnCacheClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnCacheClusterProps;
+
+      .. code-tab:: javascript
+
+         // CfnCacheClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnCacheClusterProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::CacheCluster`
+
+
+
+
+
+   .. py:attribute:: cacheNodeType
+
+      `AWS::ElastiCache::CacheCluster.CacheNodeType`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: engine
+
+      `AWS::ElastiCache::CacheCluster.Engine`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: numCacheNodes
+
+      `AWS::ElastiCache::CacheCluster.NumCacheNodes`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:attribute:: autoMinorVersionUpgrade
+
+      `AWS::ElastiCache::CacheCluster.AutoMinorVersionUpgrade`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: azMode
+
+      `AWS::ElastiCache::CacheCluster.AZMode`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheParameterGroupName
+
+      `AWS::ElastiCache::CacheCluster.CacheParameterGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheSecurityGroupNames
+
+      `AWS::ElastiCache::CacheCluster.CacheSecurityGroupNames`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheSubnetGroupName
+
+      `AWS::ElastiCache::CacheCluster.CacheSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: clusterName
+
+      `AWS::ElastiCache::CacheCluster.ClusterName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engineVersion
+
+      `AWS::ElastiCache::CacheCluster.EngineVersion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: notificationTopicArn
+
+      `AWS::ElastiCache::CacheCluster.NotificationTopicArn`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: port
+
+      `AWS::ElastiCache::CacheCluster.Port`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredAvailabilityZone
+
+      `AWS::ElastiCache::CacheCluster.PreferredAvailabilityZone`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredAvailabilityZones
+
+      `AWS::ElastiCache::CacheCluster.PreferredAvailabilityZones`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredMaintenanceWindow
+
+      `AWS::ElastiCache::CacheCluster.PreferredMaintenanceWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotArns
+
+      `AWS::ElastiCache::CacheCluster.SnapshotArns`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotName
+
+      `AWS::ElastiCache::CacheCluster.SnapshotName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotRetentionLimit
+
+      `AWS::ElastiCache::CacheCluster.SnapshotRetentionLimit`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotWindow
+
+      `AWS::ElastiCache::CacheCluster.SnapshotWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::ElastiCache::CacheCluster.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: vpcSecurityGroupIds
+
+      `AWS::ElastiCache::CacheCluster.VpcSecurityGroupIds`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+CfnParameterGroup
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnParameterGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnParameterGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnParameterGroup } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnParameterGroup } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::ParameterGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnParameterGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: parameterGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnParameterGroupProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnParameterGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnParameterGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnParameterGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnParameterGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnParameterGroupProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::ParameterGroup`
+
+
+
+
+
+   .. py:attribute:: cacheParameterGroupFamily
+
+      `AWS::ElastiCache::ParameterGroup.CacheParameterGroupFamily`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: description
+
+      `AWS::ElastiCache::ParameterGroup.Description`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      `AWS::ElastiCache::ParameterGroup.Properties`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => string *(optional)* *(readonly)*
+
+
+CfnReplicationGroup
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReplicationGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnReplicationGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnReplicationGroup } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnReplicationGroup } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::ReplicationGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnReplicationGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnReplicationGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: replicationGroupConfigurationEndPointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupConfigurationEndPointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupPrimaryEndPointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupPrimaryEndPointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupReadEndPointAddresses
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupReadEndPointAddressesList
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: replicationGroupReadEndPointPorts
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: replicationGroupReadEndPointPortsList
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: NodeGroupConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElastiCache;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnReplicationGroup.NodeGroupConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnReplicationGroup.NodeGroupConfigurationProperty } from '@aws-cdk/aws-elasticache';
+
+
+
+
+
+      .. py:attribute:: nodeGroupId
+
+         `CfnReplicationGroup.NodeGroupConfigurationProperty.NodeGroupId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: primaryAvailabilityZone
+
+         `CfnReplicationGroup.NodeGroupConfigurationProperty.PrimaryAvailabilityZone`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: replicaAvailabilityZones
+
+         `CfnReplicationGroup.NodeGroupConfigurationProperty.ReplicaAvailabilityZones`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: replicaCount
+
+         `CfnReplicationGroup.NodeGroupConfigurationProperty.ReplicaCount`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: slots
+
+         `CfnReplicationGroup.NodeGroupConfigurationProperty.Slots`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnReplicationGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnReplicationGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnReplicationGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnReplicationGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnReplicationGroupProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::ReplicationGroup`
+
+
+
+
+
+   .. py:attribute:: replicationGroupDescription
+
+      `AWS::ElastiCache::ReplicationGroup.ReplicationGroupDescription`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: atRestEncryptionEnabled
+
+      `AWS::ElastiCache::ReplicationGroup.AtRestEncryptionEnabled`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: authToken
+
+      `AWS::ElastiCache::ReplicationGroup.AuthToken`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: automaticFailoverEnabled
+
+      `AWS::ElastiCache::ReplicationGroup.AutomaticFailoverEnabled`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: autoMinorVersionUpgrade
+
+      `AWS::ElastiCache::ReplicationGroup.AutoMinorVersionUpgrade`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheNodeType
+
+      `AWS::ElastiCache::ReplicationGroup.CacheNodeType`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheParameterGroupName
+
+      `AWS::ElastiCache::ReplicationGroup.CacheParameterGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheSecurityGroupNames
+
+      `AWS::ElastiCache::ReplicationGroup.CacheSecurityGroupNames`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: cacheSubnetGroupName
+
+      `AWS::ElastiCache::ReplicationGroup.CacheSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engine
+
+      `AWS::ElastiCache::ReplicationGroup.Engine`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engineVersion
+
+      `AWS::ElastiCache::ReplicationGroup.EngineVersion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: nodeGroupConfiguration
+
+      `AWS::ElastiCache::ReplicationGroup.NodeGroupConfiguration`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: notificationTopicArn
+
+      `AWS::ElastiCache::ReplicationGroup.NotificationTopicArn`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: numCacheClusters
+
+      `AWS::ElastiCache::ReplicationGroup.NumCacheClusters`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: numNodeGroups
+
+      `AWS::ElastiCache::ReplicationGroup.NumNodeGroups`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: port
+
+      `AWS::ElastiCache::ReplicationGroup.Port`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredCacheClusterAZs
+
+      `AWS::ElastiCache::ReplicationGroup.PreferredCacheClusterAZs`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredMaintenanceWindow
+
+      `AWS::ElastiCache::ReplicationGroup.PreferredMaintenanceWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: primaryClusterId
+
+      `AWS::ElastiCache::ReplicationGroup.PrimaryClusterId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: replicasPerNodeGroup
+
+      `AWS::ElastiCache::ReplicationGroup.ReplicasPerNodeGroup`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: replicationGroupId
+
+      `AWS::ElastiCache::ReplicationGroup.ReplicationGroupId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: securityGroupIds
+
+      `AWS::ElastiCache::ReplicationGroup.SecurityGroupIds`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotArns
+
+      `AWS::ElastiCache::ReplicationGroup.SnapshotArns`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotName
+
+      `AWS::ElastiCache::ReplicationGroup.SnapshotName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotRetentionLimit
+
+      `AWS::ElastiCache::ReplicationGroup.SnapshotRetentionLimit`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshottingClusterId
+
+      `AWS::ElastiCache::ReplicationGroup.SnapshottingClusterId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotWindow
+
+      `AWS::ElastiCache::ReplicationGroup.SnapshotWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::ElastiCache::ReplicationGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: transitEncryptionEnabled
+
+      `AWS::ElastiCache::ReplicationGroup.TransitEncryptionEnabled`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+CfnSecurityGroup
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSecurityGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnSecurityGroup } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityGroup } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::SecurityGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnSecurityGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnSecurityGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: securityGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnSecurityGroupIngress
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityGroupIngress(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngress;
+
+      .. code-tab:: javascript
+
+         const { CfnSecurityGroupIngress } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityGroupIngress } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::SecurityGroupIngress`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnSecurityGroupIngressProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnSecurityGroupIngressProps`\  *(readonly)*
+
+
+   .. py:attribute:: securityGroupIngressId
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnSecurityGroupIngressProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityGroupIngressProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps;
+
+      .. code-tab:: javascript
+
+         // CfnSecurityGroupIngressProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityGroupIngressProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::SecurityGroupIngress`
+
+
+
+
+
+   .. py:attribute:: cacheSecurityGroupName
+
+      `AWS::ElastiCache::SecurityGroupIngress.CacheSecurityGroupName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ec2SecurityGroupName
+
+      `AWS::ElastiCache::SecurityGroupIngress.EC2SecurityGroupName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ec2SecurityGroupOwnerId
+
+      `AWS::ElastiCache::SecurityGroupIngress.EC2SecurityGroupOwnerId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnSecurityGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSecurityGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnSecurityGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityGroupProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::SecurityGroup`
+
+
+
+
+
+   .. py:attribute:: description
+
+      `AWS::ElastiCache::SecurityGroup.Description`
+
+
+
+      :type: string *(readonly)*
+
+
+CfnSubnetGroup
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnSubnetGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSubnetGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnSubnetGroup } = require('@aws-cdk/aws-elasticache');
+
+      .. code-tab:: typescript
+
+         import { CfnSubnetGroup } from '@aws-cdk/aws-elasticache';
+
+
+
+   A CloudFormation `AWS::ElastiCache::SubnetGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticache.CfnSubnetGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticache.CfnSubnetGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: subnetGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnSubnetGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSubnetGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElastiCache;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticache.CfnSubnetGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnSubnetGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSubnetGroupProps } from '@aws-cdk/aws-elasticache';
+
+
+
+   Properties for defining a `AWS::ElastiCache::SubnetGroup`
+
+
+
+
+
+   .. py:attribute:: description
+
+      `AWS::ElastiCache::SubnetGroup.Description`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: subnetIds
+
+      `AWS::ElastiCache::SubnetGroup.SubnetIds`
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: cacheSubnetGroupName
+
+      `AWS::ElastiCache::SubnetGroup.CacheSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+

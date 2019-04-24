@@ -1,0 +1,6003 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"mgjpQbhmELt77YD3FbB0sPOON0lCNqceXU3Jt/f7YHg="}
+
+@aws-cdk/aws-kinesisanalytics
+=============================
+
+.. mdinclude:: ./__aws-cdk_aws-kinesisanalytics.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.KinesisAnalytics/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.KinesisAnalytics" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.KinesisAnalytics --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.KinesisAnalytics" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/kinesisanalytics/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:kinesisanalytics:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="kinesisanalytics" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>kinesisanalytics</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:kinesisanalytics:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='kinesisanalytics', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kinesisanalytics/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kinesisanalytics@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kinesisanalytics": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kinesisanalytics@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kinesisanalytics/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kinesisanalytics@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kinesisanalytics": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kinesisanalytics@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-kinesisanalytics
+
+CfnApplication
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplication(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplication;
+
+      .. code-tab:: javascript
+
+         const { CfnApplication } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplication } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalytics::Application`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationProps`\  *(readonly)*
+
+   .. py:class:: CSVMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.CSVMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.CSVMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumnDelimiter
+
+         `CfnApplication.CSVMappingParametersProperty.RecordColumnDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: recordRowDelimiter
+
+         `CfnApplication.CSVMappingParametersProperty.RecordRowDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: InputLambdaProcessorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.InputLambdaProcessorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.InputLambdaProcessorProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplication.InputLambdaProcessorProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplication.InputLambdaProcessorProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: InputParallelismProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputParallelismProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.InputParallelismProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.InputParallelismProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: count
+
+         `CfnApplication.InputParallelismProperty.Count`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputProcessingConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProcessingConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.InputProcessingConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.InputProcessingConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: inputLambdaProcessor
+
+         `CfnApplication.InputProcessingConfigurationProperty.InputLambdaProcessor`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.InputLambdaProcessorProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.InputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.InputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: inputSchema
+
+         `CfnApplication.InputProperty.InputSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.InputSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: namePrefix
+
+         `CfnApplication.InputProperty.NamePrefix`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: inputParallelism
+
+         `CfnApplication.InputProperty.InputParallelism`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.InputParallelismProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: inputProcessingConfiguration
+
+         `CfnApplication.InputProperty.InputProcessingConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.InputProcessingConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisFirehoseInput
+
+         `CfnApplication.InputProperty.KinesisFirehoseInput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisStreamsInput
+
+         `CfnApplication.InputProperty.KinesisStreamsInput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.KinesisStreamsInputProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.InputSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.InputSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumns
+
+         `CfnApplication.InputSchemaProperty.RecordColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.RecordColumnProperty`\ )[] *(readonly)*
+
+
+      .. py:attribute:: recordFormat
+
+         `CfnApplication.InputSchemaProperty.RecordFormat`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.RecordFormatProperty`\  *(readonly)*
+
+
+      .. py:attribute:: recordEncoding
+
+         `CfnApplication.InputSchemaProperty.RecordEncoding`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: JSONMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.JSONMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.JSONMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordRowPath
+
+         `CfnApplication.JSONMappingParametersProperty.RecordRowPath`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisFirehoseInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.KinesisFirehoseInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.KinesisFirehoseInputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplication.KinesisFirehoseInputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplication.KinesisFirehoseInputProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisStreamsInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.KinesisStreamsInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.KinesisStreamsInputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplication.KinesisStreamsInputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplication.KinesisStreamsInputProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: MappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.MappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.MappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: csvMappingParameters
+
+         `CfnApplication.MappingParametersProperty.CSVMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.CSVMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: jsonMappingParameters
+
+         `CfnApplication.MappingParametersProperty.JSONMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.JSONMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.RecordColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.RecordColumnProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnApplication.RecordColumnProperty.Name`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: sqlType
+
+         `CfnApplication.RecordColumnProperty.SqlType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mapping
+
+         `CfnApplication.RecordColumnProperty.Mapping`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordFormatProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordFormatProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.RecordFormatProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.RecordFormatProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplication.RecordFormatProperty.RecordFormatType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mappingParameters
+
+         `CfnApplication.RecordFormatProperty.MappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.MappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationCloudWatchLoggingOptionV2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationCloudWatchLoggingOptionV2(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationCloudWatchLoggingOptionV2 } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationCloudWatchLoggingOptionV2 } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props`\  *(readonly)*
+
+   .. py:class:: CloudWatchLoggingOptionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: logStreamArn
+
+         `CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.LogStreamARN`
+
+
+
+         :type: string *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationCloudWatchLoggingOptionV2Props (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationCloudWatchLoggingOptionV2Props
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationCloudWatchLoggingOptionV2Props is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationCloudWatchLoggingOptionV2Props } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption`
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption.ApplicationName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cloudWatchLoggingOption
+
+      `AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption.CloudWatchLoggingOption`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty`\  *(readonly)*
+
+
+CfnApplicationOutput
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationOutput(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationOutput } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationOutput } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalytics::ApplicationOutput`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationOutputId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputProps`\  *(readonly)*
+
+   .. py:class:: DestinationSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutput.DestinationSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutput.DestinationSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplicationOutput.DestinationSchemaProperty.RecordFormatType`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: KinesisFirehoseOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutput.KinesisFirehoseOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutput.KinesisFirehoseOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutput.KinesisFirehoseOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplicationOutput.KinesisFirehoseOutputProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisStreamsOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutput.KinesisStreamsOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutput.KinesisStreamsOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutput.KinesisStreamsOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplicationOutput.KinesisStreamsOutputProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: LambdaOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutput.LambdaOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutput.LambdaOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutput.LambdaOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnApplicationOutput.LambdaOutputProperty.RoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: OutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput.OutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutput.OutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutput.OutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: destinationSchema
+
+         `CfnApplicationOutput.OutputProperty.DestinationSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutput.DestinationSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: kinesisFirehoseOutput
+
+         `CfnApplicationOutput.OutputProperty.KinesisFirehoseOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutput.KinesisFirehoseOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisStreamsOutput
+
+         `CfnApplicationOutput.OutputProperty.KinesisStreamsOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutput.KinesisStreamsOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: lambdaOutput
+
+         `CfnApplicationOutput.OutputProperty.LambdaOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutput.LambdaOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: name
+
+         `CfnApplicationOutput.OutputProperty.Name`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationOutputProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationOutputProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputProps;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationOutputProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationOutputProps } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalytics::ApplicationOutput`
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalytics::ApplicationOutput.ApplicationName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: output
+
+      `AWS::KinesisAnalytics::ApplicationOutput.Output`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutput.OutputProperty`\  *(readonly)*
+
+
+CfnApplicationOutputV2
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationOutputV2(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationOutputV2 } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationOutputV2 } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalyticsV2::ApplicationOutput`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2Props`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2Props`\  *(readonly)*
+
+   .. py:class:: DestinationSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutputV2.DestinationSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutputV2.DestinationSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplicationOutputV2.DestinationSchemaProperty.RecordFormatType`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: KinesisFirehoseOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutputV2.KinesisFirehoseOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutputV2.KinesisFirehoseOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutputV2.KinesisFirehoseOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisStreamsOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutputV2.KinesisStreamsOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutputV2.KinesisStreamsOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutputV2.KinesisStreamsOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: LambdaOutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutputV2.LambdaOutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutputV2.LambdaOutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationOutputV2.LambdaOutputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: OutputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2.OutputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationOutputV2.OutputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationOutputV2.OutputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: destinationSchema
+
+         `CfnApplicationOutputV2.OutputProperty.DestinationSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2.DestinationSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: kinesisFirehoseOutput
+
+         `CfnApplicationOutputV2.OutputProperty.KinesisFirehoseOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2.KinesisFirehoseOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisStreamsOutput
+
+         `CfnApplicationOutputV2.OutputProperty.KinesisStreamsOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2.KinesisStreamsOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: lambdaOutput
+
+         `CfnApplicationOutputV2.OutputProperty.LambdaOutput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2.LambdaOutputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: name
+
+         `CfnApplicationOutputV2.OutputProperty.Name`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationOutputV2Props (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationOutputV2Props
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2Props;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationOutputV2Props is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationOutputV2Props } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalyticsV2::ApplicationOutput`
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalyticsV2::ApplicationOutput.ApplicationName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: output
+
+      `AWS::KinesisAnalyticsV2::ApplicationOutput.Output`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationOutputV2.OutputProperty`\  *(readonly)*
+
+
+CfnApplicationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationProps;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationProps } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalytics::Application`
+
+
+
+
+
+   .. py:attribute:: inputs
+
+      `AWS::KinesisAnalytics::Application.Inputs`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplication.InputProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+   .. py:attribute:: applicationCode
+
+      `AWS::KinesisAnalytics::Application.ApplicationCode`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: applicationDescription
+
+      `AWS::KinesisAnalytics::Application.ApplicationDescription`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalytics::Application.ApplicationName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnApplicationReferenceDataSource
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationReferenceDataSource(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationReferenceDataSource } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationReferenceDataSource } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalytics::ApplicationReferenceDataSource`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationReferenceDataSourceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceProps`\  *(readonly)*
+
+   .. py:class:: CSVMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.CSVMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.CSVMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.CSVMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumnDelimiter
+
+         `CfnApplicationReferenceDataSource.CSVMappingParametersProperty.RecordColumnDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: recordRowDelimiter
+
+         `CfnApplicationReferenceDataSource.CSVMappingParametersProperty.RecordRowDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: JSONMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.JSONMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.JSONMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.JSONMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordRowPath
+
+         `CfnApplicationReferenceDataSource.JSONMappingParametersProperty.RecordRowPath`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: MappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.MappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.MappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.MappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: csvMappingParameters
+
+         `CfnApplicationReferenceDataSource.MappingParametersProperty.CSVMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.CSVMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: jsonMappingParameters
+
+         `CfnApplicationReferenceDataSource.MappingParametersProperty.JSONMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.JSONMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.RecordColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.RecordColumnProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnApplicationReferenceDataSource.RecordColumnProperty.Name`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: sqlType
+
+         `CfnApplicationReferenceDataSource.RecordColumnProperty.SqlType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mapping
+
+         `CfnApplicationReferenceDataSource.RecordColumnProperty.Mapping`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordFormatProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordFormatProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.RecordFormatProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.RecordFormatProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplicationReferenceDataSource.RecordFormatProperty.RecordFormatType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mappingParameters
+
+         `CfnApplicationReferenceDataSource.RecordFormatProperty.MappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.MappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ReferenceDataSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.ReferenceDataSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.ReferenceDataSourceProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: referenceSchema
+
+         `CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.ReferenceSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: s3ReferenceDataSource
+
+         `CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.S3ReferenceDataSource`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: tableName
+
+         `CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.TableName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: ReferenceSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.ReferenceSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.ReferenceSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumns
+
+         `CfnApplicationReferenceDataSource.ReferenceSchemaProperty.RecordColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.RecordColumnProperty`\ )[] *(readonly)*
+
+
+      .. py:attribute:: recordFormat
+
+         `CfnApplicationReferenceDataSource.ReferenceSchemaProperty.RecordFormat`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.RecordFormatProperty`\  *(readonly)*
+
+
+      .. py:attribute:: recordEncoding
+
+         `CfnApplicationReferenceDataSource.ReferenceSchemaProperty.RecordEncoding`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: S3ReferenceDataSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: bucketArn
+
+         `CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty.BucketARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: fileKey
+
+         `CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty.FileKey`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: referenceRoleArn
+
+         `CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty.ReferenceRoleARN`
+
+
+
+         :type: string *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationReferenceDataSourceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationReferenceDataSourceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceProps;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationReferenceDataSourceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationReferenceDataSourceProps } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalytics::ApplicationReferenceDataSource`
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalytics::ApplicationReferenceDataSource.ApplicationName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceDataSource
+
+      `AWS::KinesisAnalytics::ApplicationReferenceDataSource.ReferenceDataSource`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty`\  *(readonly)*
+
+
+CfnApplicationReferenceDataSourceV2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationReferenceDataSourceV2(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationReferenceDataSourceV2 } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationReferenceDataSourceV2 } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2Props`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2Props`\  *(readonly)*
+
+   .. py:class:: CSVMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumnDelimiter
+
+         `CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.RecordColumnDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: recordRowDelimiter
+
+         `CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty.RecordRowDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: JSONMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordRowPath
+
+         `CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty.RecordRowPath`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: MappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.MappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.MappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.MappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: csvMappingParameters
+
+         `CfnApplicationReferenceDataSourceV2.MappingParametersProperty.CSVMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: jsonMappingParameters
+
+         `CfnApplicationReferenceDataSourceV2.MappingParametersProperty.JSONMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.RecordColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.RecordColumnProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnApplicationReferenceDataSourceV2.RecordColumnProperty.Name`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: sqlType
+
+         `CfnApplicationReferenceDataSourceV2.RecordColumnProperty.SqlType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mapping
+
+         `CfnApplicationReferenceDataSourceV2.RecordColumnProperty.Mapping`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordFormatProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.RecordFormatProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.RecordFormatProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplicationReferenceDataSourceV2.RecordFormatProperty.RecordFormatType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mappingParameters
+
+         `CfnApplicationReferenceDataSourceV2.RecordFormatProperty.MappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.MappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ReferenceDataSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: referenceSchema
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty.ReferenceSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: s3ReferenceDataSource
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty.S3ReferenceDataSource`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: tableName
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty.TableName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: ReferenceSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumns
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.RecordColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordColumnProperty`\ )[] *(readonly)*
+
+
+      .. py:attribute:: recordFormat
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.RecordFormat`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty`\  *(readonly)*
+
+
+      .. py:attribute:: recordEncoding
+
+         `CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty.RecordEncoding`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: S3ReferenceDataSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: bucketArn
+
+         `CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.BucketARN`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: fileKey
+
+         `CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty.FileKey`
+
+
+
+         :type: string *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationReferenceDataSourceV2Props (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationReferenceDataSourceV2Props
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2Props;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationReferenceDataSourceV2Props is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationReferenceDataSourceV2Props } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource`
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource.ApplicationName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceDataSource
+
+      `AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource.ReferenceDataSource`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty`\  *(readonly)*
+
+
+CfnApplicationV2
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationV2(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2;
+
+      .. code-tab:: javascript
+
+         const { CfnApplicationV2 } = require('@aws-cdk/aws-kinesisanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationV2 } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   A CloudFormation `AWS::KinesisAnalyticsV2::Application`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2Props`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2Props`\  *(readonly)*
+
+   .. py:class:: ApplicationCodeConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.ApplicationCodeConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.ApplicationCodeConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: codeContent
+
+         `CfnApplicationV2.ApplicationCodeConfigurationProperty.CodeContent`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.CodeContentProperty`\  *(readonly)*
+
+
+      .. py:attribute:: codeContentType
+
+         `CfnApplicationV2.ApplicationCodeConfigurationProperty.CodeContentType`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: ApplicationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.ApplicationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.ApplicationConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: applicationCodeConfiguration
+
+         `CfnApplicationV2.ApplicationConfigurationProperty.ApplicationCodeConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.ApplicationCodeConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: applicationSnapshotConfiguration
+
+         `CfnApplicationV2.ApplicationConfigurationProperty.ApplicationSnapshotConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: environmentProperties
+
+         `CfnApplicationV2.ApplicationConfigurationProperty.EnvironmentProperties`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: flinkApplicationConfiguration
+
+         `CfnApplicationV2.ApplicationConfigurationProperty.FlinkApplicationConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: sqlApplicationConfiguration
+
+         `CfnApplicationV2.ApplicationConfigurationProperty.SqlApplicationConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ApplicationSnapshotConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ApplicationSnapshotConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.ApplicationSnapshotConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.ApplicationSnapshotConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: snapshotsEnabled
+
+         `CfnApplicationV2.ApplicationSnapshotConfigurationProperty.SnapshotsEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:class:: CSVMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.CSVMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.CSVMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumnDelimiter
+
+         `CfnApplicationV2.CSVMappingParametersProperty.RecordColumnDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: recordRowDelimiter
+
+         `CfnApplicationV2.CSVMappingParametersProperty.RecordRowDelimiter`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: CheckpointConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.CheckpointConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.CheckpointConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: configurationType
+
+         `CfnApplicationV2.CheckpointConfigurationProperty.ConfigurationType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: checkpointingEnabled
+
+         `CfnApplicationV2.CheckpointConfigurationProperty.CheckpointingEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: checkpointInterval
+
+         `CfnApplicationV2.CheckpointConfigurationProperty.CheckpointInterval`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: minPauseBetweenCheckpoints
+
+         `CfnApplicationV2.CheckpointConfigurationProperty.MinPauseBetweenCheckpoints`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: CodeContentProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.CodeContentProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.CodeContentProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.CodeContentProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: s3ContentLocation
+
+         `CfnApplicationV2.CodeContentProperty.S3ContentLocation`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: textContent
+
+         `CfnApplicationV2.CodeContentProperty.TextContent`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: zipFileContent
+
+         `CfnApplicationV2.CodeContentProperty.ZipFileContent`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: EnvironmentPropertiesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.EnvironmentPropertiesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.EnvironmentPropertiesProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: propertyGroups
+
+         `CfnApplicationV2.EnvironmentPropertiesProperty.PropertyGroups`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.PropertyGroupProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:class:: FlinkApplicationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.FlinkApplicationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.FlinkApplicationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.FlinkApplicationConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: checkpointConfiguration
+
+         `CfnApplicationV2.FlinkApplicationConfigurationProperty.CheckpointConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.CheckpointConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: monitoringConfiguration
+
+         `CfnApplicationV2.FlinkApplicationConfigurationProperty.MonitoringConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: parallelismConfiguration
+
+         `CfnApplicationV2.FlinkApplicationConfigurationProperty.ParallelismConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputLambdaProcessorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.InputLambdaProcessorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.InputLambdaProcessorProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationV2.InputLambdaProcessorProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: InputParallelismProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputParallelismProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.InputParallelismProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.InputParallelismProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: count
+
+         `CfnApplicationV2.InputParallelismProperty.Count`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputProcessingConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.InputProcessingConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.InputProcessingConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: inputLambdaProcessor
+
+         `CfnApplicationV2.InputProcessingConfigurationProperty.InputLambdaProcessor`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.InputLambdaProcessorProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.InputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.InputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: inputSchema
+
+         `CfnApplicationV2.InputProperty.InputSchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.InputSchemaProperty`\  *(readonly)*
+
+
+      .. py:attribute:: namePrefix
+
+         `CfnApplicationV2.InputProperty.NamePrefix`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: inputParallelism
+
+         `CfnApplicationV2.InputProperty.InputParallelism`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.InputParallelismProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: inputProcessingConfiguration
+
+         `CfnApplicationV2.InputProperty.InputProcessingConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.InputProcessingConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisFirehoseInput
+
+         `CfnApplicationV2.InputProperty.KinesisFirehoseInput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: kinesisStreamsInput
+
+         `CfnApplicationV2.InputProperty.KinesisStreamsInput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: InputSchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.InputSchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.InputSchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.InputSchemaProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordColumns
+
+         `CfnApplicationV2.InputSchemaProperty.RecordColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.RecordColumnProperty`\ )[] *(readonly)*
+
+
+      .. py:attribute:: recordFormat
+
+         `CfnApplicationV2.InputSchemaProperty.RecordFormat`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.RecordFormatProperty`\  *(readonly)*
+
+
+      .. py:attribute:: recordEncoding
+
+         `CfnApplicationV2.InputSchemaProperty.RecordEncoding`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: JSONMappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.JSONMappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.JSONMappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordRowPath
+
+         `CfnApplicationV2.JSONMappingParametersProperty.RecordRowPath`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisFirehoseInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisFirehoseInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.KinesisFirehoseInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.KinesisFirehoseInputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationV2.KinesisFirehoseInputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: KinesisStreamsInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.KinesisStreamsInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.KinesisStreamsInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.KinesisStreamsInputProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: resourceArn
+
+         `CfnApplicationV2.KinesisStreamsInputProperty.ResourceARN`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: MappingParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MappingParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.MappingParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.MappingParametersProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: csvMappingParameters
+
+         `CfnApplicationV2.MappingParametersProperty.CSVMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.CSVMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: jsonMappingParameters
+
+         `CfnApplicationV2.MappingParametersProperty.JSONMappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.JSONMappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: MonitoringConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.MonitoringConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.MonitoringConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.MonitoringConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: configurationType
+
+         `CfnApplicationV2.MonitoringConfigurationProperty.ConfigurationType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: logLevel
+
+         `CfnApplicationV2.MonitoringConfigurationProperty.LogLevel`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: metricsLevel
+
+         `CfnApplicationV2.MonitoringConfigurationProperty.MetricsLevel`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: ParallelismConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.ParallelismConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.ParallelismConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.ParallelismConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: configurationType
+
+         `CfnApplicationV2.ParallelismConfigurationProperty.ConfigurationType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: autoScalingEnabled
+
+         `CfnApplicationV2.ParallelismConfigurationProperty.AutoScalingEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: parallelism
+
+         `CfnApplicationV2.ParallelismConfigurationProperty.Parallelism`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: parallelismPerKpu
+
+         `CfnApplicationV2.ParallelismConfigurationProperty.ParallelismPerKPU`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: PropertyGroupProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.PropertyGroupProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.PropertyGroupProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.PropertyGroupProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: propertyGroupId
+
+         `CfnApplicationV2.PropertyGroupProperty.PropertyGroupId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: propertyMap
+
+         `CfnApplicationV2.PropertyGroupProperty.PropertyMap`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.RecordColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.RecordColumnProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnApplicationV2.RecordColumnProperty.Name`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: sqlType
+
+         `CfnApplicationV2.RecordColumnProperty.SqlType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mapping
+
+         `CfnApplicationV2.RecordColumnProperty.Mapping`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: RecordFormatProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.RecordFormatProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.RecordFormatProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.RecordFormatProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: recordFormatType
+
+         `CfnApplicationV2.RecordFormatProperty.RecordFormatType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: mappingParameters
+
+         `CfnApplicationV2.RecordFormatProperty.MappingParameters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.MappingParametersProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: S3ContentLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.S3ContentLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.S3ContentLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.S3ContentLocationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: bucketArn
+
+         `CfnApplicationV2.S3ContentLocationProperty.BucketARN`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: fileKey
+
+         `CfnApplicationV2.S3ContentLocationProperty.FileKey`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: objectVersion
+
+         `CfnApplicationV2.S3ContentLocationProperty.ObjectVersion`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: SqlApplicationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplicationV2.SqlApplicationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplicationV2.SqlApplicationConfigurationProperty } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+
+
+      .. py:attribute:: inputs
+
+         `CfnApplicationV2.SqlApplicationConfigurationProperty.Inputs`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.InputProperty`\ )[] *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnApplicationV2Props (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationV2Props
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2Props;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationV2Props is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationV2Props } from '@aws-cdk/aws-kinesisanalytics';
+
+
+
+   Properties for defining a `AWS::KinesisAnalyticsV2::Application`
+
+
+
+
+
+   .. py:attribute:: runtimeEnvironment
+
+      `AWS::KinesisAnalyticsV2::Application.RuntimeEnvironment`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceExecutionRole
+
+      `AWS::KinesisAnalyticsV2::Application.ServiceExecutionRole`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: applicationConfiguration
+
+      `AWS::KinesisAnalyticsV2::Application.ApplicationConfiguration`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisanalytics.CfnApplicationV2.ApplicationConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: applicationDescription
+
+      `AWS::KinesisAnalyticsV2::Application.ApplicationDescription`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      `AWS::KinesisAnalyticsV2::Application.ApplicationName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+

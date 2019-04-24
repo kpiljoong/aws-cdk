@@ -1,0 +1,3243 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"o0OWweLc/DzKc/7WvtwjXvXvWeCiAP9dz6+mHDo8ULw="}
+
+@aws-cdk/aws-iotanalytics
+=========================
+
+.. mdinclude:: ./__aws-cdk_aws-iotanalytics.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.IoTAnalytics/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.IoTAnalytics" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.IoTAnalytics --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.IoTAnalytics" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/iotanalytics/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:iotanalytics:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="iotanalytics" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>iotanalytics</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:iotanalytics:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='iotanalytics', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-iotanalytics/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-iotanalytics@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-iotanalytics": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-iotanalytics@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-iotanalytics/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-iotanalytics@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-iotanalytics": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-iotanalytics@0.26.0
+
+
+
+.. py:module:: @aws-cdk/aws-iotanalytics
+
+CfnChannel
+^^^^^^^^^^
+
+.. py:class:: CfnChannel(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnChannel;
+
+      .. code-tab:: javascript
+
+         const { CfnChannel } = require('@aws-cdk/aws-iotanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnChannel } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   A CloudFormation `AWS::IoTAnalytics::Channel`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-iotanalytics.CfnChannelProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: channelId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-iotanalytics.CfnChannelProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: RetentionPeriodProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty;
+
+         .. code-tab:: javascript
+
+            // CfnChannel.RetentionPeriodProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnChannel.RetentionPeriodProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: numberOfDays
+
+         `CfnChannel.RetentionPeriodProperty.NumberOfDays`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: unlimited
+
+         `CfnChannel.RetentionPeriodProperty.Unlimited`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnChannelProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnChannelProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnChannelProps;
+
+      .. code-tab:: javascript
+
+         // CfnChannelProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnChannelProps } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   Properties for defining a `AWS::IoTAnalytics::Channel`
+
+
+
+
+
+   .. py:attribute:: channelName
+
+      `AWS::IoTAnalytics::Channel.ChannelName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: retentionPeriod
+
+      `AWS::IoTAnalytics::Channel.RetentionPeriod`
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-iotanalytics.CfnChannel.RetentionPeriodProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::IoTAnalytics::Channel.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)*
+
+
+CfnDataset
+^^^^^^^^^^
+
+.. py:class:: CfnDataset(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnDataset;
+
+      .. code-tab:: javascript
+
+         const { CfnDataset } = require('@aws-cdk/aws-iotanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnDataset } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   A CloudFormation `AWS::IoTAnalytics::Dataset`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-iotanalytics.CfnDatasetProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: datasetId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-iotanalytics.CfnDatasetProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: ActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.ActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.ActionProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: actionName
+
+         `CfnDataset.ActionProperty.ActionName`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: containerAction
+
+         `CfnDataset.ActionProperty.ContainerAction`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.ContainerActionProperty`\  *(optional)*
+
+
+      .. py:attribute:: queryAction
+
+         `CfnDataset.ActionProperty.QueryAction`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.QueryActionProperty`\  *(optional)*
+
+
+   .. py:class:: ContainerActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.ContainerActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.ContainerActionProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: executionRoleArn
+
+         `CfnDataset.ContainerActionProperty.ExecutionRoleArn`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: image
+
+         `CfnDataset.ContainerActionProperty.Image`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: resourceConfiguration
+
+         `CfnDataset.ContainerActionProperty.ResourceConfiguration`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.ResourceConfigurationProperty`\ 
+
+
+      .. py:attribute:: variables
+
+         `CfnDataset.ContainerActionProperty.Variables`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.VariableProperty`\ )[] *(optional)*
+
+
+   .. py:class:: DatasetContentVersionValueProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.DatasetContentVersionValueProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.DatasetContentVersionValueProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: datasetName
+
+         `CfnDataset.DatasetContentVersionValueProperty.DatasetName`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DeltaTimeProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.DeltaTimeProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.DeltaTimeProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: offsetSeconds
+
+         `CfnDataset.DeltaTimeProperty.OffsetSeconds`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: timeExpression
+
+         `CfnDataset.DeltaTimeProperty.TimeExpression`
+
+
+
+         :type: string
+
+
+   .. py:class:: FilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.FilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.FilterProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: deltaTime
+
+         `CfnDataset.FilterProperty.DeltaTime`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.DeltaTimeProperty`\  *(optional)*
+
+
+   .. py:class:: OutputFileUriValueProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.OutputFileUriValueProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.OutputFileUriValueProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: fileName
+
+         `CfnDataset.OutputFileUriValueProperty.FileName`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: QueryActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.QueryActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.QueryActionProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: sqlQuery
+
+         `CfnDataset.QueryActionProperty.SqlQuery`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: filters
+
+         `CfnDataset.QueryActionProperty.Filters`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.FilterProperty`\ )[] *(optional)*
+
+
+   .. py:class:: ResourceConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.ResourceConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.ResourceConfigurationProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: computeType
+
+         `CfnDataset.ResourceConfigurationProperty.ComputeType`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: volumeSizeInGb
+
+         `CfnDataset.ResourceConfigurationProperty.VolumeSizeInGB`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: RetentionPeriodProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.RetentionPeriodProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.RetentionPeriodProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: numberOfDays
+
+         `CfnDataset.RetentionPeriodProperty.NumberOfDays`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: unlimited
+
+         `CfnDataset.RetentionPeriodProperty.Unlimited`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: ScheduleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.ScheduleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.ScheduleProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: scheduleExpression
+
+         `CfnDataset.ScheduleProperty.ScheduleExpression`
+
+
+
+         :type: string
+
+
+   .. py:class:: TriggerProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.TriggerProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.TriggerProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: schedule
+
+         `CfnDataset.TriggerProperty.Schedule`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.ScheduleProperty`\  *(optional)*
+
+
+      .. py:attribute:: triggeringDataset
+
+         `CfnDataset.TriggerProperty.TriggeringDataset`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.TriggeringDatasetProperty`\  *(optional)*
+
+
+   .. py:class:: TriggeringDatasetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.TriggeringDatasetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.TriggeringDatasetProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: datasetName
+
+         `CfnDataset.TriggeringDatasetProperty.DatasetName`
+
+
+
+         :type: string
+
+
+   .. py:class:: VariableProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDataset.VariableProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDataset.VariableProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: variableName
+
+         `CfnDataset.VariableProperty.VariableName`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: datasetContentVersionValue
+
+         `CfnDataset.VariableProperty.DatasetContentVersionValue`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.DatasetContentVersionValueProperty`\  *(optional)*
+
+
+      .. py:attribute:: doubleValue
+
+         `CfnDataset.VariableProperty.DoubleValue`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: outputFileUriValue
+
+         `CfnDataset.VariableProperty.OutputFileUriValue`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.OutputFileUriValueProperty`\  *(optional)*
+
+
+      .. py:attribute:: stringValue
+
+         `CfnDataset.VariableProperty.StringValue`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDatasetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDatasetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnDatasetProps;
+
+      .. code-tab:: javascript
+
+         // CfnDatasetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDatasetProps } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   Properties for defining a `AWS::IoTAnalytics::Dataset`
+
+
+
+
+
+   .. py:attribute:: actions
+
+      `AWS::IoTAnalytics::Dataset.Actions`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.ActionProperty`\ )[]
+
+
+   .. py:attribute:: datasetName
+
+      `AWS::IoTAnalytics::Dataset.DatasetName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: retentionPeriod
+
+      `AWS::IoTAnalytics::Dataset.RetentionPeriod`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.RetentionPeriodProperty`\  *(optional)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::IoTAnalytics::Dataset.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)*
+
+
+   .. py:attribute:: triggers
+
+      `AWS::IoTAnalytics::Dataset.Triggers`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDataset.TriggerProperty`\ )[] *(optional)*
+
+
+CfnDatastore
+^^^^^^^^^^^^
+
+.. py:class:: CfnDatastore(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnDatastore;
+
+      .. code-tab:: javascript
+
+         const { CfnDatastore } = require('@aws-cdk/aws-iotanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnDatastore } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   A CloudFormation `AWS::IoTAnalytics::Datastore`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-iotanalytics.CfnDatastoreProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: datastoreId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-iotanalytics.CfnDatastoreProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: RetentionPeriodProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDatastore.RetentionPeriodProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDatastore.RetentionPeriodProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: numberOfDays
+
+         `CfnDatastore.RetentionPeriodProperty.NumberOfDays`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: unlimited
+
+         `CfnDatastore.RetentionPeriodProperty.Unlimited`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDatastoreProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDatastoreProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnDatastoreProps;
+
+      .. code-tab:: javascript
+
+         // CfnDatastoreProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDatastoreProps } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   Properties for defining a `AWS::IoTAnalytics::Datastore`
+
+
+
+
+
+   .. py:attribute:: datastoreName
+
+      `AWS::IoTAnalytics::Datastore.DatastoreName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: retentionPeriod
+
+      `AWS::IoTAnalytics::Datastore.RetentionPeriod`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnDatastore.RetentionPeriodProperty`\  *(optional)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::IoTAnalytics::Datastore.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)*
+
+
+CfnPipeline
+^^^^^^^^^^^
+
+.. py:class:: CfnPipeline(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnPipeline;
+
+      .. code-tab:: javascript
+
+         const { CfnPipeline } = require('@aws-cdk/aws-iotanalytics');
+
+      .. code-tab:: typescript
+
+         import { CfnPipeline } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   A CloudFormation `AWS::IoTAnalytics::Pipeline`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipelineProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: pipelineId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipelineProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: ActivityProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.ActivityProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.ActivityProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: addAttributes
+
+         `CfnPipeline.ActivityProperty.AddAttributes`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.AddAttributesProperty`\  *(optional)*
+
+
+      .. py:attribute:: channel
+
+         `CfnPipeline.ActivityProperty.Channel`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.ChannelProperty`\  *(optional)*
+
+
+      .. py:attribute:: datastore
+
+         `CfnPipeline.ActivityProperty.Datastore`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.DatastoreProperty`\  *(optional)*
+
+
+      .. py:attribute:: deviceRegistryEnrich
+
+         `CfnPipeline.ActivityProperty.DeviceRegistryEnrich`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty`\  *(optional)*
+
+
+      .. py:attribute:: deviceShadowEnrich
+
+         `CfnPipeline.ActivityProperty.DeviceShadowEnrich`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.DeviceShadowEnrichProperty`\  *(optional)*
+
+
+      .. py:attribute:: filter
+
+         `CfnPipeline.ActivityProperty.Filter`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.FilterProperty`\  *(optional)*
+
+
+      .. py:attribute:: lambda
+
+         `CfnPipeline.ActivityProperty.Lambda`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.LambdaProperty`\  *(optional)*
+
+
+      .. py:attribute:: math
+
+         `CfnPipeline.ActivityProperty.Math`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.MathProperty`\  *(optional)*
+
+
+      .. py:attribute:: removeAttributes
+
+         `CfnPipeline.ActivityProperty.RemoveAttributes`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.RemoveAttributesProperty`\  *(optional)*
+
+
+      .. py:attribute:: selectAttributes
+
+         `CfnPipeline.ActivityProperty.SelectAttributes`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.SelectAttributesProperty`\  *(optional)*
+
+
+   .. py:class:: AddAttributesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.AddAttributesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.AddAttributesProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attributes
+
+         `CfnPipeline.AddAttributesProperty.Attributes`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.AddAttributesProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.AddAttributesProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ChannelProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.ChannelProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.ChannelProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: channelName
+
+         `CfnPipeline.ChannelProperty.ChannelName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.ChannelProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.ChannelProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DatastoreProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.DatastoreProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.DatastoreProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: datastoreName
+
+         `CfnPipeline.DatastoreProperty.DatastoreName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.DatastoreProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DeviceRegistryEnrichProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.DeviceRegistryEnrichProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.DeviceRegistryEnrichProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attribute
+
+         `CfnPipeline.DeviceRegistryEnrichProperty.Attribute`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.DeviceRegistryEnrichProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.DeviceRegistryEnrichProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnPipeline.DeviceRegistryEnrichProperty.RoleArn`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: thingName
+
+         `CfnPipeline.DeviceRegistryEnrichProperty.ThingName`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DeviceShadowEnrichProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.DeviceShadowEnrichProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.DeviceShadowEnrichProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attribute
+
+         `CfnPipeline.DeviceShadowEnrichProperty.Attribute`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.DeviceShadowEnrichProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.DeviceShadowEnrichProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: roleArn
+
+         `CfnPipeline.DeviceShadowEnrichProperty.RoleArn`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: thingName
+
+         `CfnPipeline.DeviceShadowEnrichProperty.ThingName`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: FilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.FilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.FilterProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: filter
+
+         `CfnPipeline.FilterProperty.Filter`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.FilterProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.FilterProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: LambdaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.LambdaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.LambdaProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: batchSize
+
+         `CfnPipeline.LambdaProperty.BatchSize`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: lambdaName
+
+         `CfnPipeline.LambdaProperty.LambdaName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.LambdaProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.LambdaProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: MathProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.MathProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.MathProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attribute
+
+         `CfnPipeline.MathProperty.Attribute`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: math
+
+         `CfnPipeline.MathProperty.Math`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.MathProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.MathProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: RemoveAttributesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.RemoveAttributesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.RemoveAttributesProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attributes
+
+         `CfnPipeline.RemoveAttributesProperty.Attributes`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.RemoveAttributesProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.RemoveAttributesProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SelectAttributesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.IoTAnalytics;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPipeline.SelectAttributesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPipeline.SelectAttributesProperty } from '@aws-cdk/aws-iotanalytics';
+
+
+
+
+
+      .. py:attribute:: attributes
+
+         `CfnPipeline.SelectAttributesProperty.Attributes`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnPipeline.SelectAttributesProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: next
+
+         `CfnPipeline.SelectAttributesProperty.Next`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnPipelineProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPipelineProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.IoTAnalytics;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.iotanalytics.CfnPipelineProps;
+
+      .. code-tab:: javascript
+
+         // CfnPipelineProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnPipelineProps } from '@aws-cdk/aws-iotanalytics';
+
+
+
+   Properties for defining a `AWS::IoTAnalytics::Pipeline`
+
+
+
+
+
+   .. py:attribute:: pipelineActivities
+
+      `AWS::IoTAnalytics::Pipeline.PipelineActivities`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-iotanalytics.CfnPipeline.ActivityProperty`\ )[]
+
+
+   .. py:attribute:: pipelineName
+
+      `AWS::IoTAnalytics::Pipeline.PipelineName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::IoTAnalytics::Pipeline.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)*
+
+

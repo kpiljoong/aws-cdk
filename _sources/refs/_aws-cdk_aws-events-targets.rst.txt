@@ -1,0 +1,299 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"47F1V+xe/g2lIrQ+DKruKKQWLk3DQio99TdOpqETlmg="}
+
+Event Targets for AWS CloudWatch Events
+=======================================
+
+.. mdinclude:: ./__aws-cdk_aws-events-targets.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Events.Targets/0.29.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Events.Targets" Version="0.29.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Events.Targets --version 0.29.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Events.Targets" version="0.29.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/events-targets/0.29.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:events-targets:jar:0.29.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="events-targets" rev="0.29.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>events-targets</artifactId>
+           <version>0.29.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:events-targets:0.29.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='events-targets', version='0.29.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-events-targets/v/0.29.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-events-targets@0.29.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-events-targets": "^0.29.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-events-targets@0.29.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-events-targets/v/0.29.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-events-targets@0.29.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-events-targets": "^0.29.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-events-targets@0.29.0
+
+
+
+.. py:module:: @aws-cdk/aws-events-targets
+
+CodeBuildProject
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CodeBuildProject(project)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Events.Targets;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.events.targets.CodeBuildProject;
+
+      .. code-tab:: javascript
+
+         const { CodeBuildProject } = require('@aws-cdk/aws-events-targets');
+
+      .. code-tab:: typescript
+
+         import { CodeBuildProject } from '@aws-cdk/aws-events-targets';
+
+
+
+   Start a CodeBuild build when an AWS CloudWatch events rule is triggered.
+
+
+
+   :implements: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\ 
+   :param project: 
+   :type project: :py:class:`@aws-cdk/aws-codebuild.IProject`\ 
+
+   .. py:method:: asEventRuleTarget(_ruleArn, _ruleId) -> @aws-cdk/aws-events.EventRuleTargetProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-events.IEventRuleTarget.asEventRuleTarget`
+
+      Allows using build projects as event rule targets.
+
+
+
+      :param _ruleArn: 
+      :type _ruleArn: string
+      :param _ruleId: 
+      :type _ruleId: string
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRuleTargetProps`\ 
+
+
+   .. py:attribute:: project
+
+      :type: :py:class:`@aws-cdk/aws-codebuild.IProject`\  *(readonly)*
+
+
+LambdaFunction
+^^^^^^^^^^^^^^
+
+.. py:class:: LambdaFunction(handler)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Events.Targets;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.events.targets.LambdaFunction;
+
+      .. code-tab:: javascript
+
+         const { LambdaFunction } = require('@aws-cdk/aws-events-targets');
+
+      .. code-tab:: typescript
+
+         import { LambdaFunction } from '@aws-cdk/aws-events-targets';
+
+
+
+   Use an AWS Lambda function as an event rule target.
+
+
+
+   :implements: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\ 
+   :param handler: The lambda function.
+   :type handler: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+   .. py:method:: asEventRuleTarget(ruleArn, ruleId) -> @aws-cdk/aws-events.EventRuleTargetProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-events.IEventRuleTarget.asEventRuleTarget`
+
+      Returns a RuleTarget that can be used to trigger this Lambda as a result from a CloudWatch event.
+
+
+
+      :param ruleArn: 
+      :type ruleArn: string
+      :param ruleId: 
+      :type ruleId: string
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRuleTargetProps`\ 
+
+
+   .. py:attribute:: handler
+
+      The lambda function.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(readonly)*
+
+
+SnsTopic
+^^^^^^^^
+
+.. py:class:: SnsTopic(topic)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Events.Targets;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.events.targets.SnsTopic;
+
+      .. code-tab:: javascript
+
+         const { SnsTopic } = require('@aws-cdk/aws-events-targets');
+
+      .. code-tab:: typescript
+
+         import { SnsTopic } from '@aws-cdk/aws-events-targets';
+
+
+
+   Use an SNS topic as a target for AWS CloudWatch event rules.
+
+
+
+   :implements: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\ 
+   :param topic: 
+   :type topic: :py:class:`@aws-cdk/aws-sns.ITopic`\ 
+
+   .. py:method:: asEventRuleTarget(_ruleArn, _ruleId) -> @aws-cdk/aws-events.EventRuleTargetProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-events.IEventRuleTarget.asEventRuleTarget`
+
+      Returns a RuleTarget that can be used to trigger this SNS topic as a result from a CloudWatch event.
+
+      https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/resource-based-policies-cwe.html#sns-permissions
+
+
+      :param _ruleArn: 
+      :type _ruleArn: string
+      :param _ruleId: 
+      :type _ruleId: string
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRuleTargetProps`\ 
+
+
+   .. py:attribute:: topic
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(readonly)*
+
+

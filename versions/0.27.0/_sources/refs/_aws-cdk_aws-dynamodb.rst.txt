@@ -1,0 +1,2225 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"KBj2O8slP/Ss49tQNp1jfq7wlpmN8u4lA/WG9kIF06s="}
+
+@aws-cdk/aws-dynamodb
+=====================
+
+.. mdinclude:: ./__aws-cdk_aws-dynamodb.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.DynamoDB/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.DynamoDB" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.DynamoDB --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.DynamoDB" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/dynamodb/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:dynamodb:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="dynamodb" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>dynamodb</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:dynamodb:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='dynamodb', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-dynamodb/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-dynamodb@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-dynamodb": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-dynamodb@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-dynamodb/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-dynamodb@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-dynamodb": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-dynamodb@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-dynamodb
+
+Attribute (interface)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: Attribute
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.Attribute;
+
+      .. code-tab:: javascript
+
+         // Attribute is an interface
+
+      .. code-tab:: typescript
+
+         import { Attribute } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+   .. py:attribute:: name
+
+      The name of an attribute.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      The data type of an attribute.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.AttributeType`\  *(readonly)*
+
+
+AttributeType (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AttributeType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.AttributeType;
+
+      .. code-tab:: javascript
+
+         const { AttributeType } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { AttributeType } from '@aws-cdk/aws-dynamodb';
+
+
+
+   .. py:data:: Binary
+
+   .. py:data:: Number
+
+   .. py:data:: String
+
+
+BillingMode (enum)
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BillingMode
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.BillingMode;
+
+      .. code-tab:: javascript
+
+         const { BillingMode } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { BillingMode } from '@aws-cdk/aws-dynamodb';
+
+
+
+   DyanmoDB's Read/Write capacity modes.
+
+
+
+   .. py:data:: PayPerRequest
+
+   Pay only for what you use. You don't configure Read/Write capacity units.
+
+
+
+   .. py:data:: Provisioned
+
+   Explicitly specified Read/Write capacity units.
+
+
+
+
+CfnTable
+^^^^^^^^
+
+.. py:class:: CfnTable(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.CfnTable;
+
+      .. code-tab:: javascript
+
+         const { CfnTable } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { CfnTable } from '@aws-cdk/aws-dynamodb';
+
+
+
+   A CloudFormation `AWS::DynamoDB::Table`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-dynamodb.CfnTableProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.CfnTableProps`\  *(readonly)*
+
+
+   .. py:attribute:: tableArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableStreamArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: AttributeDefinitionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.AttributeDefinitionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.AttributeDefinitionProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: attributeName
+
+         `CfnTable.AttributeDefinitionProperty.AttributeName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: attributeType
+
+         `CfnTable.AttributeDefinitionProperty.AttributeType`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: GlobalSecondaryIndexProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.GlobalSecondaryIndexProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.GlobalSecondaryIndexProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: indexName
+
+         `CfnTable.GlobalSecondaryIndexProperty.IndexName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: keySchema
+
+         `CfnTable.GlobalSecondaryIndexProperty.KeySchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-dynamodb.CfnTable.KeySchemaProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+      .. py:attribute:: projection
+
+         `CfnTable.GlobalSecondaryIndexProperty.Projection`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.ProjectionProperty`\  *(readonly)*
+
+
+      .. py:attribute:: provisionedThroughput
+
+         `CfnTable.GlobalSecondaryIndexProperty.ProvisionedThroughput`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.ProvisionedThroughputProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: KeySchemaProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.KeySchemaProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.KeySchemaProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: attributeName
+
+         `CfnTable.KeySchemaProperty.AttributeName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: keyType
+
+         `CfnTable.KeySchemaProperty.KeyType`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: LocalSecondaryIndexProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.LocalSecondaryIndexProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.LocalSecondaryIndexProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: indexName
+
+         `CfnTable.LocalSecondaryIndexProperty.IndexName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: keySchema
+
+         `CfnTable.LocalSecondaryIndexProperty.KeySchema`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-dynamodb.CfnTable.KeySchemaProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+      .. py:attribute:: projection
+
+         `CfnTable.LocalSecondaryIndexProperty.Projection`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.ProjectionProperty`\  *(readonly)*
+
+
+   .. py:class:: PointInTimeRecoverySpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.PointInTimeRecoverySpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.PointInTimeRecoverySpecificationProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: pointInTimeRecoveryEnabled
+
+         `CfnTable.PointInTimeRecoverySpecificationProperty.PointInTimeRecoveryEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ProjectionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.ProjectionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.ProjectionProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: nonKeyAttributes
+
+         `CfnTable.ProjectionProperty.NonKeyAttributes`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: projectionType
+
+         `CfnTable.ProjectionProperty.ProjectionType`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: ProvisionedThroughputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.ProvisionedThroughputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.ProvisionedThroughputProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: readCapacityUnits
+
+         `CfnTable.ProvisionedThroughputProperty.ReadCapacityUnits`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+      .. py:attribute:: writeCapacityUnits
+
+         `CfnTable.ProvisionedThroughputProperty.WriteCapacityUnits`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:class:: SSESpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.SSESpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.SSESpecificationProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: sseEnabled
+
+         `CfnTable.SSESpecificationProperty.SSEEnabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:class:: StreamSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.StreamSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.StreamSpecificationProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: streamViewType
+
+         `CfnTable.StreamSpecificationProperty.StreamViewType`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: TimeToLiveSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.DynamoDB;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.TimeToLiveSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.TimeToLiveSpecificationProperty } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+      .. py:attribute:: attributeName
+
+         `CfnTable.TimeToLiveSpecificationProperty.AttributeName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: enabled
+
+         `CfnTable.TimeToLiveSpecificationProperty.Enabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnTableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnTableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.CfnTableProps;
+
+      .. code-tab:: javascript
+
+         // CfnTableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnTableProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+   Properties for defining a `AWS::DynamoDB::Table`
+
+
+
+
+
+   .. py:attribute:: keySchema
+
+      `AWS::DynamoDB::Table.KeySchema`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-dynamodb.CfnTable.KeySchemaProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+   .. py:attribute:: attributeDefinitions
+
+      `AWS::DynamoDB::Table.AttributeDefinitions`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.AttributeDefinitionProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: billingMode
+
+      `AWS::DynamoDB::Table.BillingMode`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: globalSecondaryIndexes
+
+      `AWS::DynamoDB::Table.GlobalSecondaryIndexes`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.GlobalSecondaryIndexProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: localSecondaryIndexes
+
+      `AWS::DynamoDB::Table.LocalSecondaryIndexes`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.LocalSecondaryIndexProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: pointInTimeRecoverySpecification
+
+      `AWS::DynamoDB::Table.PointInTimeRecoverySpecification`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: provisionedThroughput
+
+      `AWS::DynamoDB::Table.ProvisionedThroughput`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.ProvisionedThroughputProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sseSpecification
+
+      `AWS::DynamoDB::Table.SSESpecification`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.SSESpecificationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: streamSpecification
+
+      `AWS::DynamoDB::Table.StreamSpecification`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.StreamSpecificationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      `AWS::DynamoDB::Table.TableName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::DynamoDB::Table.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: timeToLiveSpecification
+
+      `AWS::DynamoDB::Table.TimeToLiveSpecification`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-dynamodb.CfnTable.TimeToLiveSpecificationProperty`\  *(optional)* *(readonly)*
+
+
+EnableScalingProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EnableScalingProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.EnableScalingProps;
+
+      .. code-tab:: javascript
+
+         // EnableScalingProps is an interface
+
+      .. code-tab:: typescript
+
+         import { EnableScalingProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+   Properties for enabling DynamoDB capacity scaling
+
+
+
+
+
+   .. py:attribute:: maxCapacity
+
+      Maximum capacity to scale to
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: minCapacity
+
+      Minimum capacity to scale to
+
+
+
+      :type: number *(readonly)*
+
+
+GlobalSecondaryIndexProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: GlobalSecondaryIndexProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps;
+
+      .. code-tab:: javascript
+
+         // GlobalSecondaryIndexProps is an interface
+
+      .. code-tab:: typescript
+
+         import { GlobalSecondaryIndexProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-dynamodb.SecondaryIndexProps`\ 
+
+
+   .. py:attribute:: partitionKey
+
+      The attribute of a partition key for the global secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.Attribute`\  *(readonly)*
+
+
+   .. py:attribute:: readCapacity
+
+      The read capacity for the global secondary index.
+
+      
+
+      Can only be provided if table billingMode is Provisioned or undefined.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: sortKey
+
+      The attribute of a sort key for the global secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.Attribute`\  *(optional)* *(readonly)*
+      :default: undefined
+
+
+   .. py:attribute:: writeCapacity
+
+      The write capacity for the global secondary index.
+
+      
+
+      Can only be provided if table billingMode is Provisioned or undefined.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: indexName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.indexName>`
+
+      The name of the secondary index.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: nonKeyAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.nonKeyAttributes>`
+
+      The non-key attributes that are projected into the secondary index.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+      :default: undefined
+
+
+   .. py:attribute:: projectionType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.projectionType>`
+
+      The set of attributes that are projected into the secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.ProjectionType`\  *(optional)* *(readonly)*
+      :default: ALL
+
+
+IScalableTableAttribute (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IScalableTableAttribute
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.IScalableTableAttribute;
+
+      .. code-tab:: javascript
+
+         // IScalableTableAttribute is an interface
+
+      .. code-tab:: typescript
+
+         import { IScalableTableAttribute } from '@aws-cdk/aws-dynamodb';
+
+
+
+   Interface for scalable attributes
+
+
+
+
+
+   .. py:method:: scaleOnSchedule(id, actions)
+
+      Add scheduled scaling for this scaling attribute
+
+
+
+      :param id: 
+      :type id: string
+      :param actions: 
+      :type actions: :py:class:`@aws-cdk/aws-applicationautoscaling.ScalingSchedule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: scaleOnUtilization(props)
+
+      Scale out or in to keep utilization at a given level
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.UtilizationScalingProps`\ 
+      :abstract: Yes
+
+
+LocalSecondaryIndexProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LocalSecondaryIndexProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps;
+
+      .. code-tab:: javascript
+
+         // LocalSecondaryIndexProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LocalSecondaryIndexProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-dynamodb.SecondaryIndexProps`\ 
+
+
+   .. py:attribute:: sortKey
+
+      The attribute of a sort key for the local secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.Attribute`\  *(readonly)*
+
+
+   .. py:attribute:: indexName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.indexName>`
+
+      The name of the secondary index.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: nonKeyAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.nonKeyAttributes>`
+
+      The non-key attributes that are projected into the secondary index.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+      :default: undefined
+
+
+   .. py:attribute:: projectionType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.SecondaryIndexProps <@aws-cdk/aws-dynamodb.SecondaryIndexProps.projectionType>`
+
+      The set of attributes that are projected into the secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.ProjectionType`\  *(optional)* *(readonly)*
+      :default: ALL
+
+
+ProjectionType (enum)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ProjectionType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.ProjectionType;
+
+      .. code-tab:: javascript
+
+         const { ProjectionType } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { ProjectionType } from '@aws-cdk/aws-dynamodb';
+
+
+
+   .. py:data:: KeysOnly
+
+   .. py:data:: Include
+
+   .. py:data:: All
+
+
+SecondaryIndexProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: SecondaryIndexProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.SecondaryIndexProps;
+
+      .. code-tab:: javascript
+
+         // SecondaryIndexProps is an interface
+
+      .. code-tab:: typescript
+
+         import { SecondaryIndexProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+   .. py:attribute:: indexName
+
+      The name of the secondary index.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: nonKeyAttributes
+
+      The non-key attributes that are projected into the secondary index.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+      :default: undefined
+
+
+   .. py:attribute:: projectionType
+
+      The set of attributes that are projected into the secondary index.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.ProjectionType`\  *(optional)* *(readonly)*
+      :default: ALL
+
+
+StreamViewType (enum)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: StreamViewType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.StreamViewType;
+
+      .. code-tab:: javascript
+
+         const { StreamViewType } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { StreamViewType } from '@aws-cdk/aws-dynamodb';
+
+
+
+   When an item in the table is modified, StreamViewType determines what information
+
+   is written to the stream for this table. Valid values for StreamViewType are:
+
+   https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_StreamSpecification.html
+
+
+   .. py:data:: NewImage
+
+   The entire item, as it appears after it was modified, is written to the stream.
+
+
+
+   .. py:data:: OldImage
+
+   The entire item, as it appeared before it was modified, is written to the stream.
+
+
+
+   .. py:data:: NewAndOldImages
+
+   Both the new and the old item images of the item are written to the stream.
+
+
+
+   .. py:data:: KeysOnly
+
+   Only the key attributes of the modified item are written to the stream.
+
+
+
+
+Table
+^^^^^
+
+.. py:class:: Table(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.Table;
+
+      .. code-tab:: javascript
+
+         const { Table } = require('@aws-cdk/aws-dynamodb');
+
+      .. code-tab:: typescript
+
+         import { Table } from '@aws-cdk/aws-dynamodb';
+
+
+
+   Provides a DynamoDB table.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-dynamodb.TableProps`\ 
+
+   .. py:staticmethod:: grantListStreams([principal])
+
+      Permits an IAM Principal to list all DynamoDB Streams.
+
+
+
+      :param principal: The principal (no-op if undefined)
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: addGlobalSecondaryIndex(props)
+
+      Add a global secondary index of table.
+
+
+
+      :param props: the property of global secondary index
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.GlobalSecondaryIndexProps`\ 
+
+
+   .. py:method:: addLocalSecondaryIndex(props)
+
+      Add a local secondary index of table.
+
+
+
+      :param props: the property of local secondary index
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.LocalSecondaryIndexProps`\ 
+
+
+   .. py:method:: autoScaleGlobalSecondaryIndexReadCapacity(indexName, props) -> @aws-cdk/aws-dynamodb.IScalableTableAttribute
+
+      Enable read capacity scaling for the given GSI
+
+
+
+      :param indexName: 
+      :type indexName: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.EnableScalingProps`\ 
+      :return: An object to configure additional AutoScaling settings for this attribute
+      :rtype: :py:class:`~@aws-cdk/aws-dynamodb.IScalableTableAttribute`\ 
+
+
+   .. py:method:: autoScaleGlobalSecondaryIndexWriteCapacity(indexName, props) -> @aws-cdk/aws-dynamodb.IScalableTableAttribute
+
+      Enable write capacity scaling for the given GSI
+
+
+
+      :param indexName: 
+      :type indexName: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.EnableScalingProps`\ 
+      :return: An object to configure additional AutoScaling settings for this attribute
+      :rtype: :py:class:`~@aws-cdk/aws-dynamodb.IScalableTableAttribute`\ 
+
+
+   .. py:method:: autoScaleReadCapacity(props) -> @aws-cdk/aws-dynamodb.IScalableTableAttribute
+
+      Enable read capacity scaling for this table
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.EnableScalingProps`\ 
+      :return: An object to configure additional AutoScaling settings
+      :rtype: :py:class:`~@aws-cdk/aws-dynamodb.IScalableTableAttribute`\ 
+
+
+   .. py:method:: autoScaleWriteCapacity(props) -> @aws-cdk/aws-dynamodb.IScalableTableAttribute
+
+      Enable write capacity scaling for this table
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-dynamodb.EnableScalingProps`\ 
+      :return: An object to configure additional AutoScaling settings for this attribute
+      :rtype: :py:class:`~@aws-cdk/aws-dynamodb.IScalableTableAttribute`\ 
+
+
+   .. py:method:: grant(principal, *actions)
+
+      Adds an IAM policy statement associated with this table to an IAM
+
+      principal's policy.
+
+
+
+      :param principal: The principal (no-op if undefined)
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+      :param \*actions: The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem", ...)
+      :type \*actions: string
+
+
+   .. py:method:: grantFullAccess([principal])
+
+      Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
+
+
+
+      :param principal: The principal to grant access to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: grantReadData([principal])
+
+      Permits an IAM principal all data read operations from this table:
+
+      BatchGetItem, GetRecords, GetShardIterator, Query, GetItem, Scan.
+
+
+
+      :param principal: The principal to grant access to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: grantReadWriteData([principal])
+
+      Permits an IAM principal to all data read/write operations to this table.
+
+      BatchGetItem, GetRecords, GetShardIterator, Query, GetItem, Scan,
+
+      BatchWriteItem, PutItem, UpdateItem, DeleteItem
+
+
+
+      :param principal: The principal to grant access to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: grantStream(principal, *actions)
+
+      Adds an IAM policy statement associated with this table's stream to an
+
+      IAM principal's policy.
+
+
+
+      :param principal: The principal (no-op if undefined)
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+      :param \*actions: The set of actions to allow (i.e. "dynamodb:DescribeStream", "dynamodb:GetRecords", ...)
+      :type \*actions: string
+
+
+   .. py:method:: grantStreamRead([principal])
+
+      Permis an IAM principal all stream data read operations for this
+
+      table's stream:
+
+      DescribeStream, GetRecords, GetShardIterator, ListStreams.
+
+
+
+      :param principal: The principal to grant access to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: grantWriteData([principal])
+
+      Permits an IAM principal all data write operations to this table:
+
+      BatchWriteItem, PutItem, UpdateItem, DeleteItem.
+
+
+
+      :param principal: The principal to grant access to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: validate() -> string[]
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Construct.validate`
+
+      Validate the table construct.
+
+
+
+      *Protected method*
+
+      :return: an array of validation error message
+      :rtype: string[]
+
+
+   .. py:attribute:: tableArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableStreamArn
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+TableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.TableProps;
+
+      .. code-tab:: javascript
+
+         // TableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { TableProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+
+
+   .. py:attribute:: partitionKey
+
+      Partition key attribute definition.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.Attribute`\  *(readonly)*
+
+
+   .. py:attribute:: billingMode
+
+      Specify how you are charged for read and write throughput and how you manage capacity.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.BillingMode`\  *(optional)* *(readonly)*
+      :default: Provisioned
+
+
+   .. py:attribute:: pitrEnabled
+
+      Whether point-in-time recovery is enabled.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: undefined, point-in-time recovery is disabled
+
+
+   .. py:attribute:: readCapacity
+
+      The read capacity for the table. Careful if you add Global Secondary Indexes, as
+
+      those will share the table's provisioned throughput.
+
+      
+
+      Can only be provided if billingMode is Provisioned.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: sortKey
+
+      Table sort key attribute definition.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.Attribute`\  *(optional)* *(readonly)*
+      :default: no sort key
+
+
+   .. py:attribute:: sseEnabled
+
+      Whether server-side encryption with an AWS managed customer master key is enabled.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: undefined, server-side encryption is enabled with an AWS owned customer master key
+
+
+   .. py:attribute:: streamSpecification
+
+      When an item in the table is modified, StreamViewType determines what information
+
+      is written to the stream for this table. Valid values for StreamViewType are:
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-dynamodb.StreamViewType`\  *(optional)* *(readonly)*
+      :default: undefined, streams are disabled
+
+
+   .. py:attribute:: tableName
+
+      Enforces a particular physical table name.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: <generated>
+
+
+   .. py:attribute:: ttlAttributeName
+
+      The name of TTL attribute.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: undefined, TTL is disabled
+
+
+   .. py:attribute:: writeCapacity
+
+      The write capacity for the table. Careful if you add Global Secondary Indexes, as
+
+      those will share the table's provisioned throughput.
+
+      
+
+      Can only be provided if billingMode is Provisioned.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+UtilizationScalingProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UtilizationScalingProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.UtilizationScalingProps;
+
+      .. code-tab:: javascript
+
+         // UtilizationScalingProps is an interface
+
+      .. code-tab:: typescript
+
+         import { UtilizationScalingProps } from '@aws-cdk/aws-dynamodb';
+
+
+
+   Properties for enabling DynamoDB utilization tracking
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps`\ 
+
+
+   .. py:attribute:: targetUtilizationPercent
+
+      Target utilization percentage for the attribute
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: disableScaleIn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps <@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps.disableScaleIn>`
+
+      Indicates whether scale in by the target tracking policy is disabled.
+
+      
+
+      If the value is true, scale in is disabled and the target tracking policy
+
+      won't remove capacity from the scalable resource. Otherwise, scale in is
+
+      enabled and the target tracking policy can remove capacity from the
+
+      scalable resource.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: false
+
+
+   .. py:attribute:: policyName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps <@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps.policyName>`
+
+      A name for the scaling policy
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: Automatically generated name
+
+
+   .. py:attribute:: scaleInCooldownSec
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps <@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps.scaleInCooldownSec>`
+
+      Period after a scale in activity completes before another scale in activity can start.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: No scale in cooldown
+
+
+   .. py:attribute:: scaleOutCooldownSec
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps <@aws-cdk/aws-applicationautoscaling.BaseTargetTrackingProps.scaleOutCooldownSec>`
+
+      Period after a scale out activity completes before another scale out activity can start.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: No scale out cooldown
+
+

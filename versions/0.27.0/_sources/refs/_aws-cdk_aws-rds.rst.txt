@@ -1,0 +1,7476 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"rRhgSUSBm315SRBgRjTI84lqctDV32N5no2pW/bslyw="}
+
+@aws-cdk/aws-rds
+================
+
+.. mdinclude:: ./__aws-cdk_aws-rds.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.RDS/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.RDS" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.RDS --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.RDS" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/rds/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:rds:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="rds" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>rds</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:rds:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='rds', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-rds/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-rds@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-rds": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-rds@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-rds/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-rds@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-rds": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-rds@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-rds
+
+BackupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BackupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.BackupProps;
+
+      .. code-tab:: javascript
+
+         // BackupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BackupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Backup configuration for RDS databases
+
+
+
+
+
+   .. py:attribute:: retentionDays
+
+      How many days to retain the backup
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: preferredWindow
+
+      A daily time range in 24-hours UTC format in which backups preferably execute.
+
+      
+
+      Must be at least 30 minutes long.
+
+      
+
+      Example: '01:00-02:00'
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnDBCluster
+^^^^^^^^^^^^
+
+.. py:class:: CfnDBCluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBCluster;
+
+      .. code-tab:: javascript
+
+         const { CfnDBCluster } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBCluster } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBCluster`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBClusterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbClusterEndpointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dbClusterEndpointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dbClusterName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dbClusterReadEndpointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBClusterProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: ScalingConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.RDS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDBCluster.ScalingConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDBCluster.ScalingConfigurationProperty } from '@aws-cdk/aws-rds';
+
+
+
+
+
+      .. py:attribute:: autoPause
+
+         `CfnDBCluster.ScalingConfigurationProperty.AutoPause`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: maxCapacity
+
+         `CfnDBCluster.ScalingConfigurationProperty.MaxCapacity`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: minCapacity
+
+         `CfnDBCluster.ScalingConfigurationProperty.MinCapacity`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: secondsUntilAutoPause
+
+         `CfnDBCluster.ScalingConfigurationProperty.SecondsUntilAutoPause`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBClusterParameterGroup
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBClusterParameterGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnDBClusterParameterGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBClusterParameterGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBClusterParameterGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBClusterParameterGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbClusterParameterGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBClusterParameterGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBClusterParameterGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBClusterParameterGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBClusterParameterGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBClusterParameterGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBClusterParameterGroup`
+
+
+
+
+
+   .. py:attribute:: description
+
+      `AWS::RDS::DBClusterParameterGroup.Description`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: family
+
+      `AWS::RDS::DBClusterParameterGroup.Family`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameters
+
+      `AWS::RDS::DBClusterParameterGroup.Parameters`
+
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBClusterParameterGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+CfnDBClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBClusterProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBClusterProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBCluster`
+
+
+
+
+
+   .. py:attribute:: engine
+
+      `AWS::RDS::DBCluster.Engine`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: availabilityZones
+
+      `AWS::RDS::DBCluster.AvailabilityZones`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: backtrackWindow
+
+      `AWS::RDS::DBCluster.BacktrackWindow`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: backupRetentionPeriod
+
+      `AWS::RDS::DBCluster.BackupRetentionPeriod`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: databaseName
+
+      `AWS::RDS::DBCluster.DatabaseName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbClusterIdentifier
+
+      `AWS::RDS::DBCluster.DBClusterIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbClusterParameterGroupName
+
+      `AWS::RDS::DBCluster.DBClusterParameterGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbSubnetGroupName
+
+      `AWS::RDS::DBCluster.DBSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: deletionProtection
+
+      `AWS::RDS::DBCluster.DeletionProtection`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: enableCloudwatchLogsExports
+
+      `AWS::RDS::DBCluster.EnableCloudwatchLogsExports`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: enableIamDatabaseAuthentication
+
+      `AWS::RDS::DBCluster.EnableIAMDatabaseAuthentication`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engineMode
+
+      `AWS::RDS::DBCluster.EngineMode`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engineVersion
+
+      `AWS::RDS::DBCluster.EngineVersion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: kmsKeyId
+
+      `AWS::RDS::DBCluster.KmsKeyId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: masterUsername
+
+      `AWS::RDS::DBCluster.MasterUsername`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: masterUserPassword
+
+      `AWS::RDS::DBCluster.MasterUserPassword`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: port
+
+      `AWS::RDS::DBCluster.Port`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredBackupWindow
+
+      `AWS::RDS::DBCluster.PreferredBackupWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredMaintenanceWindow
+
+      `AWS::RDS::DBCluster.PreferredMaintenanceWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: replicationSourceIdentifier
+
+      `AWS::RDS::DBCluster.ReplicationSourceIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: scalingConfiguration
+
+      `AWS::RDS::DBCluster.ScalingConfiguration`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-rds.CfnDBCluster.ScalingConfigurationProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: snapshotIdentifier
+
+      `AWS::RDS::DBCluster.SnapshotIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sourceRegion
+
+      `AWS::RDS::DBCluster.SourceRegion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: storageEncrypted
+
+      `AWS::RDS::DBCluster.StorageEncrypted`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBCluster.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: vpcSecurityGroupIds
+
+      `AWS::RDS::DBCluster.VpcSecurityGroupIds`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+CfnDBInstance
+^^^^^^^^^^^^^
+
+.. py:class:: CfnDBInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBInstance;
+
+      .. code-tab:: javascript
+
+         const { CfnDBInstance } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBInstance } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBInstance`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBInstanceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbInstanceEndpointAddress
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dbInstanceEndpointPort
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: dbInstanceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBInstanceProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: ProcessorFeatureProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.RDS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDBInstance.ProcessorFeatureProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDBInstance.ProcessorFeatureProperty } from '@aws-cdk/aws-rds';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnDBInstance.ProcessorFeatureProperty.Name`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: value
+
+         `CfnDBInstance.ProcessorFeatureProperty.Value`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBInstanceProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBInstanceProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBInstance`
+
+
+
+
+
+   .. py:attribute:: dbInstanceClass
+
+      `AWS::RDS::DBInstance.DBInstanceClass`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: allocatedStorage
+
+      `AWS::RDS::DBInstance.AllocatedStorage`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: allowMajorVersionUpgrade
+
+      `AWS::RDS::DBInstance.AllowMajorVersionUpgrade`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: autoMinorVersionUpgrade
+
+      `AWS::RDS::DBInstance.AutoMinorVersionUpgrade`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: availabilityZone
+
+      `AWS::RDS::DBInstance.AvailabilityZone`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: backupRetentionPeriod
+
+      `AWS::RDS::DBInstance.BackupRetentionPeriod`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: characterSetName
+
+      `AWS::RDS::DBInstance.CharacterSetName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: copyTagsToSnapshot
+
+      `AWS::RDS::DBInstance.CopyTagsToSnapshot`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbClusterIdentifier
+
+      `AWS::RDS::DBInstance.DBClusterIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbInstanceIdentifier
+
+      `AWS::RDS::DBInstance.DBInstanceIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbName
+
+      `AWS::RDS::DBInstance.DBName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbParameterGroupName
+
+      `AWS::RDS::DBInstance.DBParameterGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbSecurityGroups
+
+      `AWS::RDS::DBInstance.DBSecurityGroups`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbSnapshotIdentifier
+
+      `AWS::RDS::DBInstance.DBSnapshotIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: dbSubnetGroupName
+
+      `AWS::RDS::DBInstance.DBSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: deleteAutomatedBackups
+
+      `AWS::RDS::DBInstance.DeleteAutomatedBackups`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: deletionProtection
+
+      `AWS::RDS::DBInstance.DeletionProtection`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: domain
+
+      `AWS::RDS::DBInstance.Domain`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: domainIamRoleName
+
+      `AWS::RDS::DBInstance.DomainIAMRoleName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: enableCloudwatchLogsExports
+
+      `AWS::RDS::DBInstance.EnableCloudwatchLogsExports`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: enableIamDatabaseAuthentication
+
+      `AWS::RDS::DBInstance.EnableIAMDatabaseAuthentication`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: enablePerformanceInsights
+
+      `AWS::RDS::DBInstance.EnablePerformanceInsights`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engine
+
+      `AWS::RDS::DBInstance.Engine`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: engineVersion
+
+      `AWS::RDS::DBInstance.EngineVersion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: iops
+
+      `AWS::RDS::DBInstance.Iops`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: kmsKeyId
+
+      `AWS::RDS::DBInstance.KmsKeyId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: licenseModel
+
+      `AWS::RDS::DBInstance.LicenseModel`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: masterUsername
+
+      `AWS::RDS::DBInstance.MasterUsername`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: masterUserPassword
+
+      `AWS::RDS::DBInstance.MasterUserPassword`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: monitoringInterval
+
+      `AWS::RDS::DBInstance.MonitoringInterval`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: monitoringRoleArn
+
+      `AWS::RDS::DBInstance.MonitoringRoleArn`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: multiAz
+
+      `AWS::RDS::DBInstance.MultiAZ`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: optionGroupName
+
+      `AWS::RDS::DBInstance.OptionGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: performanceInsightsKmsKeyId
+
+      `AWS::RDS::DBInstance.PerformanceInsightsKMSKeyId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: performanceInsightsRetentionPeriod
+
+      `AWS::RDS::DBInstance.PerformanceInsightsRetentionPeriod`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: port
+
+      `AWS::RDS::DBInstance.Port`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredBackupWindow
+
+      `AWS::RDS::DBInstance.PreferredBackupWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredMaintenanceWindow
+
+      `AWS::RDS::DBInstance.PreferredMaintenanceWindow`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: processorFeatures
+
+      `AWS::RDS::DBInstance.ProcessorFeatures`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-rds.CfnDBInstance.ProcessorFeatureProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: promotionTier
+
+      `AWS::RDS::DBInstance.PromotionTier`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: publiclyAccessible
+
+      `AWS::RDS::DBInstance.PubliclyAccessible`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sourceDbInstanceIdentifier
+
+      `AWS::RDS::DBInstance.SourceDBInstanceIdentifier`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sourceRegion
+
+      `AWS::RDS::DBInstance.SourceRegion`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: storageEncrypted
+
+      `AWS::RDS::DBInstance.StorageEncrypted`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: storageType
+
+      `AWS::RDS::DBInstance.StorageType`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBInstance.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: timezone
+
+      `AWS::RDS::DBInstance.Timezone`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: useDefaultProcessorFeatures
+
+      `AWS::RDS::DBInstance.UseDefaultProcessorFeatures`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: vpcSecurityGroups
+
+      `AWS::RDS::DBInstance.VPCSecurityGroups`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+CfnDBParameterGroup
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBParameterGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBParameterGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnDBParameterGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBParameterGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBParameterGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBParameterGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbParameterGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBParameterGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBParameterGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBParameterGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBParameterGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBParameterGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBParameterGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBParameterGroup`
+
+
+
+
+
+   .. py:attribute:: description
+
+      `AWS::RDS::DBParameterGroup.Description`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: family
+
+      `AWS::RDS::DBParameterGroup.Family`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameters
+
+      `AWS::RDS::DBParameterGroup.Parameters`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBParameterGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+CfnDBSecurityGroup
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSecurityGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSecurityGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnDBSecurityGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBSecurityGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBSecurityGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBSecurityGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbSecurityGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBSecurityGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: IngressProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.RDS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDBSecurityGroup.IngressProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDBSecurityGroup.IngressProperty } from '@aws-cdk/aws-rds';
+
+
+
+
+
+      .. py:attribute:: cidrip
+
+         `CfnDBSecurityGroup.IngressProperty.CIDRIP`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: ec2SecurityGroupId
+
+         `CfnDBSecurityGroup.IngressProperty.EC2SecurityGroupId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: ec2SecurityGroupName
+
+         `CfnDBSecurityGroup.IngressProperty.EC2SecurityGroupName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: ec2SecurityGroupOwnerId
+
+         `CfnDBSecurityGroup.IngressProperty.EC2SecurityGroupOwnerId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBSecurityGroupIngress
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSecurityGroupIngress(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngress;
+
+      .. code-tab:: javascript
+
+         const { CfnDBSecurityGroupIngress } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBSecurityGroupIngress } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBSecurityGroupIngress`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBSecurityGroupIngressProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbSecurityGroupIngressName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBSecurityGroupIngressProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBSecurityGroupIngressProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSecurityGroupIngressProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngressProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBSecurityGroupIngressProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBSecurityGroupIngressProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBSecurityGroupIngress`
+
+
+
+
+
+   .. py:attribute:: dbSecurityGroupName
+
+      `AWS::RDS::DBSecurityGroupIngress.DBSecurityGroupName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: cidrip
+
+      `AWS::RDS::DBSecurityGroupIngress.CIDRIP`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: ec2SecurityGroupId
+
+      `AWS::RDS::DBSecurityGroupIngress.EC2SecurityGroupId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: ec2SecurityGroupName
+
+      `AWS::RDS::DBSecurityGroupIngress.EC2SecurityGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: ec2SecurityGroupOwnerId
+
+      `AWS::RDS::DBSecurityGroupIngress.EC2SecurityGroupOwnerId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnDBSecurityGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSecurityGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBSecurityGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBSecurityGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBSecurityGroup`
+
+
+
+
+
+   .. py:attribute:: dbSecurityGroupIngress
+
+      `AWS::RDS::DBSecurityGroup.DBSecurityGroupIngress`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-rds.CfnDBSecurityGroup.IngressProperty`\ )[] *(readonly)*
+
+
+   .. py:attribute:: groupDescription
+
+      `AWS::RDS::DBSecurityGroup.GroupDescription`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ec2VpcId
+
+      `AWS::RDS::DBSecurityGroup.EC2VpcId`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBSecurityGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+CfnDBSubnetGroup
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSubnetGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSubnetGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnDBSubnetGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnDBSubnetGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::DBSubnetGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnDBSubnetGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: dbSubnetGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnDBSubnetGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDBSubnetGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDBSubnetGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnDBSubnetGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnDBSubnetGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDBSubnetGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::DBSubnetGroup`
+
+
+
+
+
+   .. py:attribute:: dbSubnetGroupDescription
+
+      `AWS::RDS::DBSubnetGroup.DBSubnetGroupDescription`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: subnetIds
+
+      `AWS::RDS::DBSubnetGroup.SubnetIds`
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dbSubnetGroupName
+
+      `AWS::RDS::DBSubnetGroup.DBSubnetGroupName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::DBSubnetGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+CfnEventSubscription
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnEventSubscription(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnEventSubscription;
+
+      .. code-tab:: javascript
+
+         const { CfnEventSubscription } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnEventSubscription } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::EventSubscription`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnEventSubscriptionProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: eventSubscriptionName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnEventSubscriptionProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnEventSubscriptionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnEventSubscriptionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnEventSubscriptionProps;
+
+      .. code-tab:: javascript
+
+         // CfnEventSubscriptionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnEventSubscriptionProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::EventSubscription`
+
+
+
+
+
+   .. py:attribute:: snsTopicArn
+
+      `AWS::RDS::EventSubscription.SnsTopicArn`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: enabled
+
+      `AWS::RDS::EventSubscription.Enabled`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: eventCategories
+
+      `AWS::RDS::EventSubscription.EventCategories`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sourceIds
+
+      `AWS::RDS::EventSubscription.SourceIds`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sourceType
+
+      `AWS::RDS::EventSubscription.SourceType`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+CfnOptionGroup
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnOptionGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnOptionGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnOptionGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { CfnOptionGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A CloudFormation `AWS::RDS::OptionGroup`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-rds.CfnOptionGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: optionGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-rds.CfnOptionGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: OptionConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.RDS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnOptionGroup.OptionConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnOptionGroup.OptionConfigurationProperty } from '@aws-cdk/aws-rds';
+
+
+
+
+
+      .. py:attribute:: optionName
+
+         `CfnOptionGroup.OptionConfigurationProperty.OptionName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: dbSecurityGroupMemberships
+
+         `CfnOptionGroup.OptionConfigurationProperty.DBSecurityGroupMemberships`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: optionSettings
+
+         `CfnOptionGroup.OptionConfigurationProperty.OptionSettings`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-rds.CfnOptionGroup.OptionSettingProperty`\ )[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: optionVersion
+
+         `CfnOptionGroup.OptionConfigurationProperty.OptionVersion`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: port
+
+         `CfnOptionGroup.OptionConfigurationProperty.Port`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: vpcSecurityGroupMemberships
+
+         `CfnOptionGroup.OptionConfigurationProperty.VpcSecurityGroupMemberships`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:class:: OptionSettingProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.RDS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty;
+
+         .. code-tab:: javascript
+
+            // CfnOptionGroup.OptionSettingProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnOptionGroup.OptionSettingProperty } from '@aws-cdk/aws-rds';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnOptionGroup.OptionSettingProperty.Name`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: value
+
+         `CfnOptionGroup.OptionSettingProperty.Value`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnOptionGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnOptionGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.CfnOptionGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnOptionGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnOptionGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for defining a `AWS::RDS::OptionGroup`
+
+
+
+
+
+   .. py:attribute:: engineName
+
+      `AWS::RDS::OptionGroup.EngineName`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: majorEngineVersion
+
+      `AWS::RDS::OptionGroup.MajorEngineVersion`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: optionConfigurations
+
+      `AWS::RDS::OptionGroup.OptionConfigurations`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-rds.CfnOptionGroup.OptionConfigurationProperty`\ )[] *(readonly)*
+
+
+   .. py:attribute:: optionGroupDescription
+
+      `AWS::RDS::OptionGroup.OptionGroupDescription`
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::RDS::OptionGroup.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+ClusterParameterGroup
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ClusterParameterGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.ClusterParameterGroup;
+
+      .. code-tab:: javascript
+
+         const { ClusterParameterGroup } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { ClusterParameterGroup } from '@aws-cdk/aws-rds';
+
+
+
+   Defina a cluster parameter group
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-rds.IClusterParameterGroup`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-rds.ClusterParameterGroupProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-rds.IClusterParameterGroup
+
+      Import a parameter group
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-rds.ClusterParameterGroupImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-rds.IClusterParameterGroup`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-rds.ClusterParameterGroupImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IClusterParameterGroup.export`
+
+      Export this parameter group
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-rds.ClusterParameterGroupImportProps`\ 
+
+
+   .. py:method:: removeParameter(key)
+
+      Remove a previously-set parameter from this parameter group
+
+
+
+      :param key: 
+      :type key: string
+
+
+   .. py:method:: setParameter(key, [value])
+
+      Set a single parameter in this parameter group
+
+
+
+      :param key: 
+      :type key: string
+      :param value: 
+      :type value: string *(optional)*
+
+
+   .. py:method:: validate() -> string[]
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Construct.validate`
+
+      Validate this construct
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: parameterGroupName
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IClusterParameterGroup.parameterGroupName`
+
+      Name of this parameter group
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ClusterParameterGroupImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ClusterParameterGroupImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.ClusterParameterGroupImportProps;
+
+      .. code-tab:: javascript
+
+         // ClusterParameterGroupImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ClusterParameterGroupImportProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties to reference a cluster parameter group
+
+
+
+
+
+   .. py:attribute:: parameterGroupName
+
+      :type: string *(readonly)*
+
+
+ClusterParameterGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ClusterParameterGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.ClusterParameterGroupProps;
+
+      .. code-tab:: javascript
+
+         // ClusterParameterGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ClusterParameterGroupProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for a cluster parameter group
+
+
+
+
+
+   .. py:attribute:: description
+
+      Description for this parameter group
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: family
+
+      Database family of this parameter group
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameters
+
+      The parameters in this parameter group
+
+
+
+      :type: string => any *(optional)* *(readonly)*
+
+
+DatabaseCluster
+^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseCluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseCluster;
+
+      .. code-tab:: javascript
+
+         const { DatabaseCluster } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { DatabaseCluster } from '@aws-cdk/aws-rds';
+
+
+
+   Create a clustered database with a given number of instances.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterBase`\ 
+   :implements: :py:class:`~@aws-cdk/aws-rds.IDatabaseCluster`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterProps`\ 
+
+   .. py:method:: addRotationSingleUser(id, [options]) -> @aws-cdk/aws-rds.RotationSingleUser
+
+      Adds the single user rotation of the master password to this cluster.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-rds.RotationSingleUserOptions`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-rds.RotationSingleUser`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-rds.DatabaseClusterImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.DatabaseClusterBase.export`
+
+      Export a Database Cluster for importing in another stack
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterImportProps`\ 
+
+
+   .. py:attribute:: clusterEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.clusterEndpoint`
+
+      The endpoint to use for read/write operations
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)*
+
+
+   .. py:attribute:: clusterIdentifier
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.clusterIdentifier`
+
+      Identifier of the cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-ec2.IConnectable.connections`
+
+      Access to the network connections
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+   .. py:attribute:: engine
+
+      The database engine of this cluster
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterEngine`\  *(readonly)*
+
+
+   .. py:attribute:: instanceEndpoints
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.instanceEndpoints`
+
+      Endpoints which address each individual replica.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\ [] *(readonly)*
+
+
+   .. py:attribute:: instanceIdentifiers
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.instanceIdentifiers`
+
+      Identifiers of the replicas
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: readerEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.readerEndpoint`
+
+      Endpoint to use for load-balanced read-only operations.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)*
+
+
+   .. py:attribute:: securityGroupId
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.securityGroupId`
+
+      Security group identifier of this database
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: secret
+
+      The secret attached to this cluster
+
+
+
+      :type: :py:class:`@aws-cdk/aws-secretsmanager.ISecret`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: asSecretAttachmentTarget() -> @aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-rds.DatabaseClusterBase <@aws-cdk/aws-rds.DatabaseClusterBase.asSecretAttachmentTarget>`
+
+      Renders the secret attachment target specifications.
+
+
+
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DatabaseClusterBase
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseClusterBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseClusterBase;
+
+      .. code-tab:: javascript
+
+         const { DatabaseClusterBase } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { DatabaseClusterBase } from '@aws-cdk/aws-rds';
+
+
+
+   A new or imported clustered database.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-rds.IDatabaseCluster`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-rds.IDatabaseCluster
+
+      Import an existing DatabaseCluster from properties
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-rds.IDatabaseCluster`\ 
+
+
+   .. py:method:: asSecretAttachmentTarget() -> @aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-secretsmanager.ISecretAttachmentTarget.asSecretAttachmentTarget`
+
+      Renders the secret attachment target specifications.
+
+
+
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-rds.DatabaseClusterImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.export`
+
+      Export a Database Cluster for importing in another stack
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: clusterEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.clusterEndpoint`
+
+      The endpoint to use for read/write operations
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: clusterIdentifier
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.clusterIdentifier`
+
+      Identifier of the cluster
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-ec2.IConnectable.connections`
+
+      Access to the network connections
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: instanceEndpoints
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.instanceEndpoints`
+
+      Endpoints which address each individual replica.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\ [] *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: instanceIdentifiers
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.instanceIdentifiers`
+
+      Identifiers of the replicas
+
+
+
+      :type: string[] *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: readerEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.readerEndpoint`
+
+      Endpoint to use for load-balanced read-only operations.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: securityGroupId
+
+      *Implements* :py:meth:`@aws-cdk/aws-rds.IDatabaseCluster.securityGroupId`
+
+      Security group identifier of this database
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DatabaseClusterEngine (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseClusterEngine
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseClusterEngine;
+
+      .. code-tab:: javascript
+
+         const { DatabaseClusterEngine } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { DatabaseClusterEngine } from '@aws-cdk/aws-rds';
+
+
+
+   The engine for the database cluster
+
+
+
+   .. py:data:: Aurora
+
+   .. py:data:: AuroraMysql
+
+   .. py:data:: AuroraPostgresql
+
+   .. py:data:: Neptune
+
+
+DatabaseClusterImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseClusterImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseClusterImportProps;
+
+      .. code-tab:: javascript
+
+         // DatabaseClusterImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DatabaseClusterImportProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties that describe an existing cluster instance
+
+
+
+
+
+   .. py:attribute:: clusterEndpointAddress
+
+      Cluster endpoint address
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterIdentifier
+
+      Identifier for the cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: instanceEndpointAddresses
+
+      Endpoint addresses of individual instances
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: instanceIdentifiers
+
+      Identifier for the instances
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: port
+
+      The database port
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: readerEndpointAddress
+
+      Reader endpoint address
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: securityGroupId
+
+      The security group for this database cluster
+
+
+
+      :type: string *(readonly)*
+
+
+DatabaseClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseClusterProps;
+
+      .. code-tab:: javascript
+
+         // DatabaseClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DatabaseClusterProps } from '@aws-cdk/aws-rds';
+
+
+
+   Properties for a new database cluster
+
+
+
+
+
+   .. py:attribute:: engine
+
+      What kind of database to start
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterEngine`\  *(readonly)*
+
+
+   .. py:attribute:: instanceProps
+
+      Settings for the individual instances that are launched
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.InstanceProps`\  *(readonly)*
+
+
+   .. py:attribute:: masterUser
+
+      Username and password for the administrative user
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Login`\  *(readonly)*
+
+
+   .. py:attribute:: backup
+
+      Backup settings
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.BackupProps`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: clusterIdentifier
+
+      An optional identifier for the cluster
+
+      
+
+      If not supplied, a name is automatically generated.
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: defaultDatabaseName
+
+      Name of a database which is automatically created inside the cluster
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: deleteReplacePolicy
+
+      The CloudFormation policy to apply when the cluster and its instances
+
+      are removed from the stack or replaced during an update.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.DeletionPolicy`\  *(optional)* *(readonly)*
+      :default: Retain
+
+
+   .. py:attribute:: instanceIdentifierBase
+
+      Base identifier for instances
+
+      
+
+      Every replica is named by appending the replica number to this string, 1-based.
+
+      
+
+      If not given, the clusterIdentifier is used with the word "Instance" appended.
+
+      
+
+      If clusterIdentifier is also not given, the identifier is automatically generated.
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: instances
+
+      How many replicas/instances to create
+
+      
+
+      Has to be at least 1.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 2
+
+
+   .. py:attribute:: kmsKey
+
+      The KMS key for storage encryption. If specified `storageEncrypted`
+
+      will be set to `true`.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)* *(readonly)*
+      :default: default master key
+
+
+   .. py:attribute:: parameterGroup
+
+      Additional parameters to pass to the database engine
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.IClusterParameterGroup`\  *(optional)* *(readonly)*
+      :default: No parameter group
+
+
+   .. py:attribute:: port
+
+      What port to listen on
+
+      
+
+      If not supplied, the default for the engine is used.
+
+
+
+      :type: number *(optional)* *(readonly)*
+
+
+   .. py:attribute:: preferredMaintenanceWindow
+
+      A daily time range in 24-hours UTC format in which backups preferably execute.
+
+      
+
+      Must be at least 30 minutes long.
+
+      
+
+      Example: '01:00-02:00'
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: storageEncrypted
+
+      Whether to enable storage encryption
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: false
+
+
+DatabaseEngine (enum)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseEngine
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseEngine;
+
+      .. code-tab:: javascript
+
+         const { DatabaseEngine } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { DatabaseEngine } from '@aws-cdk/aws-rds';
+
+
+
+   The RDS database engine
+
+
+
+   .. py:data:: MariaDb
+
+   MariaDB
+
+
+
+   .. py:data:: Mysql
+
+   MySQL
+
+
+
+   .. py:data:: Oracle
+
+   Oracle
+
+
+
+   .. py:data:: Postgres
+
+   PostgreSQL
+
+
+
+   .. py:data:: SqlServer
+
+   SQL Server
+
+
+
+
+DatabaseSecret
+^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseSecret(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseSecret;
+
+      .. code-tab:: javascript
+
+         const { DatabaseSecret } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { DatabaseSecret } from '@aws-cdk/aws-rds';
+
+
+
+   A database secret.
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-secretsmanager.Secret`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-rds.DatabaseSecretProps`\ 
+
+   .. py:method:: addTargetAttachment(id, options) -> @aws-cdk/aws-secretsmanager.AttachedSecret
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.Secret <@aws-cdk/aws-secretsmanager.Secret.addTargetAttachment>`
+
+      Adds a target attachment to the secret.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-secretsmanager.AttachedSecretOptions`\ 
+      :return: an AttachedSecret
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.AttachedSecret`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-secretsmanager.SecretImportProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.Secret <@aws-cdk/aws-secretsmanager.Secret.export>`
+
+      Exports this secret.
+
+
+
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.SecretImportProps`\ 
+
+
+   .. py:attribute:: secretArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-secretsmanager.Secret <@aws-cdk/aws-secretsmanager.Secret.secretArn>`
+
+      The ARN of the secret in AWS Secrets Manager.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: encryptionKey
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-secretsmanager.Secret <@aws-cdk/aws-secretsmanager.Secret.encryptionKey>`
+
+      The customer-managed encryption key that is used to encrypt this secret, if any. When not specified, the default
+
+      KMS key for the account and region is being used.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: addRotationSchedule(id, options) -> @aws-cdk/aws-secretsmanager.RotationSchedule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.SecretBase <@aws-cdk/aws-secretsmanager.SecretBase.addRotationSchedule>`
+
+      Adds a rotation schedule to the secret.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-secretsmanager.RotationScheduleOptions`\ 
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.RotationSchedule`\ 
+
+
+   .. py:method:: grantRead(grantee, [versionStages])
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.SecretBase <@aws-cdk/aws-secretsmanager.SecretBase.grantRead>`
+
+      Grants reading the secret value to some role.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :param versionStages: 
+      :type versionStages: string[] *(optional)*
+
+
+   .. py:method:: jsonFieldValue(key) -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.SecretBase <@aws-cdk/aws-secretsmanager.SecretBase.jsonFieldValue>`
+
+      Interpret the secret as a JSON object and return a field's value from it
+
+
+
+      :param key: 
+      :type key: string
+      :rtype: string
+
+
+   .. py:attribute:: secretString
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-secretsmanager.SecretBase <@aws-cdk/aws-secretsmanager.SecretBase.secretString>`
+
+      Returns a SecretString corresponding to this secret.
+
+      
+
+      SecretString represents the value of the Secret.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-secretsmanager.SecretString`\  *(readonly)*
+
+
+   .. py:attribute:: stringValue
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-secretsmanager.SecretBase <@aws-cdk/aws-secretsmanager.SecretBase.stringValue>`
+
+      Retrieve the value of the Secret, as a string.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DatabaseSecretProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseSecretProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.DatabaseSecretProps;
+
+      .. code-tab:: javascript
+
+         // DatabaseSecretProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DatabaseSecretProps } from '@aws-cdk/aws-rds';
+
+
+
+   Construction properties for a DatabaseSecret.
+
+
+
+
+
+   .. py:attribute:: username
+
+      The username.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: encryptionKey
+
+      The KMS key to use to encrypt the secret.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)* *(readonly)*
+      :default: default master key
+
+
+Endpoint
+^^^^^^^^
+
+.. py:class:: Endpoint(address, port)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.Endpoint;
+
+      .. code-tab:: javascript
+
+         const { Endpoint } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { Endpoint } from '@aws-cdk/aws-rds';
+
+
+
+   Connection endpoint of a database cluster or instance
+
+   
+
+   Consists of a combination of hostname and port.
+
+
+
+   :param address: 
+   :type address: string
+   :param port: 
+   :type port: string
+
+   .. py:attribute:: hostname
+
+      The hostname of the endpoint
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: port
+
+      The port of the endpoint
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: socketAddress
+
+      The combination of "HOSTNAME:PORT" for this endpoint
+
+
+
+      :type: string *(readonly)*
+
+
+IClusterParameterGroup (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IClusterParameterGroup
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.IClusterParameterGroup;
+
+      .. code-tab:: javascript
+
+         // IClusterParameterGroup is an interface
+
+      .. code-tab:: typescript
+
+         import { IClusterParameterGroup } from '@aws-cdk/aws-rds';
+
+
+
+   A cluster parameter group
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: parameterGroupName
+
+      Name of this parameter group
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-rds.ClusterParameterGroupImportProps
+
+      Export this parameter group
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-rds.ClusterParameterGroupImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IDatabaseCluster (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IDatabaseCluster
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.IDatabaseCluster;
+
+      .. code-tab:: javascript
+
+         // IDatabaseCluster is an interface
+
+      .. code-tab:: typescript
+
+         import { IDatabaseCluster } from '@aws-cdk/aws-rds';
+
+
+
+   Create a clustered database with a given number of instances.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+   :extends: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ 
+   :extends: :py:class:`@aws-cdk/aws-secretsmanager.ISecretAttachmentTarget`\ 
+
+
+   .. py:attribute:: clusterEndpoint
+
+      The endpoint to use for read/write operations
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)*
+
+
+   .. py:attribute:: clusterIdentifier
+
+      Identifier of the cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: instanceEndpoints
+
+      Endpoints which address each individual replica.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\ [] *(readonly)*
+
+
+   .. py:attribute:: instanceIdentifiers
+
+      Identifiers of the replicas
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: readerEndpoint
+
+      Endpoint to use for load-balanced read-only operations.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.Endpoint`\  *(readonly)*
+
+
+   .. py:attribute:: securityGroupId
+
+      The security group for this database cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-rds.DatabaseClusterImportProps
+
+      Export a Database Cluster for importing in another stack
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-rds.DatabaseClusterImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: connections
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ec2.IConnectable <@aws-cdk/aws-ec2.IConnectable.connections>`
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+   .. py:method:: asSecretAttachmentTarget() -> @aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-secretsmanager.ISecretAttachmentTarget <@aws-cdk/aws-secretsmanager.ISecretAttachmentTarget.asSecretAttachmentTarget>`
+
+      Renders the target specifications.
+
+
+
+      :rtype: :py:class:`@aws-cdk/aws-secretsmanager.SecretAttachmentTargetProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+InstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: InstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.InstanceProps;
+
+      .. code-tab:: javascript
+
+         // InstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { InstanceProps } from '@aws-cdk/aws-rds';
+
+
+
+   Instance properties for database instances
+
+
+
+
+
+   .. py:attribute:: instanceType
+
+      What type of instance to start for the replicas
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.InstanceType`\  *(readonly)*
+
+
+   .. py:attribute:: vpc
+
+      What subnets to run the RDS instances in.
+
+      
+
+      Must be at least 2 subnets in two different AZs.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)*
+
+
+   .. py:attribute:: securityGroup
+
+      Security group. If not specified a new one will be created.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.ISecurityGroup`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: vpcSubnets
+
+      Where to place the instances within the VPC
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.SubnetSelection`\  *(optional)* *(readonly)*
+
+
+Login (interface)
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: Login
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.Login;
+
+      .. code-tab:: javascript
+
+         // Login is an interface
+
+      .. code-tab:: typescript
+
+         import { Login } from '@aws-cdk/aws-rds';
+
+
+
+   Username and password combination
+
+
+
+
+
+   .. py:attribute:: username
+
+      Username
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: kmsKey
+
+      KMS encryption key to encrypt the generated secret.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)* *(readonly)*
+      :default: default master key
+
+
+   .. py:attribute:: password
+
+      Password
+
+      
+
+      Do not put passwords in your CDK code directly.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: a Secrets Manager generated password
+
+
+RotationSingleUser
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RotationSingleUser(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.RotationSingleUser;
+
+      .. code-tab:: javascript
+
+         const { RotationSingleUser } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { RotationSingleUser } from '@aws-cdk/aws-rds';
+
+
+
+   Single user secret rotation for a database instance or cluster.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-rds.RotationSingleUserProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+RotationSingleUserOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RotationSingleUserOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.RotationSingleUserOptions;
+
+      .. code-tab:: javascript
+
+         // RotationSingleUserOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { RotationSingleUserOptions } from '@aws-cdk/aws-rds';
+
+
+
+   Options to add single user rotation to a database instance or cluster.
+
+
+
+
+
+   .. py:attribute:: automaticallyAfterDays
+
+      Specifies the number of days after the previous rotation before
+
+      Secrets Manager triggers the next automatic rotation.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 30 days
+
+
+   .. py:attribute:: serverlessApplicationLocation
+
+      The location of the serverless application for the rotation.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(optional)* *(readonly)*
+      :default: derived from the target's engine
+
+
+RotationSingleUserProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RotationSingleUserProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.RotationSingleUserProps;
+
+      .. code-tab:: javascript
+
+         // RotationSingleUserProps is an interface
+
+      .. code-tab:: typescript
+
+         import { RotationSingleUserProps } from '@aws-cdk/aws-rds';
+
+
+
+   Construction properties for a RotationSingleUser.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-rds.RotationSingleUserOptions`\ 
+
+
+   .. py:attribute:: secret
+
+      The secret to rotate. It must be a JSON string with the following format:
+
+      {
+
+         'engine': <required: database engine>,
+
+         'host': <required: instance host name>,
+
+         'username': <required: username>,
+
+         'password': <required: password>,
+
+         'dbname': <optional: database name>,
+
+         'port': <optional: if not specified, default port will be used>
+
+      }
+
+      
+
+      This is typically the case for a secret referenced from an AWS::SecretsManager::SecretTargetAttachment
+
+      https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html
+
+
+
+      :type: :py:class:`@aws-cdk/aws-secretsmanager.ISecret`\  *(readonly)*
+
+
+   .. py:attribute:: target
+
+      The target database cluster or instance
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IConnectable`\  *(readonly)*
+
+
+   .. py:attribute:: vpc
+
+      The VPC where the Lambda rotation function will run.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)*
+
+
+   .. py:attribute:: engine
+
+      The database engine. Either `serverlessApplicationLocation` or `engine` must be specified.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.DatabaseEngine`\  *(optional)* *(readonly)*
+      :default: no engine specified
+
+
+   .. py:attribute:: vpcSubnets
+
+      The type of subnets in the VPC where the Lambda rotation function will run.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.SubnetSelection`\  *(optional)* *(readonly)*
+      :default: private subnets
+
+
+   .. py:attribute:: automaticallyAfterDays
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-rds.RotationSingleUserOptions <@aws-cdk/aws-rds.RotationSingleUserOptions.automaticallyAfterDays>`
+
+      Specifies the number of days after the previous rotation before
+
+      Secrets Manager triggers the next automatic rotation.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 30 days
+
+
+   .. py:attribute:: serverlessApplicationLocation
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-rds.RotationSingleUserOptions <@aws-cdk/aws-rds.RotationSingleUserOptions.serverlessApplicationLocation>`
+
+      The location of the serverless application for the rotation.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(optional)* *(readonly)*
+      :default: derived from the target's engine
+
+
+ServerlessApplicationLocation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerlessApplicationLocation(applicationId, semanticVersion)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.RDS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.rds.ServerlessApplicationLocation;
+
+      .. code-tab:: javascript
+
+         const { ServerlessApplicationLocation } = require('@aws-cdk/aws-rds');
+
+      .. code-tab:: typescript
+
+         import { ServerlessApplicationLocation } from '@aws-cdk/aws-rds';
+
+
+
+   A serverless application location.
+
+
+
+   :param applicationId: 
+   :type applicationId: string
+   :param semanticVersion: 
+   :type semanticVersion: string
+
+   .. py:attribute:: MariaDbRotationSingleUser
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: MysqlRotationSingleUser
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: OracleRotationSingleUser
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: PostgresRotationSingleUser
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: SqlServerRotationSingleUser
+
+      :type: :py:class:`~@aws-cdk/aws-rds.ServerlessApplicationLocation`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: semanticVersion
+
+      :type: string *(readonly)*
+
+

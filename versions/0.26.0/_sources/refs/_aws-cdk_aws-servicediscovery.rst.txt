@@ -1,0 +1,6044 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"HLd1XqgqcoliSr5xMAW3oxz1jPwhTf2QNPvirP1yS1E="}
+
+@aws-cdk/aws-servicediscovery
+=============================
+
+.. mdinclude:: ./__aws-cdk_aws-servicediscovery.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.ServiceDiscovery/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.ServiceDiscovery" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.ServiceDiscovery --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.ServiceDiscovery" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/servicediscovery/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:servicediscovery:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="servicediscovery" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>servicediscovery</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:servicediscovery:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='servicediscovery', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-servicediscovery/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-servicediscovery@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-servicediscovery": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-servicediscovery@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-servicediscovery/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-servicediscovery@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-servicediscovery": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-servicediscovery@0.26.0
+
+
+
+.. py:module:: @aws-cdk/aws-servicediscovery
+
+AliasTargetInstance
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AliasTargetInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.AliasTargetInstance;
+
+      .. code-tab:: javascript
+
+         const { AliasTargetInstance } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { AliasTargetInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.InstanceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.AliasTargetInstanceProps`\ 
+
+   .. py:attribute:: dnsName
+
+      The Route53 DNS name of the alias target
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: instanceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.instanceId`
+
+      The Id of the instance
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: service
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.service`
+
+      The Cloudmap service to which the instance is registered.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)*
+
+
+   .. py:method:: uniqueInstanceId() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase <@aws-cdk/aws-servicediscovery.InstanceBase.uniqueInstanceId>`
+
+      Generate a unique instance Id that is safe to pass to CloudMap
+
+
+
+      *Protected method*
+
+      :rtype: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+AliasTargetInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AliasTargetInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps;
+
+      .. code-tab:: javascript
+
+         // AliasTargetInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { AliasTargetInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseInstanceProps`\ 
+
+
+   .. py:attribute:: dnsName
+
+      DNS name of the target
+
+
+
+      :type: string
+
+
+   .. py:attribute:: service
+
+      The Cloudmap service this resource is registered to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\ 
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+BaseInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BaseInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.BaseInstanceProps;
+
+      .. code-tab:: javascript
+
+         // BaseInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BaseInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Used when the resource that's associated with the service instance is accessible using values other than an IP
+
+   address or a domain name (CNAME), i.e. for non-ip-instances
+
+
+
+
+
+   .. py:attribute:: customAttributes
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+BaseNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BaseNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // BaseNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BaseNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+   .. py:attribute:: name
+
+      A name for the Namespace.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      A description of the Namespace.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+BaseServiceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BaseServiceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.BaseServiceProps;
+
+      .. code-tab:: javascript
+
+         // BaseServiceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BaseServiceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Basic props needed to create a service in a given namespace. Used by HttpNamespace.createService
+
+
+
+
+
+   .. py:attribute:: customHealthCheck
+
+      Structure containing failure threshold for a custom health checker.
+
+      Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+
+      See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckCustomConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: description
+
+      A description of the service.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: healthCheck
+
+      Settings for an optional health check.  If you specify health check settings, AWS Cloud Map associates the health
+
+      check with the records that you specify in DnsConfig. Only one of healthCheckConfig or healthCheckCustomConfig can
+
+      be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register IP instances to
+
+      this service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      A name for the Service.
+
+
+
+      :type: string *(optional)*
+      :default: CloudFormation-generated name
+
+
+CfnHttpNamespace
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnHttpNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace;
+
+      .. code-tab:: javascript
+
+         const { CfnHttpNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CfnHttpNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   A CloudFormation `AWS::ServiceDiscovery::HttpNamespace`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CfnHttpNamespaceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: httpNamespaceArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: httpNamespaceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.CfnHttpNamespaceProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnHttpNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnHttpNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnHttpNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // CfnHttpNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnHttpNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Properties for defining a `AWS::ServiceDiscovery::HttpNamespace`
+
+
+
+
+
+   .. py:attribute:: name
+
+      `AWS::ServiceDiscovery::HttpNamespace.Name`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      `AWS::ServiceDiscovery::HttpNamespace.Description`
+
+
+
+      :type: string *(optional)*
+
+
+CfnInstance
+^^^^^^^^^^^
+
+.. py:class:: CfnInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnInstance;
+
+      .. code-tab:: javascript
+
+         const { CfnInstance } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CfnInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   A CloudFormation `AWS::ServiceDiscovery::Instance`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CfnInstanceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: instanceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.CfnInstanceProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnInstanceProps;
+
+      .. code-tab:: javascript
+
+         // CfnInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Properties for defining a `AWS::ServiceDiscovery::Instance`
+
+
+
+
+
+   .. py:attribute:: instanceAttributes
+
+      `AWS::ServiceDiscovery::Instance.InstanceAttributes`
+
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: serviceId
+
+      `AWS::ServiceDiscovery::Instance.ServiceId`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: instanceId
+
+      `AWS::ServiceDiscovery::Instance.InstanceId`
+
+
+
+      :type: string *(optional)*
+
+
+CfnPrivateDnsNamespace
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPrivateDnsNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace;
+
+      .. code-tab:: javascript
+
+         const { CfnPrivateDnsNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CfnPrivateDnsNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   A CloudFormation `AWS::ServiceDiscovery::PrivateDnsNamespace`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CfnPrivateDnsNamespaceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: privateDnsNamespaceArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: privateDnsNamespaceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.CfnPrivateDnsNamespaceProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnPrivateDnsNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPrivateDnsNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // CfnPrivateDnsNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnPrivateDnsNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Properties for defining a `AWS::ServiceDiscovery::PrivateDnsNamespace`
+
+
+
+
+
+   .. py:attribute:: name
+
+      `AWS::ServiceDiscovery::PrivateDnsNamespace.Name`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: vpc
+
+      `AWS::ServiceDiscovery::PrivateDnsNamespace.Vpc`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      `AWS::ServiceDiscovery::PrivateDnsNamespace.Description`
+
+
+
+      :type: string *(optional)*
+
+
+CfnPublicDnsNamespace
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPublicDnsNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace;
+
+      .. code-tab:: javascript
+
+         const { CfnPublicDnsNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CfnPublicDnsNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   A CloudFormation `AWS::ServiceDiscovery::PublicDnsNamespace`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CfnPublicDnsNamespaceProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.CfnPublicDnsNamespaceProps`\  *(readonly)*
+
+
+   .. py:attribute:: publicDnsNamespaceArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: publicDnsNamespaceId
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnPublicDnsNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPublicDnsNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // CfnPublicDnsNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnPublicDnsNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Properties for defining a `AWS::ServiceDiscovery::PublicDnsNamespace`
+
+
+
+
+
+   .. py:attribute:: name
+
+      `AWS::ServiceDiscovery::PublicDnsNamespace.Name`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      `AWS::ServiceDiscovery::PublicDnsNamespace.Description`
+
+
+
+      :type: string *(optional)*
+
+
+CfnService
+^^^^^^^^^^
+
+.. py:class:: CfnService(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnService;
+
+      .. code-tab:: javascript
+
+         const { CfnService } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CfnService } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   A CloudFormation `AWS::ServiceDiscovery::Service`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CfnServiceProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.CfnServiceProps`\  *(readonly)*
+
+
+   .. py:attribute:: serviceArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceName
+
+      :type: string *(readonly)*
+
+   .. py:class:: DnsConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ServiceDiscovery;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnService.DnsConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnService.DnsConfigProperty } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+      .. py:attribute:: dnsRecords
+
+         `CfnService.DnsConfigProperty.DnsRecords`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-servicediscovery.CfnService.DnsRecordProperty`\ )[]
+
+
+      .. py:attribute:: namespaceId
+
+         `CfnService.DnsConfigProperty.NamespaceId`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: routingPolicy
+
+         `CfnService.DnsConfigProperty.RoutingPolicy`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DnsRecordProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ServiceDiscovery;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty;
+
+         .. code-tab:: javascript
+
+            // CfnService.DnsRecordProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnService.DnsRecordProperty } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+      .. py:attribute:: ttl
+
+         `CfnService.DnsRecordProperty.TTL`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: type
+
+         `CfnService.DnsRecordProperty.Type`
+
+
+
+         :type: string
+
+
+   .. py:class:: HealthCheckConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ServiceDiscovery;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnService.HealthCheckConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnService.HealthCheckConfigProperty } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+      .. py:attribute:: type
+
+         `CfnService.HealthCheckConfigProperty.Type`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: failureThreshold
+
+         `CfnService.HealthCheckConfigProperty.FailureThreshold`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: resourcePath
+
+         `CfnService.HealthCheckConfigProperty.ResourcePath`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: HealthCheckCustomConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ServiceDiscovery;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnService.HealthCheckCustomConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnService.HealthCheckCustomConfigProperty } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+      .. py:attribute:: failureThreshold
+
+         `CfnService.HealthCheckCustomConfigProperty.FailureThreshold`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnServiceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnServiceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CfnServiceProps;
+
+      .. code-tab:: javascript
+
+         // CfnServiceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnServiceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Properties for defining a `AWS::ServiceDiscovery::Service`
+
+
+
+
+
+   .. py:attribute:: description
+
+      `AWS::ServiceDiscovery::Service.Description`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: dnsConfig
+
+      `AWS::ServiceDiscovery::Service.DnsConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-servicediscovery.CfnService.DnsConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: healthCheckConfig
+
+      `AWS::ServiceDiscovery::Service.HealthCheckConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-servicediscovery.CfnService.HealthCheckConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: healthCheckCustomConfig
+
+      `AWS::ServiceDiscovery::Service.HealthCheckCustomConfig`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-servicediscovery.CfnService.HealthCheckCustomConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: name
+
+      `AWS::ServiceDiscovery::Service.Name`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: namespaceId
+
+      `AWS::ServiceDiscovery::Service.NamespaceId`
+
+
+
+      :type: string *(optional)*
+
+
+CnameInstance
+^^^^^^^^^^^^^
+
+.. py:class:: CnameInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CnameInstance;
+
+      .. code-tab:: javascript
+
+         const { CnameInstance } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { CnameInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.InstanceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CnameInstanceProps`\ 
+
+   .. py:attribute:: instanceCname
+
+      The domain name returned by DNS queries for the instance
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: instanceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.instanceId`
+
+      The Id of the instance
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: service
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.service`
+
+      The Cloudmap service to which the instance is registered.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)*
+
+
+   .. py:method:: uniqueInstanceId() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase <@aws-cdk/aws-servicediscovery.InstanceBase.uniqueInstanceId>`
+
+      Generate a unique instance Id that is safe to pass to CloudMap
+
+
+
+      *Protected method*
+
+      :rtype: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CnameInstanceBaseProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CnameInstanceBaseProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps;
+
+      .. code-tab:: javascript
+
+         // CnameInstanceBaseProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CnameInstanceBaseProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseInstanceProps`\ 
+
+
+   .. py:attribute:: instanceCname
+
+      If the service configuration includes a CNAME record, the domain name that you want Route 53 to
+
+      return in response to DNS queries, for example, example.com. This value is required if the
+
+      service specified by ServiceId includes settings for an CNAME record.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+CnameInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CnameInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.CnameInstanceProps;
+
+      .. code-tab:: javascript
+
+         // CnameInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CnameInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.CnameInstanceBaseProps`\ 
+
+
+   .. py:attribute:: service
+
+      The Cloudmap service this resource is registered to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\ 
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+   .. py:attribute:: instanceCname
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.CnameInstanceBaseProps <@aws-cdk/aws-servicediscovery.CnameInstanceBaseProps.instanceCname>`
+
+      If the service configuration includes a CNAME record, the domain name that you want Route 53 to
+
+      return in response to DNS queries, for example, example.com. This value is required if the
+
+      service specified by ServiceId includes settings for an CNAME record.
+
+
+
+      :type: string
+
+
+DnsRecordType (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DnsRecordType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.DnsRecordType;
+
+      .. code-tab:: javascript
+
+         const { DnsRecordType } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { DnsRecordType } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   .. py:data:: A
+
+   An A record
+
+
+
+   .. py:data:: AAAA
+
+   An AAAA record
+
+
+
+   .. py:data:: A_AAAA
+
+   Both an A and AAAA record
+
+
+
+   .. py:data:: SRV
+
+   A Srv record
+
+
+
+   .. py:data:: CNAME
+
+   A CNAME record
+
+
+
+
+DnsServiceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DnsServiceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.DnsServiceProps;
+
+      .. code-tab:: javascript
+
+         // DnsServiceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DnsServiceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Service props needed to create a service in a given namespace. Used by createService() for PrivateDnsNamespace and
+
+   PublicDnsNamespace
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseServiceProps`\ 
+
+
+   .. py:attribute:: dnsRecordType
+
+      The DNS type of the record that you want AWS Cloud Map to create. Supported record types
+
+      include A, AAAA, A and AAAA (A_AAAA), CNAME, and SRV.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.DnsRecordType`\  *(optional)*
+      :default: A
+
+
+   .. py:attribute:: dnsTtlSec
+
+      The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
+
+      record.
+
+
+
+      :type: number *(optional)*
+      :default: 60
+
+
+   .. py:attribute:: loadBalancer
+
+      Whether or not this service will have an Elastic LoadBalancer registered to it as an AliasTargetInstance.
+
+      
+
+      Setting this to `true` correctly configures the `routingPolicy`
+
+      and performs some additional validation.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: routingPolicy
+
+      The routing policy that you want to apply to all DNS records that AWS Cloud Map creates when you
+
+      register an instance and specify this service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.RoutingPolicy`\  *(optional)*
+      :default: WEIGHTED for CNAME records and when loadBalancer is true, MULTIVALUE otherwise
+
+
+   .. py:attribute:: customHealthCheck
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.customHealthCheck>`
+
+      Structure containing failure threshold for a custom health checker.
+
+      Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+
+      See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckCustomConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.description>`
+
+      A description of the service.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: healthCheck
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.healthCheck>`
+
+      Settings for an optional health check.  If you specify health check settings, AWS Cloud Map associates the health
+
+      check with the records that you specify in DnsConfig. Only one of healthCheckConfig or healthCheckCustomConfig can
+
+      be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register IP instances to
+
+      this service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.name>`
+
+      A name for the Service.
+
+
+
+      :type: string *(optional)*
+      :default: CloudFormation-generated name
+
+
+HealthCheckConfig (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HealthCheckConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.HealthCheckConfig;
+
+      .. code-tab:: javascript
+
+         // HealthCheckConfig is an interface
+
+      .. code-tab:: typescript
+
+         import { HealthCheckConfig } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Settings for an optional Amazon Route 53 health check. If you specify settings for a health check, AWS Cloud Map
+
+   associates the health check with all the records that you specify in DnsConfig. Only valid with a PublicDnsNamespace.
+
+
+
+
+
+   .. py:attribute:: failureThreshold
+
+      The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current
+
+      status of the endpoint from unhealthy to healthy or vice versa.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+   .. py:attribute:: resourcePath
+
+      The path that you want Route 53 to request when performing health checks. Do not use when health check type is TCP.
+
+
+
+      :type: string *(optional)*
+      :default: '/'
+
+
+   .. py:attribute:: type
+
+      The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is
+
+      healthy. Cannot be modified once created. Supported values are HTTP, HTTPS, and TCP.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckType`\  *(optional)*
+      :default: HTTP
+
+
+HealthCheckCustomConfig (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HealthCheckCustomConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig;
+
+      .. code-tab:: javascript
+
+         // HealthCheckCustomConfig is an interface
+
+      .. code-tab:: typescript
+
+         import { HealthCheckCustomConfig } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Specifies information about an optional custom health check.
+
+
+
+
+
+   .. py:attribute:: failureThreshold
+
+      The number of 30-second intervals that you want Cloud Map to wait after receiving an
+
+      UpdateInstanceCustomHealthStatus request before it changes the health status of a service instance.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+HealthCheckType (enum)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HealthCheckType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.HealthCheckType;
+
+      .. code-tab:: javascript
+
+         const { HealthCheckType } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { HealthCheckType } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   .. py:data:: Http
+
+   Route 53 tries to establish a TCP connection. If successful, Route 53 submits an HTTP request and waits for an HTTP
+
+   status code of 200 or greater and less than 400.
+
+
+
+   .. py:data:: Https
+
+   Route 53 tries to establish a TCP connection. If successful, Route 53 submits an HTTPS request and waits for an
+
+   HTTP status code of 200 or greater and less than 400.  If you specify HTTPS for the value of Type, the endpoint
+
+   must support TLS v1.0 or later.
+
+
+
+   .. py:data:: Tcp
+
+   Route 53 tries to establish a TCP connection.
+
+   If you specify TCP for Type, don't specify a value for ResourcePath.
+
+
+
+
+HttpNamespace
+^^^^^^^^^^^^^
+
+.. py:class:: HttpNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.HttpNamespace;
+
+      .. code-tab:: javascript
+
+         const { HttpNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { HttpNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Define an HTTP Namespace
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.HttpNamespaceProps`\ 
+
+   .. py:method:: createService(id, [props]) -> @aws-cdk/aws-servicediscovery.Service
+
+      Creates a service within the namespace
+
+
+
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.BaseServiceProps`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.Service`\ 
+
+
+   .. py:attribute:: namespaceArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceArn`
+
+      Namespace Arn for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceId`
+
+      Namespace Id for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceName
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceName`
+
+      A name for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.type`
+
+      Type of the namespace.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+HttpNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HttpNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.HttpNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // HttpNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { HttpNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseNamespaceProps`\ 
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.name>`
+
+      A name for the Namespace.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.description>`
+
+      A description of the Namespace.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+IInstance (interface)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IInstance
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.IInstance;
+
+      .. code-tab:: javascript
+
+         // IInstance is an interface
+
+      .. code-tab:: typescript
+
+         import { IInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: instanceId
+
+      The id of the instance resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: service
+
+      The Cloudmap service this resource is registered to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+INamespace (interface)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: INamespace
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.INamespace;
+
+      .. code-tab:: javascript
+
+         // INamespace is an interface
+
+      .. code-tab:: typescript
+
+         import { INamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: namespaceArn
+
+      Namespace ARN for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceId
+
+      Namespace Id for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceName
+
+      A name for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      Type of Namespace
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IService (interface)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IService
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.IService;
+
+      .. code-tab:: javascript
+
+         // IService is an interface
+
+      .. code-tab:: typescript
+
+         import { IService } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: dnsRecordType
+
+      The DnsRecordType used by the service
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.DnsRecordType`\  *(readonly)*
+
+
+   .. py:attribute:: namespace
+
+      The namespace for the Cloudmap Service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.INamespace`\  *(readonly)*
+
+
+   .. py:attribute:: routingPolicy
+
+      The Routing Policy used by the service
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.RoutingPolicy`\  *(readonly)*
+
+
+   .. py:attribute:: serviceArn
+
+      The Arn of the namespace that you want to use for DNS configuration.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceId
+
+      The ID of the namespace that you want to use for DNS configuration.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceName
+
+      A name for the Cloudmap Service.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+InstanceBase
+^^^^^^^^^^^^
+
+.. py:class:: InstanceBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.InstanceBase;
+
+      .. code-tab:: javascript
+
+         const { InstanceBase } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { InstanceBase } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-servicediscovery.IInstance`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:method:: uniqueInstanceId() -> string
+
+      Generate a unique instance Id that is safe to pass to CloudMap
+
+
+
+      *Protected method*
+
+      :rtype: string
+
+
+   .. py:attribute:: instanceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IInstance.instanceId`
+
+      The Id of the instance
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: service
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IInstance.service`
+
+      The Cloudmap service to which the instance is registered.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+IpInstance
+^^^^^^^^^^
+
+.. py:class:: IpInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.IpInstance;
+
+      .. code-tab:: javascript
+
+         const { IpInstance } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { IpInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.InstanceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.IpInstanceProps`\ 
+
+   .. py:attribute:: instanceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.instanceId`
+
+      The Id of the instance
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ipv4
+
+      The Ipv4 address of the instance, or blank string if none available
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ipv6
+
+      The Ipv6 address of the instance, or blank string if none available
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: port
+
+      The exposed port of the instance
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: service
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.service`
+
+      The Cloudmap service to which the instance is registered.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)*
+
+
+   .. py:method:: uniqueInstanceId() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase <@aws-cdk/aws-servicediscovery.InstanceBase.uniqueInstanceId>`
+
+      Generate a unique instance Id that is safe to pass to CloudMap
+
+
+
+      *Protected method*
+
+      :rtype: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+IpInstanceBaseProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IpInstanceBaseProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps;
+
+      .. code-tab:: javascript
+
+         // IpInstanceBaseProps is an interface
+
+      .. code-tab:: typescript
+
+         import { IpInstanceBaseProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseInstanceProps`\ 
+
+
+   .. py:attribute:: ipv4
+
+      If the service that you specify contains a template for an A record, the IPv4 address that you want AWS Cloud
+
+      Map to use for the value of the A record.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: ipv6
+
+      If the service that you specify contains a template for an AAAA record, the IPv6 address that you want AWS Cloud
+
+      Map to use for the value of the AAAA record.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: port
+
+      The port on the endpoint that you want AWS Cloud Map to perform health checks on. This value is also used for
+
+      the port value in an SRV record if the service that you specify includes an SRV record. You can also specify a
+
+      default port that is applied to all instances in the Service configuration.
+
+
+
+      :type: number *(optional)*
+      :default: 80
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+IpInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IpInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.IpInstanceProps;
+
+      .. code-tab:: javascript
+
+         // IpInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { IpInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.IpInstanceBaseProps`\ 
+
+
+   .. py:attribute:: service
+
+      The Cloudmap service this resource is registered to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\ 
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+   .. py:attribute:: ipv4
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.IpInstanceBaseProps <@aws-cdk/aws-servicediscovery.IpInstanceBaseProps.ipv4>`
+
+      If the service that you specify contains a template for an A record, the IPv4 address that you want AWS Cloud
+
+      Map to use for the value of the A record.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: ipv6
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.IpInstanceBaseProps <@aws-cdk/aws-servicediscovery.IpInstanceBaseProps.ipv6>`
+
+      If the service that you specify contains a template for an AAAA record, the IPv6 address that you want AWS Cloud
+
+      Map to use for the value of the AAAA record.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: port
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.IpInstanceBaseProps <@aws-cdk/aws-servicediscovery.IpInstanceBaseProps.port>`
+
+      The port on the endpoint that you want AWS Cloud Map to perform health checks on. This value is also used for
+
+      the port value in an SRV record if the service that you specify includes an SRV record. You can also specify a
+
+      default port that is applied to all instances in the Service configuration.
+
+
+
+      :type: number *(optional)*
+      :default: 80
+
+
+NamespaceBase
+^^^^^^^^^^^^^
+
+.. py:class:: NamespaceBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NamespaceBase;
+
+      .. code-tab:: javascript
+
+         const { NamespaceBase } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { NamespaceBase } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-servicediscovery.INamespace`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:attribute:: namespaceArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.INamespace.namespaceArn`
+
+      Namespace ARN for the Namespace.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: namespaceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.INamespace.namespaceId`
+
+      Namespace Id for the Namespace.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: namespaceName
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.INamespace.namespaceName`
+
+      A name for the Namespace.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: type
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.INamespace.type`
+
+      Type of Namespace
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+NamespaceImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: NamespaceImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NamespaceImportProps;
+
+      .. code-tab:: javascript
+
+         // NamespaceImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { NamespaceImportProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+
+
+   .. py:attribute:: namespaceArn
+
+      Namespace ARN for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceId
+
+      Namespace Id for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceName
+
+      A name for the Namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      Type of Namespace. Valid values: HTTP, DNS_PUBLIC, or DNS_PRIVATE
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)*
+
+
+NamespaceType (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: NamespaceType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NamespaceType;
+
+      .. code-tab:: javascript
+
+         const { NamespaceType } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { NamespaceType } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   .. py:data:: Http
+
+   Choose this option if you want your application to use only API calls to discover registered instances.
+
+
+
+   .. py:data:: DnsPrivate
+
+   Choose this option if you want your application to be able to discover instances using either API calls or using
+
+   DNS queries in a VPC.
+
+
+
+   .. py:data:: DnsPublic
+
+   Choose this option if you want your application to be able to discover instances using either API calls or using
+
+   public DNS queries. You aren't required to use both methods.
+
+
+
+
+NonIpInstance
+^^^^^^^^^^^^^
+
+.. py:class:: NonIpInstance(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NonIpInstance;
+
+      .. code-tab:: javascript
+
+         const { NonIpInstance } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { NonIpInstance } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.InstanceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.NonIpInstanceProps`\ 
+
+   .. py:attribute:: instanceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.instanceId`
+
+      The Id of the instance
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: service
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase.service`
+
+      The Cloudmap service to which the instance is registered.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\  *(readonly)*
+
+
+   .. py:method:: uniqueInstanceId() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-servicediscovery.InstanceBase <@aws-cdk/aws-servicediscovery.InstanceBase.uniqueInstanceId>`
+
+      Generate a unique instance Id that is safe to pass to CloudMap
+
+
+
+      *Protected method*
+
+      :rtype: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+NonIpInstanceBaseProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: NonIpInstanceBaseProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps;
+
+      .. code-tab:: javascript
+
+         // NonIpInstanceBaseProps is an interface
+
+      .. code-tab:: typescript
+
+         import { NonIpInstanceBaseProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseInstanceProps`\ 
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+NonIpInstanceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: NonIpInstanceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps;
+
+      .. code-tab:: javascript
+
+         // NonIpInstanceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { NonIpInstanceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.NonIpInstanceBaseProps`\ 
+
+
+   .. py:attribute:: service
+
+      The Cloudmap service this resource is registered to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\ 
+
+
+   .. py:attribute:: customAttributes
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.customAttributes>`
+
+      Custom attributes of the instance.
+
+
+
+      :type: string => string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: instanceId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseInstanceProps <@aws-cdk/aws-servicediscovery.BaseInstanceProps.instanceId>`
+
+      The id of the instance resource
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+PrivateDnsNamespace
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PrivateDnsNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace;
+
+      .. code-tab:: javascript
+
+         const { PrivateDnsNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { PrivateDnsNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Define a Service Discovery HTTP Namespace
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.PrivateDnsNamespaceProps`\ 
+
+   .. py:method:: createService(id, [props]) -> @aws-cdk/aws-servicediscovery.Service
+
+      Creates a service within the namespace
+
+
+
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.DnsServiceProps`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.Service`\ 
+
+
+   .. py:attribute:: namespaceArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceArn`
+
+      Namespace Arn of the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceId`
+
+      Namespace Id of the PrivateDnsNamespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceName
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceName`
+
+      The name of the PrivateDnsNamespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.type`
+
+      Type of the namespace.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PrivateDnsNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PrivateDnsNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // PrivateDnsNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PrivateDnsNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseNamespaceProps`\ 
+
+
+   .. py:attribute:: vpc
+
+      The Amazon VPC that you want to associate the namespace with.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.name>`
+
+      A name for the Namespace.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.description>`
+
+      A description of the Namespace.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+PublicDnsNamespace
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PublicDnsNamespace(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace;
+
+      .. code-tab:: javascript
+
+         const { PublicDnsNamespace } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { PublicDnsNamespace } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Define a Public DNS Namespace
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.PublicDnsNamespaceProps`\ 
+
+   .. py:method:: createService(id, [props]) -> @aws-cdk/aws-servicediscovery.Service
+
+      Creates a service within the namespace
+
+
+
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.DnsServiceProps`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.Service`\ 
+
+
+   .. py:attribute:: namespaceArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceArn`
+
+      Namespace Arn for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceId`
+
+      Namespace Id for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: namespaceName
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.namespaceName`
+
+      A name for the namespace.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: type
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.NamespaceBase.type`
+
+      Type of the namespace.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.NamespaceType`\  *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PublicDnsNamespaceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PublicDnsNamespaceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps;
+
+      .. code-tab:: javascript
+
+         // PublicDnsNamespaceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PublicDnsNamespaceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.BaseNamespaceProps`\ 
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.name>`
+
+      A name for the Namespace.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseNamespaceProps <@aws-cdk/aws-servicediscovery.BaseNamespaceProps.description>`
+
+      A description of the Namespace.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+RoutingPolicy (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RoutingPolicy
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.RoutingPolicy;
+
+      .. code-tab:: javascript
+
+         const { RoutingPolicy } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { RoutingPolicy } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   .. py:data:: Weighted
+
+   Route 53 returns the applicable value from one randomly selected instance from among the instances that you
+
+   registered using the same service.
+
+
+
+   .. py:data:: Multivalue
+
+   If you define a health check for the service and the health check is healthy, Route 53 returns the applicable value
+
+   for up to eight instances.
+
+
+
+
+Service
+^^^^^^^
+
+.. py:class:: Service(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.Service;
+
+      .. code-tab:: javascript
+
+         const { Service } = require('@aws-cdk/aws-servicediscovery');
+
+      .. code-tab:: typescript
+
+         import { Service } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   Define a CloudMap Service
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-servicediscovery.IService`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-servicediscovery.ServiceProps`\ 
+
+   .. py:method:: registerCnameInstance(props) -> @aws-cdk/aws-servicediscovery.IInstance
+
+      Registers a resource that is accessible using a CNAME.
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.CnameInstanceBaseProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.IInstance`\ 
+
+
+   .. py:method:: registerIpInstance(props) -> @aws-cdk/aws-servicediscovery.IInstance
+
+      Registers a resource that is accessible using an IP address.
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.IpInstanceBaseProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.IInstance`\ 
+
+
+   .. py:method:: registerLoadBalancer(id, loadBalancer, [customAttributes]) -> @aws-cdk/aws-servicediscovery.IInstance
+
+      Registers an ELB as a new instance with unique name instanceId in this service.
+
+
+
+      :param id: 
+      :type id: string
+      :param loadBalancer: 
+      :type loadBalancer: :py:class:`@aws-cdk/aws-route53.IAliasRecordTarget`\ 
+      :param customAttributes: 
+      :type customAttributes: string => string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.IInstance`\ 
+
+
+   .. py:method:: registerNonIpInstance(props) -> @aws-cdk/aws-servicediscovery.IInstance
+
+      Registers a resource that is accessible using values other than an IP address or a domain name (CNAME).
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-servicediscovery.NonIpInstanceBaseProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-servicediscovery.IInstance`\ 
+
+
+   .. py:attribute:: dnsRecordType
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.dnsRecordType`
+
+      The DnsRecordType used by the service
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.DnsRecordType`\  *(readonly)*
+
+
+   .. py:attribute:: namespace
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.namespace`
+
+      The namespace for the Cloudmap Service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.INamespace`\  *(readonly)*
+
+
+   .. py:attribute:: routingPolicy
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.routingPolicy`
+
+      The Routing Policy used by the service
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.RoutingPolicy`\  *(readonly)*
+
+
+   .. py:attribute:: serviceArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.serviceArn`
+
+      The Arn of the namespace that you want to use for DNS configuration.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceId
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.serviceId`
+
+      The ID of the namespace that you want to use for DNS configuration.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: serviceName
+
+      *Implements* :py:meth:`@aws-cdk/aws-servicediscovery.IService.serviceName`
+
+      A name for the Cloudmap Service.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ServiceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServiceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ServiceDiscovery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.servicediscovery.ServiceProps;
+
+      .. code-tab:: javascript
+
+         // ServiceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServiceProps } from '@aws-cdk/aws-servicediscovery';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-servicediscovery.DnsServiceProps`\ 
+
+
+   .. py:attribute:: namespace
+
+      The ID of the namespace that you want to use for DNS configuration.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.INamespace`\ 
+
+
+   .. py:attribute:: customHealthCheck
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.customHealthCheck>`
+
+      Structure containing failure threshold for a custom health checker.
+
+      Only one of healthCheckConfig or healthCheckCustomConfig can be specified.
+
+      See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckCustomConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.description>`
+
+      A description of the service.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: healthCheck
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.healthCheck>`
+
+      Settings for an optional health check.  If you specify health check settings, AWS Cloud Map associates the health
+
+      check with the records that you specify in DnsConfig. Only one of healthCheckConfig or healthCheckCustomConfig can
+
+      be specified. Not valid for PrivateDnsNamespaces. If you use healthCheck, you can only register IP instances to
+
+      this service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.HealthCheckConfig`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.BaseServiceProps <@aws-cdk/aws-servicediscovery.BaseServiceProps.name>`
+
+      A name for the Service.
+
+
+
+      :type: string *(optional)*
+      :default: CloudFormation-generated name
+
+
+   .. py:attribute:: dnsRecordType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.DnsServiceProps <@aws-cdk/aws-servicediscovery.DnsServiceProps.dnsRecordType>`
+
+      The DNS type of the record that you want AWS Cloud Map to create. Supported record types
+
+      include A, AAAA, A and AAAA (A_AAAA), CNAME, and SRV.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.DnsRecordType`\  *(optional)*
+      :default: A
+
+
+   .. py:attribute:: dnsTtlSec
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.DnsServiceProps <@aws-cdk/aws-servicediscovery.DnsServiceProps.dnsTtlSec>`
+
+      The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
+
+      record.
+
+
+
+      :type: number *(optional)*
+      :default: 60
+
+
+   .. py:attribute:: loadBalancer
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.DnsServiceProps <@aws-cdk/aws-servicediscovery.DnsServiceProps.loadBalancer>`
+
+      Whether or not this service will have an Elastic LoadBalancer registered to it as an AliasTargetInstance.
+
+      
+
+      Setting this to `true` correctly configures the `routingPolicy`
+
+      and performs some additional validation.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: routingPolicy
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-servicediscovery.DnsServiceProps <@aws-cdk/aws-servicediscovery.DnsServiceProps.routingPolicy>`
+
+      The routing policy that you want to apply to all DNS records that AWS Cloud Map creates when you
+
+      register an instance and specify this service.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-servicediscovery.RoutingPolicy`\  *(optional)*
+      :default: WEIGHTED for CNAME records and when loadBalancer is true, MULTIVALUE otherwise
+
+

@@ -1,0 +1,2234 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"r9P5im3YFlJhRyL671itDwcjDwWNDtmjmyiY0rn6EzQ="}
+
+@aws-cdk/aws-batch
+==================
+
+.. mdinclude:: ./__aws-cdk_aws-batch.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Batch/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Batch" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Batch --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Batch" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/batch/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:batch:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="batch" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>batch</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:batch:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='batch', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-batch/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-batch@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-batch": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-batch@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-batch/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-batch@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-batch": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-batch@0.26.0
+
+
+
+.. py:module:: @aws-cdk/aws-batch
+
+CfnComputeEnvironment
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnComputeEnvironment(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnComputeEnvironment;
+
+      .. code-tab:: javascript
+
+         const { CfnComputeEnvironment } = require('@aws-cdk/aws-batch');
+
+      .. code-tab:: typescript
+
+         import { CfnComputeEnvironment } from '@aws-cdk/aws-batch';
+
+
+
+   A CloudFormation `AWS::Batch::ComputeEnvironment`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-batch.CfnComputeEnvironmentProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: computeEnvironmentArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-batch.CfnComputeEnvironmentProps`\  *(readonly)*
+
+   .. py:class:: ComputeResourcesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnComputeEnvironment.ComputeResourcesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnComputeEnvironment.ComputeResourcesProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: instanceRole
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.InstanceRole`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: instanceTypes
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.InstanceTypes`
+
+
+
+         :type: string[]
+
+
+      .. py:attribute:: maxvCpus
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.MaxvCpus`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: minvCpus
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.MinvCpus`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: securityGroupIds
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.SecurityGroupIds`
+
+
+
+         :type: string[]
+
+
+      .. py:attribute:: subnets
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.Subnets`
+
+
+
+         :type: string[]
+
+
+      .. py:attribute:: type
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.Type`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: bidPercentage
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.BidPercentage`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: desiredvCpus
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.DesiredvCpus`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: ec2KeyPair
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.Ec2KeyPair`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: imageId
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.ImageId`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: launchTemplate
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.LaunchTemplate`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty`\  *(optional)*
+
+
+      .. py:attribute:: placementGroup
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.PlacementGroup`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: spotIamFleetRole
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.SpotIamFleetRole`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: tags
+
+         `CfnComputeEnvironment.ComputeResourcesProperty.Tags`
+
+
+
+         :type: json *(optional)*
+
+
+   .. py:class:: LaunchTemplateSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnComputeEnvironment.LaunchTemplateSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnComputeEnvironment.LaunchTemplateSpecificationProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: launchTemplateId
+
+         `CfnComputeEnvironment.LaunchTemplateSpecificationProperty.LaunchTemplateId`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: launchTemplateName
+
+         `CfnComputeEnvironment.LaunchTemplateSpecificationProperty.LaunchTemplateName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: version
+
+         `CfnComputeEnvironment.LaunchTemplateSpecificationProperty.Version`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnComputeEnvironmentProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnComputeEnvironmentProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps;
+
+      .. code-tab:: javascript
+
+         // CfnComputeEnvironmentProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnComputeEnvironmentProps } from '@aws-cdk/aws-batch';
+
+
+
+   Properties for defining a `AWS::Batch::ComputeEnvironment`
+
+
+
+
+
+   .. py:attribute:: serviceRole
+
+      `AWS::Batch::ComputeEnvironment.ServiceRole`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: type
+
+      `AWS::Batch::ComputeEnvironment.Type`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: computeEnvironmentName
+
+      `AWS::Batch::ComputeEnvironment.ComputeEnvironmentName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: computeResources
+
+      `AWS::Batch::ComputeEnvironment.ComputeResources`
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-batch.CfnComputeEnvironment.ComputeResourcesProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: state
+
+      `AWS::Batch::ComputeEnvironment.State`
+
+
+
+      :type: string *(optional)*
+
+
+CfnJobDefinition
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnJobDefinition(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnJobDefinition;
+
+      .. code-tab:: javascript
+
+         const { CfnJobDefinition } = require('@aws-cdk/aws-batch');
+
+      .. code-tab:: typescript
+
+         import { CfnJobDefinition } from '@aws-cdk/aws-batch';
+
+
+
+   A CloudFormation `AWS::Batch::JobDefinition`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-batch.CfnJobDefinitionProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: jobDefinitionArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-batch.CfnJobDefinitionProps`\  *(readonly)*
+
+   .. py:class:: ContainerPropertiesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.ContainerPropertiesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.ContainerPropertiesProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: image
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Image`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: memory
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Memory`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: vcpus
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Vcpus`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: command
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Command`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: environment
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Environment`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.EnvironmentProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: instanceType
+
+         `CfnJobDefinition.ContainerPropertiesProperty.InstanceType`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: jobRoleArn
+
+         `CfnJobDefinition.ContainerPropertiesProperty.JobRoleArn`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: mountPoints
+
+         `CfnJobDefinition.ContainerPropertiesProperty.MountPoints`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.MountPointsProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: privileged
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Privileged`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: readonlyRootFilesystem
+
+         `CfnJobDefinition.ContainerPropertiesProperty.ReadonlyRootFilesystem`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: ulimits
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Ulimits`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.UlimitProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: user
+
+         `CfnJobDefinition.ContainerPropertiesProperty.User`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: volumes
+
+         `CfnJobDefinition.ContainerPropertiesProperty.Volumes`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.VolumesProperty`\ )[] *(optional)*
+
+
+   .. py:class:: EnvironmentProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.EnvironmentProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.EnvironmentProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnJobDefinition.EnvironmentProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         `CfnJobDefinition.EnvironmentProperty.Value`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: MountPointsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.MountPointsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.MountPointsProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: containerPath
+
+         `CfnJobDefinition.MountPointsProperty.ContainerPath`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: readOnly
+
+         `CfnJobDefinition.MountPointsProperty.ReadOnly`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: sourceVolume
+
+         `CfnJobDefinition.MountPointsProperty.SourceVolume`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: NodePropertiesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.NodePropertiesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.NodePropertiesProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: mainNode
+
+         `CfnJobDefinition.NodePropertiesProperty.MainNode`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: nodeRangeProperties
+
+         `CfnJobDefinition.NodePropertiesProperty.NodeRangeProperties`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.NodeRangePropertyProperty`\ )[]
+
+
+      .. py:attribute:: numNodes
+
+         `CfnJobDefinition.NodePropertiesProperty.NumNodes`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: NodeRangePropertyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.NodeRangePropertyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.NodeRangePropertyProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: targetNodes
+
+         `CfnJobDefinition.NodeRangePropertyProperty.TargetNodes`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: container
+
+         `CfnJobDefinition.NodeRangePropertyProperty.Container`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.ContainerPropertiesProperty`\  *(optional)*
+
+
+   .. py:class:: RetryStrategyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.RetryStrategyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.RetryStrategyProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: attempts
+
+         `CfnJobDefinition.RetryStrategyProperty.Attempts`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: TimeoutProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.TimeoutProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.TimeoutProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: attemptDurationSeconds
+
+         `CfnJobDefinition.TimeoutProperty.AttemptDurationSeconds`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: UlimitProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.UlimitProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.UlimitProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: hardLimit
+
+         `CfnJobDefinition.UlimitProperty.HardLimit`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: name
+
+         `CfnJobDefinition.UlimitProperty.Name`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: softLimit
+
+         `CfnJobDefinition.UlimitProperty.SoftLimit`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: VolumesHostProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.VolumesHostProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.VolumesHostProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: sourcePath
+
+         `CfnJobDefinition.VolumesHostProperty.SourcePath`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: VolumesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobDefinition.VolumesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobDefinition.VolumesProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: host
+
+         `CfnJobDefinition.VolumesProperty.Host`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.VolumesHostProperty`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnJobDefinition.VolumesProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnJobDefinitionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnJobDefinitionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnJobDefinitionProps;
+
+      .. code-tab:: javascript
+
+         // CfnJobDefinitionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnJobDefinitionProps } from '@aws-cdk/aws-batch';
+
+
+
+   Properties for defining a `AWS::Batch::JobDefinition`
+
+
+
+
+
+   .. py:attribute:: type
+
+      `AWS::Batch::JobDefinition.Type`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: containerProperties
+
+      `AWS::Batch::JobDefinition.ContainerProperties`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.ContainerPropertiesProperty`\  *(optional)*
+
+
+   .. py:attribute:: jobDefinitionName
+
+      `AWS::Batch::JobDefinition.JobDefinitionName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: nodeProperties
+
+      `AWS::Batch::JobDefinition.NodeProperties`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.NodePropertiesProperty`\  *(optional)*
+
+
+   .. py:attribute:: parameters
+
+      `AWS::Batch::JobDefinition.Parameters`
+
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: retryStrategy
+
+      `AWS::Batch::JobDefinition.RetryStrategy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.RetryStrategyProperty`\  *(optional)*
+
+
+   .. py:attribute:: timeout
+
+      `AWS::Batch::JobDefinition.Timeout`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobDefinition.TimeoutProperty`\  *(optional)*
+
+
+CfnJobQueue
+^^^^^^^^^^^
+
+.. py:class:: CfnJobQueue(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnJobQueue;
+
+      .. code-tab:: javascript
+
+         const { CfnJobQueue } = require('@aws-cdk/aws-batch');
+
+      .. code-tab:: typescript
+
+         import { CfnJobQueue } from '@aws-cdk/aws-batch';
+
+
+
+   A CloudFormation `AWS::Batch::JobQueue`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-batch.CfnJobQueueProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: jobQueueArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-batch.CfnJobQueueProps`\  *(readonly)*
+
+   .. py:class:: ComputeEnvironmentOrderProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Batch;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJobQueue.ComputeEnvironmentOrderProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJobQueue.ComputeEnvironmentOrderProperty } from '@aws-cdk/aws-batch';
+
+
+
+
+
+      .. py:attribute:: computeEnvironment
+
+         `CfnJobQueue.ComputeEnvironmentOrderProperty.ComputeEnvironment`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: order
+
+         `CfnJobQueue.ComputeEnvironmentOrderProperty.Order`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnJobQueueProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnJobQueueProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Batch;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.batch.CfnJobQueueProps;
+
+      .. code-tab:: javascript
+
+         // CfnJobQueueProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnJobQueueProps } from '@aws-cdk/aws-batch';
+
+
+
+   Properties for defining a `AWS::Batch::JobQueue`
+
+
+
+
+
+   .. py:attribute:: computeEnvironmentOrder
+
+      `AWS::Batch::JobQueue.ComputeEnvironmentOrder`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-batch.CfnJobQueue.ComputeEnvironmentOrderProperty`\ )[]
+
+
+   .. py:attribute:: priority
+
+      `AWS::Batch::JobQueue.Priority`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: jobQueueName
+
+      `AWS::Batch::JobQueue.JobQueueName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: state
+
+      `AWS::Batch::JobQueue.State`
+
+
+
+      :type: string *(optional)*
+
+

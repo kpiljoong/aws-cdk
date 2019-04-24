@@ -1,0 +1,7236 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"n0DEl8kqC0awRQhL+yxtFjmeLLeN2tFkNmQeOt5MDto="}
+
+@aws-cdk/aws-glue
+=================
+
+.. mdinclude:: ./__aws-cdk_aws-glue.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Glue/0.26.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Glue" Version="0.26.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Glue --version 0.26.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Glue" version="0.26.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/glue/0.26.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:glue:jar:0.26.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="glue" rev="0.26.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>glue</artifactId>
+           <version>0.26.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:glue:0.26.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='glue', version='0.26.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-glue/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-glue@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-glue": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-glue@0.26.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-glue/v/0.26.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-glue@0.26.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-glue": "^0.26.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-glue@0.26.0
+
+
+
+.. py:module:: @aws-cdk/aws-glue
+
+CfnClassifier
+^^^^^^^^^^^^^
+
+.. py:class:: CfnClassifier(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnClassifier;
+
+      .. code-tab:: javascript
+
+         const { CfnClassifier } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnClassifier } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Classifier`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnClassifierProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: classifierName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnClassifierProps`\  *(readonly)*
+
+   .. py:class:: GrokClassifierProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty;
+
+         .. code-tab:: javascript
+
+            // CfnClassifier.GrokClassifierProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnClassifier.GrokClassifierProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: classification
+
+         `CfnClassifier.GrokClassifierProperty.Classification`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: grokPattern
+
+         `CfnClassifier.GrokClassifierProperty.GrokPattern`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: customPatterns
+
+         `CfnClassifier.GrokClassifierProperty.CustomPatterns`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnClassifier.GrokClassifierProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: JsonClassifierProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty;
+
+         .. code-tab:: javascript
+
+            // CfnClassifier.JsonClassifierProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnClassifier.JsonClassifierProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: jsonPath
+
+         `CfnClassifier.JsonClassifierProperty.JsonPath`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: name
+
+         `CfnClassifier.JsonClassifierProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: XMLClassifierProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty;
+
+         .. code-tab:: javascript
+
+            // CfnClassifier.XMLClassifierProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnClassifier.XMLClassifierProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: classification
+
+         `CfnClassifier.XMLClassifierProperty.Classification`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: rowTag
+
+         `CfnClassifier.XMLClassifierProperty.RowTag`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: name
+
+         `CfnClassifier.XMLClassifierProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnClassifierProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnClassifierProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnClassifierProps;
+
+      .. code-tab:: javascript
+
+         // CfnClassifierProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnClassifierProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Classifier`
+
+
+
+
+
+   .. py:attribute:: grokClassifier
+
+      `AWS::Glue::Classifier.GrokClassifier`
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnClassifier.GrokClassifierProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: jsonClassifier
+
+      `AWS::Glue::Classifier.JsonClassifier`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnClassifier.JsonClassifierProperty`\  *(optional)*
+
+
+   .. py:attribute:: xmlClassifier
+
+      `AWS::Glue::Classifier.XMLClassifier`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnClassifier.XMLClassifierProperty`\  *(optional)*
+
+
+CfnConnection
+^^^^^^^^^^^^^
+
+.. py:class:: CfnConnection(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnConnection;
+
+      .. code-tab:: javascript
+
+         const { CfnConnection } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnConnection } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Connection`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnConnectionProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: connectionName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnConnectionProps`\  *(readonly)*
+
+   .. py:class:: ConnectionInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConnection.ConnectionInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConnection.ConnectionInputProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: connectionProperties
+
+         `CfnConnection.ConnectionInputProperty.ConnectionProperties`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: connectionType
+
+         `CfnConnection.ConnectionInputProperty.ConnectionType`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: description
+
+         `CfnConnection.ConnectionInputProperty.Description`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: matchCriteria
+
+         `CfnConnection.ConnectionInputProperty.MatchCriteria`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnConnection.ConnectionInputProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: physicalConnectionRequirements
+
+         `CfnConnection.ConnectionInputProperty.PhysicalConnectionRequirements`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnConnection.PhysicalConnectionRequirementsProperty`\  *(optional)*
+
+
+   .. py:class:: PhysicalConnectionRequirementsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnConnection.PhysicalConnectionRequirementsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnConnection.PhysicalConnectionRequirementsProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: availabilityZone
+
+         `CfnConnection.PhysicalConnectionRequirementsProperty.AvailabilityZone`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: securityGroupIdList
+
+         `CfnConnection.PhysicalConnectionRequirementsProperty.SecurityGroupIdList`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: subnetId
+
+         `CfnConnection.PhysicalConnectionRequirementsProperty.SubnetId`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnConnectionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnConnectionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnConnectionProps;
+
+      .. code-tab:: javascript
+
+         // CfnConnectionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnConnectionProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Connection`
+
+
+
+
+
+   .. py:attribute:: catalogId
+
+      `AWS::Glue::Connection.CatalogId`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: connectionInput
+
+      `AWS::Glue::Connection.ConnectionInput`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnConnection.ConnectionInputProperty`\ 
+
+
+CfnCrawler
+^^^^^^^^^^
+
+.. py:class:: CfnCrawler(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnCrawler;
+
+      .. code-tab:: javascript
+
+         const { CfnCrawler } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnCrawler } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Crawler`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnCrawlerProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: crawlerName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnCrawlerProps`\  *(readonly)*
+
+   .. py:class:: JdbcTargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCrawler.JdbcTargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCrawler.JdbcTargetProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: connectionName
+
+         `CfnCrawler.JdbcTargetProperty.ConnectionName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: exclusions
+
+         `CfnCrawler.JdbcTargetProperty.Exclusions`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: path
+
+         `CfnCrawler.JdbcTargetProperty.Path`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: S3TargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCrawler.S3TargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCrawler.S3TargetProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: exclusions
+
+         `CfnCrawler.S3TargetProperty.Exclusions`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: path
+
+         `CfnCrawler.S3TargetProperty.Path`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ScheduleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCrawler.ScheduleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCrawler.ScheduleProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: scheduleExpression
+
+         `CfnCrawler.ScheduleProperty.ScheduleExpression`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SchemaChangePolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCrawler.SchemaChangePolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCrawler.SchemaChangePolicyProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: deleteBehavior
+
+         `CfnCrawler.SchemaChangePolicyProperty.DeleteBehavior`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: updateBehavior
+
+         `CfnCrawler.SchemaChangePolicyProperty.UpdateBehavior`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TargetsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCrawler.TargetsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCrawler.TargetsProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: jdbcTargets
+
+         `CfnCrawler.TargetsProperty.JdbcTargets`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnCrawler.JdbcTargetProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: s3Targets
+
+         `CfnCrawler.TargetsProperty.S3Targets`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnCrawler.S3TargetProperty`\ )[] *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnCrawlerProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnCrawlerProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnCrawlerProps;
+
+      .. code-tab:: javascript
+
+         // CfnCrawlerProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnCrawlerProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Crawler`
+
+
+
+
+
+   .. py:attribute:: databaseName
+
+      `AWS::Glue::Crawler.DatabaseName`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: role
+
+      `AWS::Glue::Crawler.Role`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: targets
+
+      `AWS::Glue::Crawler.Targets`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnCrawler.TargetsProperty`\ 
+
+
+   .. py:attribute:: classifiers
+
+      `AWS::Glue::Crawler.Classifiers`
+
+
+
+      :type: string[] *(optional)*
+
+
+   .. py:attribute:: configuration
+
+      `AWS::Glue::Crawler.Configuration`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: description
+
+      `AWS::Glue::Crawler.Description`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: name
+
+      `AWS::Glue::Crawler.Name`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: schedule
+
+      `AWS::Glue::Crawler.Schedule`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnCrawler.ScheduleProperty`\  *(optional)*
+
+
+   .. py:attribute:: schemaChangePolicy
+
+      `AWS::Glue::Crawler.SchemaChangePolicy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnCrawler.SchemaChangePolicyProperty`\  *(optional)*
+
+
+   .. py:attribute:: tablePrefix
+
+      `AWS::Glue::Crawler.TablePrefix`
+
+
+
+      :type: string *(optional)*
+
+
+CfnDatabase
+^^^^^^^^^^^
+
+.. py:class:: CfnDatabase(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnDatabase;
+
+      .. code-tab:: javascript
+
+         const { CfnDatabase } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnDatabase } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Database`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnDatabaseProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: databaseName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnDatabaseProps`\  *(readonly)*
+
+   .. py:class:: DatabaseInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDatabase.DatabaseInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDatabase.DatabaseInputProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: description
+
+         `CfnDatabase.DatabaseInputProperty.Description`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: locationUri
+
+         `CfnDatabase.DatabaseInputProperty.LocationUri`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnDatabase.DatabaseInputProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnDatabase.DatabaseInputProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDatabaseProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDatabaseProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnDatabaseProps;
+
+      .. code-tab:: javascript
+
+         // CfnDatabaseProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDatabaseProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Database`
+
+
+
+
+
+   .. py:attribute:: catalogId
+
+      `AWS::Glue::Database.CatalogId`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: databaseInput
+
+      `AWS::Glue::Database.DatabaseInput`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnDatabase.DatabaseInputProperty`\ 
+
+
+CfnDevEndpoint
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnDevEndpoint(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnDevEndpoint;
+
+      .. code-tab:: javascript
+
+         const { CfnDevEndpoint } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnDevEndpoint } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::DevEndpoint`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnDevEndpointProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: devEndpointId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnDevEndpointProps`\  *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnDevEndpointProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDevEndpointProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnDevEndpointProps;
+
+      .. code-tab:: javascript
+
+         // CfnDevEndpointProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDevEndpointProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::DevEndpoint`
+
+
+
+
+
+   .. py:attribute:: publicKey
+
+      `AWS::Glue::DevEndpoint.PublicKey`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: roleArn
+
+      `AWS::Glue::DevEndpoint.RoleArn`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: endpointName
+
+      `AWS::Glue::DevEndpoint.EndpointName`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: extraJarsS3Path
+
+      `AWS::Glue::DevEndpoint.ExtraJarsS3Path`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: extraPythonLibsS3Path
+
+      `AWS::Glue::DevEndpoint.ExtraPythonLibsS3Path`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: numberOfNodes
+
+      `AWS::Glue::DevEndpoint.NumberOfNodes`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: securityGroupIds
+
+      `AWS::Glue::DevEndpoint.SecurityGroupIds`
+
+
+
+      :type: string[] *(optional)*
+
+
+   .. py:attribute:: subnetId
+
+      `AWS::Glue::DevEndpoint.SubnetId`
+
+
+
+      :type: string *(optional)*
+
+
+CfnJob
+^^^^^^
+
+.. py:class:: CfnJob(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnJob;
+
+      .. code-tab:: javascript
+
+         const { CfnJob } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnJob } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Job`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnJobProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: jobName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnJobProps`\  *(readonly)*
+
+   .. py:class:: ConnectionsListProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJob.ConnectionsListProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJob.ConnectionsListProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: connections
+
+         `CfnJob.ConnectionsListProperty.Connections`
+
+
+
+         :type: string[] *(optional)*
+
+
+   .. py:class:: ExecutionPropertyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJob.ExecutionPropertyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJob.ExecutionPropertyProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: maxConcurrentRuns
+
+         `CfnJob.ExecutionPropertyProperty.MaxConcurrentRuns`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: JobCommandProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty;
+
+         .. code-tab:: javascript
+
+            // CfnJob.JobCommandProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnJob.JobCommandProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnJob.JobCommandProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: scriptLocation
+
+         `CfnJob.JobCommandProperty.ScriptLocation`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnJobProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnJobProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnJobProps;
+
+      .. code-tab:: javascript
+
+         // CfnJobProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnJobProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Job`
+
+
+
+
+
+   .. py:attribute:: command
+
+      `AWS::Glue::Job.Command`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnJob.JobCommandProperty`\ 
+
+
+   .. py:attribute:: role
+
+      `AWS::Glue::Job.Role`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: allocatedCapacity
+
+      `AWS::Glue::Job.AllocatedCapacity`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: connections
+
+      `AWS::Glue::Job.Connections`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnJob.ConnectionsListProperty`\  *(optional)*
+
+
+   .. py:attribute:: defaultArguments
+
+      `AWS::Glue::Job.DefaultArguments`
+
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: description
+
+      `AWS::Glue::Job.Description`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: executionProperty
+
+      `AWS::Glue::Job.ExecutionProperty`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnJob.ExecutionPropertyProperty`\  *(optional)*
+
+
+   .. py:attribute:: logUri
+
+      `AWS::Glue::Job.LogUri`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: maxRetries
+
+      `AWS::Glue::Job.MaxRetries`
+
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: name
+
+      `AWS::Glue::Job.Name`
+
+
+
+      :type: string *(optional)*
+
+
+CfnPartition
+^^^^^^^^^^^^
+
+.. py:class:: CfnPartition(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnPartition;
+
+      .. code-tab:: javascript
+
+         const { CfnPartition } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnPartition } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Partition`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnPartitionProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: partitionId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnPartitionProps`\  *(readonly)*
+
+   .. py:class:: ColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.ColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.ColumnProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnPartition.ColumnProperty.Name`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: comment
+
+         `CfnPartition.ColumnProperty.Comment`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: type
+
+         `CfnPartition.ColumnProperty.Type`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: OrderProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.OrderProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.OrderProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.OrderProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: column
+
+         `CfnPartition.OrderProperty.Column`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: sortOrder
+
+         `CfnPartition.OrderProperty.SortOrder`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: PartitionInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.PartitionInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.PartitionInputProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: values
+
+         `CfnPartition.PartitionInputProperty.Values`
+
+
+
+         :type: string[]
+
+
+      .. py:attribute:: parameters
+
+         `CfnPartition.PartitionInputProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: storageDescriptor
+
+         `CfnPartition.PartitionInputProperty.StorageDescriptor`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.StorageDescriptorProperty`\  *(optional)*
+
+
+   .. py:class:: SerdeInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.SerdeInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.SerdeInfoProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnPartition.SerdeInfoProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnPartition.SerdeInfoProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: serializationLibrary
+
+         `CfnPartition.SerdeInfoProperty.SerializationLibrary`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SkewedInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.SkewedInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.SkewedInfoProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: skewedColumnNames
+
+         `CfnPartition.SkewedInfoProperty.SkewedColumnNames`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: skewedColumnValueLocationMaps
+
+         `CfnPartition.SkewedInfoProperty.SkewedColumnValueLocationMaps`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: skewedColumnValues
+
+         `CfnPartition.SkewedInfoProperty.SkewedColumnValues`
+
+
+
+         :type: string[] *(optional)*
+
+
+   .. py:class:: StorageDescriptorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPartition.StorageDescriptorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPartition.StorageDescriptorProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: bucketColumns
+
+         `CfnPartition.StorageDescriptorProperty.BucketColumns`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: columns
+
+         `CfnPartition.StorageDescriptorProperty.Columns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.ColumnProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: compressed
+
+         `CfnPartition.StorageDescriptorProperty.Compressed`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: inputFormat
+
+         `CfnPartition.StorageDescriptorProperty.InputFormat`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: location
+
+         `CfnPartition.StorageDescriptorProperty.Location`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: numberOfBuckets
+
+         `CfnPartition.StorageDescriptorProperty.NumberOfBuckets`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: outputFormat
+
+         `CfnPartition.StorageDescriptorProperty.OutputFormat`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnPartition.StorageDescriptorProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: serdeInfo
+
+         `CfnPartition.StorageDescriptorProperty.SerdeInfo`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.SerdeInfoProperty`\  *(optional)*
+
+
+      .. py:attribute:: skewedInfo
+
+         `CfnPartition.StorageDescriptorProperty.SkewedInfo`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.SkewedInfoProperty`\  *(optional)*
+
+
+      .. py:attribute:: sortColumns
+
+         `CfnPartition.StorageDescriptorProperty.SortColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.OrderProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: storedAsSubDirectories
+
+         `CfnPartition.StorageDescriptorProperty.StoredAsSubDirectories`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnPartitionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPartitionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnPartitionProps;
+
+      .. code-tab:: javascript
+
+         // CfnPartitionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnPartitionProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Partition`
+
+
+
+
+
+   .. py:attribute:: catalogId
+
+      `AWS::Glue::Partition.CatalogId`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: databaseName
+
+      `AWS::Glue::Partition.DatabaseName`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: partitionInput
+
+      `AWS::Glue::Partition.PartitionInput`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnPartition.PartitionInputProperty`\ 
+
+
+   .. py:attribute:: tableName
+
+      `AWS::Glue::Partition.TableName`
+
+
+
+      :type: string
+
+
+CfnTable
+^^^^^^^^
+
+.. py:class:: CfnTable(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnTable;
+
+      .. code-tab:: javascript
+
+         const { CfnTable } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnTable } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Table`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnTableProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnTableProps`\  *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      :type: string *(readonly)*
+
+   .. py:class:: ColumnProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.ColumnProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.ColumnProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.ColumnProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnTable.ColumnProperty.Name`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: comment
+
+         `CfnTable.ColumnProperty.Comment`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: type
+
+         `CfnTable.ColumnProperty.Type`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: OrderProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.OrderProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.OrderProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.OrderProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: column
+
+         `CfnTable.OrderProperty.Column`
+
+
+
+         :type: string
+
+
+      .. py:attribute:: sortOrder
+
+         `CfnTable.OrderProperty.SortOrder`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: SerdeInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.SerdeInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.SerdeInfoProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: name
+
+         `CfnTable.SerdeInfoProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnTable.SerdeInfoProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: serializationLibrary
+
+         `CfnTable.SerdeInfoProperty.SerializationLibrary`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SkewedInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.SkewedInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.SkewedInfoProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: skewedColumnNames
+
+         `CfnTable.SkewedInfoProperty.SkewedColumnNames`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: skewedColumnValueLocationMaps
+
+         `CfnTable.SkewedInfoProperty.SkewedColumnValueLocationMaps`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: skewedColumnValues
+
+         `CfnTable.SkewedInfoProperty.SkewedColumnValues`
+
+
+
+         :type: string[] *(optional)*
+
+
+   .. py:class:: StorageDescriptorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.StorageDescriptorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.StorageDescriptorProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: bucketColumns
+
+         `CfnTable.StorageDescriptorProperty.BucketColumns`
+
+
+
+         :type: string[] *(optional)*
+
+
+      .. py:attribute:: columns
+
+         `CfnTable.StorageDescriptorProperty.Columns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.ColumnProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: compressed
+
+         `CfnTable.StorageDescriptorProperty.Compressed`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: inputFormat
+
+         `CfnTable.StorageDescriptorProperty.InputFormat`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: location
+
+         `CfnTable.StorageDescriptorProperty.Location`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: numberOfBuckets
+
+         `CfnTable.StorageDescriptorProperty.NumberOfBuckets`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: outputFormat
+
+         `CfnTable.StorageDescriptorProperty.OutputFormat`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnTable.StorageDescriptorProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: serdeInfo
+
+         `CfnTable.StorageDescriptorProperty.SerdeInfo`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.SerdeInfoProperty`\  *(optional)*
+
+
+      .. py:attribute:: skewedInfo
+
+         `CfnTable.StorageDescriptorProperty.SkewedInfo`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.SkewedInfoProperty`\  *(optional)*
+
+
+      .. py:attribute:: sortColumns
+
+         `CfnTable.StorageDescriptorProperty.SortColumns`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.OrderProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: storedAsSubDirectories
+
+         `CfnTable.StorageDescriptorProperty.StoredAsSubDirectories`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: TableInputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTable.TableInputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTable.TableInputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTable.TableInputProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: description
+
+         `CfnTable.TableInputProperty.Description`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         `CfnTable.TableInputProperty.Name`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: owner
+
+         `CfnTable.TableInputProperty.Owner`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         `CfnTable.TableInputProperty.Parameters`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: partitionKeys
+
+         `CfnTable.TableInputProperty.PartitionKeys`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.ColumnProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: retention
+
+         `CfnTable.TableInputProperty.Retention`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: storageDescriptor
+
+         `CfnTable.TableInputProperty.StorageDescriptor`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.StorageDescriptorProperty`\  *(optional)*
+
+
+      .. py:attribute:: tableType
+
+         `CfnTable.TableInputProperty.TableType`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: viewExpandedText
+
+         `CfnTable.TableInputProperty.ViewExpandedText`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: viewOriginalText
+
+         `CfnTable.TableInputProperty.ViewOriginalText`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnTableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnTableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnTableProps;
+
+      .. code-tab:: javascript
+
+         // CfnTableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnTableProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Table`
+
+
+
+
+
+   .. py:attribute:: catalogId
+
+      `AWS::Glue::Table.CatalogId`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: databaseName
+
+      `AWS::Glue::Table.DatabaseName`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: tableInput
+
+      `AWS::Glue::Table.TableInput`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTable.TableInputProperty`\ 
+
+
+CfnTrigger
+^^^^^^^^^^
+
+.. py:class:: CfnTrigger(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnTrigger;
+
+      .. code-tab:: javascript
+
+         const { CfnTrigger } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { CfnTrigger } from '@aws-cdk/aws-glue';
+
+
+
+   A CloudFormation `AWS::Glue::Trigger`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-glue.CfnTriggerProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-glue.CfnTriggerProps`\  *(readonly)*
+
+
+   .. py:attribute:: triggerName
+
+      :type: string *(readonly)*
+
+   .. py:class:: ActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTrigger.ActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTrigger.ActionProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: arguments
+
+         `CfnTrigger.ActionProperty.Arguments`
+
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: jobName
+
+         `CfnTrigger.ActionProperty.JobName`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ConditionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTrigger.ConditionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTrigger.ConditionProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: jobName
+
+         `CfnTrigger.ConditionProperty.JobName`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: logicalOperator
+
+         `CfnTrigger.ConditionProperty.LogicalOperator`
+
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: state
+
+         `CfnTrigger.ConditionProperty.State`
+
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: PredicateProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Glue;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTrigger.PredicateProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTrigger.PredicateProperty } from '@aws-cdk/aws-glue';
+
+
+
+
+
+      .. py:attribute:: conditions
+
+         `CfnTrigger.PredicateProperty.Conditions`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTrigger.ConditionProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: logical
+
+         `CfnTrigger.PredicateProperty.Logical`
+
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.Reference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.Reference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnTriggerProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnTriggerProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.CfnTriggerProps;
+
+      .. code-tab:: javascript
+
+         // CfnTriggerProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnTriggerProps } from '@aws-cdk/aws-glue';
+
+
+
+   Properties for defining a `AWS::Glue::Trigger`
+
+
+
+
+
+   .. py:attribute:: actions
+
+      `AWS::Glue::Trigger.Actions`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTrigger.ActionProperty`\ )[]
+
+
+   .. py:attribute:: type
+
+      `AWS::Glue::Trigger.Type`
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      `AWS::Glue::Trigger.Description`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: name
+
+      `AWS::Glue::Trigger.Name`
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: predicate
+
+      `AWS::Glue::Trigger.Predicate`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-glue.CfnTrigger.PredicateProperty`\  *(optional)*
+
+
+   .. py:attribute:: schedule
+
+      `AWS::Glue::Trigger.Schedule`
+
+
+
+      :type: string *(optional)*
+
+
+Column (interface)
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: Column
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.Column;
+
+      .. code-tab:: javascript
+
+         // Column is an interface
+
+      .. code-tab:: typescript
+
+         import { Column } from '@aws-cdk/aws-glue';
+
+
+
+   A column of a table.
+
+
+
+
+
+   .. py:attribute:: name
+
+      Name of the column.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: type
+
+      Type of the column.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:attribute:: comment
+
+      Coment describing the column.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+DataFormat (interface)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DataFormat
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.DataFormat;
+
+      .. code-tab:: javascript
+
+         // DataFormat is an interface
+
+      .. code-tab:: typescript
+
+         import { DataFormat } from '@aws-cdk/aws-glue';
+
+
+
+   Defines the input/output formats and ser/de for a single DataFormat.
+
+
+
+
+
+   .. py:attribute:: inputFormat
+
+      `InputFormat` for this data format.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.InputFormat`\ 
+
+
+   .. py:attribute:: outputFormat
+
+      `OutputFormat` for this data format.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.OutputFormat`\ 
+
+
+   .. py:attribute:: serializationLibrary
+
+      Serialization library for this data format.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.SerializationLibrary`\ 
+
+
+Database
+^^^^^^^^
+
+.. py:class:: Database(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.Database;
+
+      .. code-tab:: javascript
+
+         const { Database } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { Database } from '@aws-cdk/aws-glue';
+
+
+
+   A Glue database.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-glue.DatabaseProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-glue.IDatabase
+
+      Creates a Database construct that represents an external database.
+
+
+
+      :param scope: The scope creating construct (usually `this`).
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: The construct's id.
+      :type id: string
+      :param props: A `DatabaseImportProps` object. Can be obtained from a call to `database.export()` or manually created.
+      :type props: :py:class:`~@aws-cdk/aws-glue.DatabaseImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-glue.IDatabase`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-glue.DatabaseImportProps
+
+      Exports this database from the stack.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-glue.DatabaseImportProps`\ 
+
+
+   .. py:attribute:: catalogArn
+
+      ARN of the Glue catalog in which this database is stored.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: catalogId
+
+      ID of the Glue catalog in which this database is stored.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: databaseArn
+
+      ARN of this database.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: databaseName
+
+      Name of this database.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: locationUri
+
+      Location URI of this database.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DatabaseImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.DatabaseImportProps;
+
+      .. code-tab:: javascript
+
+         // DatabaseImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DatabaseImportProps } from '@aws-cdk/aws-glue';
+
+
+
+
+
+   .. py:attribute:: catalogArn
+
+      :type: string
+
+
+   .. py:attribute:: catalogId
+
+      :type: string
+
+
+   .. py:attribute:: databaseArn
+
+      :type: string
+
+
+   .. py:attribute:: databaseName
+
+      :type: string
+
+
+   .. py:attribute:: locationUri
+
+      :type: string
+
+
+DatabaseProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DatabaseProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.DatabaseProps;
+
+      .. code-tab:: javascript
+
+         // DatabaseProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DatabaseProps } from '@aws-cdk/aws-glue';
+
+
+
+
+
+   .. py:attribute:: databaseName
+
+      The name of the database.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: locationUri
+
+      The location of the database (for example, an HDFS path).
+
+
+
+      :type: string *(optional)*
+      :default: a bucket is created and the database is stored under s3://<bucket-name>/<database-name>
+
+
+IDatabase (interface)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IDatabase
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.IDatabase;
+
+      .. code-tab:: javascript
+
+         // IDatabase is an interface
+
+      .. code-tab:: typescript
+
+         import { IDatabase } from '@aws-cdk/aws-glue';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: catalogArn
+
+      The ARN of the catalog.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: catalogId
+
+      The catalog id of the database (usually, the AWS account id)
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: databaseArn
+
+      The ARN of the database.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: databaseName
+
+      The name of the database.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: locationUri
+
+      The location of the database (for example, an HDFS path).
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-glue.DatabaseImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-glue.DatabaseImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+ITable (interface)
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ITable
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.ITable;
+
+      .. code-tab:: javascript
+
+         // ITable is an interface
+
+      .. code-tab:: typescript
+
+         import { ITable } from '@aws-cdk/aws-glue';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: tableArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-glue.TableImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-glue.TableImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+InputFormat
+^^^^^^^^^^^
+
+.. py:class:: InputFormat(className)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.InputFormat;
+
+      .. code-tab:: javascript
+
+         const { InputFormat } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { InputFormat } from '@aws-cdk/aws-glue';
+
+
+
+   Absolute class name of the Hadoop `InputFormat` to use when reading table files.
+
+
+
+   :param className: 
+   :type className: string
+
+   .. py:attribute:: TextInputFormat
+
+      An InputFormat for plain text files. Files are broken into lines. Either linefeed or
+
+      carriage-return are used to signal end of line. Keys are the position in the file, and
+
+      values are the line of text.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.InputFormat`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: className
+
+      :type: string *(readonly)*
+
+
+OutputFormat
+^^^^^^^^^^^^
+
+.. py:class:: OutputFormat(className)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.OutputFormat;
+
+      .. code-tab:: javascript
+
+         const { OutputFormat } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { OutputFormat } from '@aws-cdk/aws-glue';
+
+
+
+   Absolute class name of the Hadoop `OutputFormat` to use when writing table files.
+
+
+
+   :param className: 
+   :type className: string
+
+   .. py:attribute:: HiveIgnoreKeyTextOutputFormat
+
+      Writes text data with a null key (value only).
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.OutputFormat`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: className
+
+      :type: string *(readonly)*
+
+
+Schema
+^^^^^^
+
+.. py:class:: Schema()
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.Schema;
+
+      .. code-tab:: javascript
+
+         const { Schema } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { Schema } from '@aws-cdk/aws-glue';
+
+
+
+
+   .. py:staticmethod:: array(itemType) -> @aws-cdk/aws-glue.Type
+
+      Creates an array of some other type.
+
+
+
+      :param itemType: type contained by the array.
+      :type itemType: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:staticmethod:: char(length) -> @aws-cdk/aws-glue.Type
+
+      Fixed length character data, with a specified length between 1 and 255.
+
+
+
+      :param length: length between 1 and 255
+      :type length: number
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:staticmethod:: decimal(precision, [scale]) -> @aws-cdk/aws-glue.Type
+
+      Creates a decimal type.
+
+      
+
+      TODO: Bounds
+
+
+
+      :param precision: the total number of digits
+      :type precision: number
+      :param scale: the number of digits in fractional part, the default is 0
+      :type scale: number *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:staticmethod:: map(keyType, valueType) -> @aws-cdk/aws-glue.Type
+
+      Creates a map of some primitive key type to some value type.
+
+
+
+      :param keyType: type of key, must be a primitive.
+      :type keyType: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+      :param valueType: type fo the value indexed by the key.
+      :type valueType: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:staticmethod:: struct(columns) -> @aws-cdk/aws-glue.Type
+
+      Creates a nested structure containing individually named and typed columns.
+
+
+
+      :param columns: the columns of the structure.
+      :type columns: :py:class:`~@aws-cdk/aws-glue.Column`\ []
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:staticmethod:: varchar(length) -> @aws-cdk/aws-glue.Type
+
+      Variable length character data, with a specified length between 1 and 65535.
+
+
+
+      :param length: length between 1 and 65535.
+      :type length: number
+      :rtype: :py:class:`~@aws-cdk/aws-glue.Type`\ 
+
+
+   .. py:attribute:: bigint
+
+      A 64-bit signed INTEGER in two’s complement format, with a minimum value of -2^63 and a maximum value of 2^63-1.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: binary
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: boolean
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: date
+
+      Date type.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: double
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: float
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: integer
+
+      A 32-bit signed INTEGER in two’s complement format, with a minimum value of -2^31 and a maximum value of 2^31-1.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: smallint
+
+      A 16-bit signed INTEGER in two’s complement format, with a minimum value of -2^15 and a maximum value of 2^15-1.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: string
+
+      Arbitrary-length string type.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: timestamp
+
+      Timestamp type (date and time).
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: tinyint
+
+      A 8-bit signed INTEGER in two’s complement format, with a minimum value of -2^7 and a maximum value of 2^7-1
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Type`\  *(readonly)* *(static)*
+
+
+SerializationLibrary
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: SerializationLibrary(className)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.SerializationLibrary;
+
+      .. code-tab:: javascript
+
+         const { SerializationLibrary } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { SerializationLibrary } from '@aws-cdk/aws-glue';
+
+
+
+   Serialization library to use when serializing/deserializing (SerDe) table records.
+
+
+
+   :param className: 
+   :type className: string
+
+   .. py:attribute:: HiveJson
+
+      :type: :py:class:`~@aws-cdk/aws-glue.SerializationLibrary`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: OpenXJson
+
+      :type: :py:class:`~@aws-cdk/aws-glue.SerializationLibrary`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: className
+
+      :type: string *(readonly)*
+
+
+Table
+^^^^^
+
+.. py:class:: Table(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.Table;
+
+      .. code-tab:: javascript
+
+         const { Table } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { Table } from '@aws-cdk/aws-glue';
+
+
+
+   A Glue table.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-glue.ITable`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-glue.TableProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-glue.ITable
+
+      Creates a Table construct that represents an external table.
+
+
+
+      :param scope: The scope creating construct (usually `this`).
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: The construct's id.
+      :type id: string
+      :param props: A `TableImportProps` object. Can be obtained from a call to `table.export()` or manually created.
+      :type props: :py:class:`~@aws-cdk/aws-glue.TableImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-glue.ITable`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-glue.TableImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-glue.ITable.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-glue.TableImportProps`\ 
+
+
+   .. py:method:: grantRead(identity)
+
+      Grant read permissions to the table and the underlying data stored in S3 to an IAM principal.
+
+
+
+      :param identity: the principal
+      :type identity: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:method:: grantReadWrite(identity)
+
+      Grant read and write permissions to the table and the underlying data stored in S3 to an IAM principal.
+
+
+
+      :param identity: the principal
+      :type identity: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:method:: grantWrite(identity)
+
+      Grant write permissions to the table and the underlying data stored in S3 to an IAM principal.
+
+
+
+      :param identity: the principal
+      :type identity: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:attribute:: bucket
+
+      S3 bucket in which the table's data resides.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-s3.IBucket`\  *(readonly)*
+
+
+   .. py:attribute:: columns
+
+      This table's columns.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Column`\ [] *(readonly)*
+
+
+   .. py:attribute:: database
+
+      Database this table belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.IDatabase`\  *(readonly)*
+
+
+   .. py:attribute:: dataFormat
+
+      Format of this table's data files.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.DataFormat`\  *(readonly)*
+
+
+   .. py:attribute:: encryption
+
+      The type of encryption enabled for the table.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.TableEncryption`\  *(readonly)*
+
+
+   .. py:attribute:: s3Prefix
+
+      S3 Key Prefix under which this table's files are stored in S3.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-glue.ITable.tableArn`
+
+      ARN of this table.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      *Implements* :py:meth:`@aws-cdk/aws-glue.ITable.tableName`
+
+      Name of this table.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: encryptionKey
+
+      The KMS key used to secure the data if `encryption` is set to `CSE-KMS` or `SSE-KMS`. Otherwise, `undefined`.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: partitionKeys
+
+      This table's partition keys if the table is partitioned.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Column`\ [] *(optional)* *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+TableEncryption (enum)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TableEncryption
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.TableEncryption;
+
+      .. code-tab:: javascript
+
+         const { TableEncryption } = require('@aws-cdk/aws-glue');
+
+      .. code-tab:: typescript
+
+         import { TableEncryption } from '@aws-cdk/aws-glue';
+
+
+
+   Encryption options for a Table.
+
+
+
+   .. py:data:: Unencrypted
+
+   .. py:data:: S3Managed
+
+   Server side encryption (SSE) with an Amazon S3-managed key.
+
+
+
+   .. py:data:: Kms
+
+   Server-side encryption (SSE) with an AWS KMS key managed by the account owner.
+
+
+
+   .. py:data:: KmsManaged
+
+   Server-side encryption (SSE) with an AWS KMS key managed by the KMS service.
+
+
+
+   .. py:data:: ClientSideKms
+
+   Client-side encryption (CSE) with an AWS KMS key managed by the account owner.
+
+
+
+
+TableImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TableImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.TableImportProps;
+
+      .. code-tab:: javascript
+
+         // TableImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { TableImportProps } from '@aws-cdk/aws-glue';
+
+
+
+
+
+   .. py:attribute:: tableArn
+
+      :type: string
+
+
+   .. py:attribute:: tableName
+
+      :type: string
+
+
+TableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.TableProps;
+
+      .. code-tab:: javascript
+
+         // TableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { TableProps } from '@aws-cdk/aws-glue';
+
+
+
+
+
+   .. py:attribute:: columns
+
+      Columns of the table.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Column`\ []
+
+
+   .. py:attribute:: database
+
+      Database in which to store the table.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.IDatabase`\ 
+
+
+   .. py:attribute:: dataFormat
+
+      Storage type of the table's data.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.DataFormat`\ 
+
+
+   .. py:attribute:: tableName
+
+      Name of the table.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: bucket
+
+      S3 bucket in which to store data.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-s3.IBucket`\  *(optional)*
+      :default: one is created for you
+
+
+   .. py:attribute:: compressed
+
+      Indicates whether the table's data is compressed or not.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: description
+
+      Description of the table.
+
+
+
+      :type: string *(optional)*
+      :default: generated
+
+
+   .. py:attribute:: encryption
+
+      The kind of encryption to secure the data with.
+
+      
+
+      You can only provide this option if you are not explicitly passing in a bucket.
+
+      
+
+      If you choose `SSE-KMS`, you *can* provide an un-managed KMS key with `encryptionKey`.
+
+      If you choose `CSE-KMS`, you *must* provide an un-managed KMS key with `encryptionKey`.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.TableEncryption`\  *(optional)*
+      :default: Unencrypted
+
+
+   .. py:attribute:: encryptionKey
+
+      External KMS key to use for bucket encryption.
+
+      
+
+      The `encryption` property must be `SSE-KMS` or `CSE-KMS`.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)*
+      :default: key is managed by KMS.
+
+
+   .. py:attribute:: partitionKeys
+
+      Partition columns of the table.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-glue.Column`\ [] *(optional)*
+      :default: table is not partitioned
+
+
+   .. py:attribute:: s3Prefix
+
+      S3 prefix under which table objects are stored.
+
+
+
+      :type: string *(optional)*
+      :default: data/
+
+
+   .. py:attribute:: storedAsSubDirectories
+
+      Indicates whether the table data is stored in subdirectories.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+Type (interface)
+^^^^^^^^^^^^^^^^
+
+.. py:class:: Type
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Glue;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.glue.Type;
+
+      .. code-tab:: javascript
+
+         // Type is an interface
+
+      .. code-tab:: typescript
+
+         import { Type } from '@aws-cdk/aws-glue';
+
+
+
+   Represents a type of a column in a table schema.
+
+
+
+
+
+   .. py:attribute:: inputString
+
+      Glue InputString for this type.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: isPrimitive
+
+      Indicates whether this type is a primitive data type.
+
+
+
+      :type: boolean
+
+

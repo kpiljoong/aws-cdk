@@ -1,0 +1,1868 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"ZaMRWUmhqXdeHcHE0Ua13nTJ7zfTwZNzcQfWj1q7y2o="}
+
+@aws-cdk/aws-elasticloadbalancing
+=================================
+
+.. mdinclude:: ./__aws-cdk_aws-elasticloadbalancing.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.ElasticLoadBalancing/0.27.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.ElasticLoadBalancing" Version="0.27.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.ElasticLoadBalancing --version 0.27.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.ElasticLoadBalancing" version="0.27.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/elasticloadbalancing/0.27.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:elasticloadbalancing:jar:0.27.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="elasticloadbalancing" rev="0.27.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>elasticloadbalancing</artifactId>
+           <version>0.27.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:elasticloadbalancing:0.27.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='elasticloadbalancing', version='0.27.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-elasticloadbalancing/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-elasticloadbalancing@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-elasticloadbalancing": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-elasticloadbalancing@0.27.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-elasticloadbalancing/v/0.27.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-elasticloadbalancing@0.27.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-elasticloadbalancing": "^0.27.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-elasticloadbalancing@0.27.0
+
+
+
+.. py:module:: @aws-cdk/aws-elasticloadbalancing
+
+CfnLoadBalancer
+^^^^^^^^^^^^^^^
+
+.. py:class:: CfnLoadBalancer(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer;
+
+      .. code-tab:: javascript
+
+         const { CfnLoadBalancer } = require('@aws-cdk/aws-elasticloadbalancing');
+
+      .. code-tab:: typescript
+
+         import { CfnLoadBalancer } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   A CloudFormation `AWS::ElasticLoadBalancing::LoadBalancer`
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+   :param scope: - scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: - scoped id of the resource
+   :type id: string
+   :param props: - resource properties
+   :type props: :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancerProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.CfnResource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: loadBalancerCanonicalHostedZoneName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerCanonicalHostedZoneNameId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerDnsName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerSourceSecurityGroupGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerSourceSecurityGroupOwnerAlias
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancerProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The `TagManager` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. `Tag` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: AccessLoggingPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.AccessLoggingPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.AccessLoggingPolicyProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         `CfnLoadBalancer.AccessLoggingPolicyProperty.Enabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+      .. py:attribute:: s3BucketName
+
+         `CfnLoadBalancer.AccessLoggingPolicyProperty.S3BucketName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: emitInterval
+
+         `CfnLoadBalancer.AccessLoggingPolicyProperty.EmitInterval`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+      .. py:attribute:: s3BucketPrefix
+
+         `CfnLoadBalancer.AccessLoggingPolicyProperty.S3BucketPrefix`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: AppCookieStickinessPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.AppCookieStickinessPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.AppCookieStickinessPolicyProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: cookieName
+
+         `CfnLoadBalancer.AppCookieStickinessPolicyProperty.CookieName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: policyName
+
+         `CfnLoadBalancer.AppCookieStickinessPolicyProperty.PolicyName`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: ConnectionDrainingPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.ConnectionDrainingPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.ConnectionDrainingPolicyProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         `CfnLoadBalancer.ConnectionDrainingPolicyProperty.Enabled`
+
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+      .. py:attribute:: timeout
+
+         `CfnLoadBalancer.ConnectionDrainingPolicyProperty.Timeout`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:class:: ConnectionSettingsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.ConnectionSettingsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.ConnectionSettingsProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: idleTimeout
+
+         `CfnLoadBalancer.ConnectionSettingsProperty.IdleTimeout`
+
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:class:: HealthCheckProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.HealthCheckProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.HealthCheckProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: healthyThreshold
+
+         `CfnLoadBalancer.HealthCheckProperty.HealthyThreshold`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: interval
+
+         `CfnLoadBalancer.HealthCheckProperty.Interval`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: target
+
+         `CfnLoadBalancer.HealthCheckProperty.Target`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: timeout
+
+         `CfnLoadBalancer.HealthCheckProperty.Timeout`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: unhealthyThreshold
+
+         `CfnLoadBalancer.HealthCheckProperty.UnhealthyThreshold`
+
+
+
+         :type: string *(readonly)*
+
+
+   .. py:class:: LBCookieStickinessPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.LBCookieStickinessPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.LBCookieStickinessPolicyProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: cookieExpirationPeriod
+
+         `CfnLoadBalancer.LBCookieStickinessPolicyProperty.CookieExpirationPeriod`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: policyName
+
+         `CfnLoadBalancer.LBCookieStickinessPolicyProperty.PolicyName`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: ListenersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.ListenersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.ListenersProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: instancePort
+
+         `CfnLoadBalancer.ListenersProperty.InstancePort`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: loadBalancerPort
+
+         `CfnLoadBalancer.ListenersProperty.LoadBalancerPort`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: protocol
+
+         `CfnLoadBalancer.ListenersProperty.Protocol`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: instanceProtocol
+
+         `CfnLoadBalancer.ListenersProperty.InstanceProtocol`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+      .. py:attribute:: policyNames
+
+         `CfnLoadBalancer.ListenersProperty.PolicyNames`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: sslCertificateId
+
+         `CfnLoadBalancer.ListenersProperty.SSLCertificateId`
+
+
+
+         :type: string *(optional)* *(readonly)*
+
+
+   .. py:class:: PoliciesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnLoadBalancer.PoliciesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnLoadBalancer.PoliciesProperty } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+
+
+      .. py:attribute:: attributes
+
+         `CfnLoadBalancer.PoliciesProperty.Attributes`
+
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (json or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+      .. py:attribute:: policyName
+
+         `CfnLoadBalancer.PoliciesProperty.PolicyName`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: policyType
+
+         `CfnLoadBalancer.PoliciesProperty.PolicyType`
+
+
+
+         :type: string *(readonly)*
+
+
+      .. py:attribute:: instancePorts
+
+         `CfnLoadBalancer.PoliciesProperty.InstancePorts`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+      .. py:attribute:: loadBalancerPorts
+
+         `CfnLoadBalancer.PoliciesProperty.LoadBalancerPorts`
+
+
+
+         :type: string[] *(optional)* *(readonly)*
+
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.prepare>`
+
+      Automatically detect references in this CfnElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnElement <@aws-cdk/cdk.CfnElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: referenceToken
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnRefElement <@aws-cdk/cdk.CfnRefElement.referenceToken>`
+
+      Return a token that will CloudFormation { Ref } this stack element
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.CfnResource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.CfnResource <@aws-cdk/cdk.CfnResource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CfnLoadBalancerProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnLoadBalancerProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancerProps;
+
+      .. code-tab:: javascript
+
+         // CfnLoadBalancerProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnLoadBalancerProps } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Properties for defining a `AWS::ElasticLoadBalancing::LoadBalancer`
+
+
+
+
+
+   .. py:attribute:: listeners
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Listeners`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.ListenersProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(readonly)*
+
+
+   .. py:attribute:: accessLoggingPolicy
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.AccessLoggingPolicy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: appCookieStickinessPolicy
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.AppCookieStickinessPolicy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: availabilityZones
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.AvailabilityZones`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: connectionDrainingPolicy
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.ConnectionDrainingPolicy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: connectionSettings
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.ConnectionSettings`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: crossZone
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.CrossZone`
+
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: healthCheck
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.HealthCheck`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: instances
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Instances`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: lbCookieStickinessPolicy
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.LBCookieStickinessPolicy`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: loadBalancerName
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.LoadBalancerName`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: policies
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Policies`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-elasticloadbalancing.CfnLoadBalancer.PoliciesProperty`\ )[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: scheme
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Scheme`
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+   .. py:attribute:: securityGroups
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.SecurityGroups`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: subnets
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Subnets`
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      `AWS::ElasticLoadBalancing::LoadBalancer.Tags`
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.CfnTag`\ [] *(optional)* *(readonly)*
+
+
+HealthCheck (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HealthCheck
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.HealthCheck;
+
+      .. code-tab:: javascript
+
+         // HealthCheck is an interface
+
+      .. code-tab:: typescript
+
+         import { HealthCheck } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Describe the health check to a load balancer
+
+
+
+
+
+   .. py:attribute:: port
+
+      What port number to health check on
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: healthyThreshold
+
+      After how many successful checks is an instance considered healthy
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 2
+
+
+   .. py:attribute:: interval
+
+      Number of seconds between health checks
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 30
+
+
+   .. py:attribute:: path
+
+      What path to use for HTTP or HTTPS health check (must return 200)
+
+      
+
+      For SSL and TCP health checks, accepting connections is enough to be considered
+
+      healthy.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: "/"
+
+
+   .. py:attribute:: protocol
+
+      What protocol to use for health checking
+
+      
+
+      The protocol is automatically determined from the port if it's not supplied.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancingProtocol`\  *(optional)* *(readonly)*
+      :default: Automatic
+
+
+   .. py:attribute:: timeout
+
+      Health check timeout
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: unhealthyThreshold
+
+      After how many unsuccessful checks is an instance considered unhealthy
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+ILoadBalancerTarget (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ILoadBalancerTarget
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget;
+
+      .. code-tab:: javascript
+
+         // ILoadBalancerTarget is an interface
+
+      .. code-tab:: typescript
+
+         import { ILoadBalancerTarget } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Interface that is going to be implemented by constructs that you can load balance to
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ 
+
+
+   .. py:method:: attachToClassicLB(loadBalancer)
+
+      Attach load-balanced target to a classic ELB
+
+
+
+      :param loadBalancer: 
+      :type loadBalancer: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancer`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: connections
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ec2.IConnectable <@aws-cdk/aws-ec2.IConnectable.connections>`
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+ListenerPort
+^^^^^^^^^^^^
+
+.. py:class:: ListenerPort(securityGroup, defaultPortRange)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.ListenerPort;
+
+      .. code-tab:: javascript
+
+         const { ListenerPort } = require('@aws-cdk/aws-elasticloadbalancing');
+
+      .. code-tab:: typescript
+
+         import { ListenerPort } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Reference to a listener's port just created.
+
+   
+
+   This implements IConnectable with a default port (the port that an ELB
+
+   listener was just created on) for a given security group so that it can be
+
+   conveniently used just like any Connectable. E.g:
+
+   
+
+       const listener = elb.addListener(...);
+
+   
+
+       listener.connections.allowDefaultPortFromAnyIPv4();
+
+       // or
+
+       instance.connections.allowToDefaultPort(listener);
+
+
+
+   :implements: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ 
+   :param securityGroup: 
+   :type securityGroup: :py:class:`@aws-cdk/aws-ec2.ISecurityGroup`\ 
+   :param defaultPortRange: 
+   :type defaultPortRange: :py:class:`@aws-cdk/aws-ec2.IPortRange`\ 
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-ec2.IConnectable.connections`
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+LoadBalancer
+^^^^^^^^^^^^
+
+.. py:class:: LoadBalancer(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer;
+
+      .. code-tab:: javascript
+
+         const { LoadBalancer } = require('@aws-cdk/aws-elasticloadbalancing');
+
+      .. code-tab:: typescript
+
+         import { LoadBalancer } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   A load balancer with a single listener
+
+   
+
+   Routes to a fleet of of instances in a VPC.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ 
+   :implements: :py:class:`@aws-cdk/aws-codedeploy-api.ILoadBalancer`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancerProps`\ 
+
+   .. py:method:: addListener(listener) -> @aws-cdk/aws-elasticloadbalancing.ListenerPort
+
+      Add a backend to the load balancer
+
+
+
+      :param listener: 
+      :type listener: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancerListener`\ 
+      :return: A ListenerPort object that controls connections to the listener port
+      :rtype: :py:class:`~@aws-cdk/aws-elasticloadbalancing.ListenerPort`\ 
+
+
+   .. py:method:: addTarget(target)
+
+      :param target: 
+      :type target: :py:class:`~@aws-cdk/aws-elasticloadbalancing.ILoadBalancerTarget`\ 
+
+
+   .. py:method:: asCodeDeployLoadBalancer() -> @aws-cdk/aws-codedeploy-api.ILoadBalancerProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy-api.ILoadBalancer.asCodeDeployLoadBalancer`
+
+      Specify the CodeDeploy-required properties of this load balancer.
+
+
+
+      :rtype: :py:class:`@aws-cdk/aws-codedeploy-api.ILoadBalancerProps`\ 
+
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-ec2.IConnectable.connections`
+
+      Control all connections from and to this load balancer
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+   .. py:attribute:: listenerPorts
+
+      An object controlling specifically the connections for each listener added to this load balancer
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.ListenerPort`\ [] *(readonly)*
+
+
+   .. py:attribute:: loadBalancerCanonicalHostedZoneName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerDnsName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerSourceSecurityGroupGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: loadBalancerSourceSecurityGroupOwnerAlias
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+LoadBalancerListener (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LoadBalancerListener
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener;
+
+      .. code-tab:: javascript
+
+         // LoadBalancerListener is an interface
+
+      .. code-tab:: typescript
+
+         import { LoadBalancerListener } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Add a backend to the load balancer
+
+
+
+
+
+   .. py:attribute:: externalPort
+
+      External listening port
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: allowConnectionsFrom
+
+      Allow connections to the load balancer from the given set of connection peers
+
+      
+
+      By default, connections will be allowed from anywhere. Set this to an empty list
+
+      to deny connections, or supply a custom list of peers to allow connections from
+
+      (IP ranges or security groups).
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ [] *(optional)* *(readonly)*
+      :default: Anywhere
+
+
+   .. py:attribute:: externalProtocol
+
+      What public protocol to use for load balancing
+
+      
+
+      Either 'tcp', 'ssl', 'http' or 'https'.
+
+      
+
+      May be omitted if the external port is either 80 or 443.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancingProtocol`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: internalPort
+
+      Instance listening port
+
+      
+
+      Same as the externalPort if not specified.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: externalPort
+
+
+   .. py:attribute:: internalProtocol
+
+      What public protocol to use for load balancing
+
+      
+
+      Either 'tcp', 'ssl', 'http' or 'https'.
+
+      
+
+      May be omitted if the internal port is either 80 or 443.
+
+      
+
+      The instance protocol is 'tcp' if the front-end protocol
+
+      is 'tcp' or 'ssl', the instance protocol is 'http' if the
+
+      front-end protocol is 'https'.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancingProtocol`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: policyNames
+
+      SSL policy names
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: sslCertificateId
+
+      ID of SSL certificate
+
+
+
+      :type: string *(optional)* *(readonly)*
+
+
+LoadBalancerProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LoadBalancerProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerProps;
+
+      .. code-tab:: javascript
+
+         // LoadBalancerProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LoadBalancerProps } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   Construction properties for a LoadBalancer
+
+
+
+
+
+   .. py:attribute:: vpc
+
+      VPC network of the fleet instances
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)*
+
+
+   .. py:attribute:: healthCheck
+
+      Health check settings for the load balancing targets.
+
+      
+
+      Not required but recommended.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.HealthCheck`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: internetFacing
+
+      Whether this is an internet-facing Load Balancer
+
+      
+
+      This controls whether the LB has a public IP address assigned. It does
+
+      not open up the Load Balancer's security groups to public internet access.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: false
+
+
+   .. py:attribute:: listeners
+
+      What listeners to set up for the load balancer.
+
+      
+
+      Can also be added by .addListener()
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.LoadBalancerListener`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: targets
+
+      What targets to load balance to.
+
+      
+
+      Can also be added by .addTarget()
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-elasticloadbalancing.ILoadBalancerTarget`\ [] *(optional)* *(readonly)*
+
+
+LoadBalancingProtocol (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LoadBalancingProtocol
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.ElasticLoadBalancing;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancingProtocol;
+
+      .. code-tab:: javascript
+
+         const { LoadBalancingProtocol } = require('@aws-cdk/aws-elasticloadbalancing');
+
+      .. code-tab:: typescript
+
+         import { LoadBalancingProtocol } from '@aws-cdk/aws-elasticloadbalancing';
+
+
+
+   .. py:data:: Tcp
+
+   .. py:data:: Ssl
+
+   .. py:data:: Http
+
+   .. py:data:: Https
+
+

@@ -1,0 +1,502 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"OUL98UFwlVe73giNydw+vlGFoiVPKemxiqwbFLk8r48="}
+
+@aws-cdk/aws-dynamodb-global
+============================
+
+.. mdinclude:: ./__aws-cdk_aws-dynamodb-global.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.DynamoDB.Global/0.29.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.DynamoDB.Global" Version="0.29.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.DynamoDB.Global --version 0.29.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.DynamoDB.Global" version="0.29.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/dynamodb-global/0.29.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:dynamodb-global:jar:0.29.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="dynamodb-global" rev="0.29.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>dynamodb-global</artifactId>
+           <version>0.29.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:dynamodb-global:0.29.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='dynamodb-global', version='0.29.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-dynamodb-global/v/0.29.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-dynamodb-global@0.29.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-dynamodb-global": "^0.29.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-dynamodb-global@0.29.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-dynamodb-global/v/0.29.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-dynamodb-global@0.29.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-dynamodb-global": "^0.29.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-dynamodb-global@0.29.0
+
+
+
+.. py:module:: @aws-cdk/aws-dynamodb-global
+
+GlobalTable
+^^^^^^^^^^^
+
+.. py:class:: GlobalTable(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB.Global;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.global.GlobalTable;
+
+      .. code-tab:: javascript
+
+         const { GlobalTable } = require('@aws-cdk/aws-dynamodb-global');
+
+      .. code-tab:: typescript
+
+         import { GlobalTable } from '@aws-cdk/aws-dynamodb-global';
+
+
+
+   This class works by deploying an AWS DynamoDB table into each region specified in  GlobalTableProps.regions[], then triggering a CloudFormation Custom Resource Lambda to link them all together to create linked AWS Global DynamoDB tables.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-dynamodb-global.GlobalTableProps`\ 
+
+   .. py:attribute:: regionalTables
+
+      Obtain tables deployed in other each region.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-dynamodb.Table`\ [] *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable.
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+GlobalTableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: GlobalTableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.DynamoDB.Global;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.dynamodb.global.GlobalTableProps;
+
+      .. code-tab:: javascript
+
+         // GlobalTableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { GlobalTableProps } from '@aws-cdk/aws-dynamodb-global';
+
+
+
+   Properties for the mutliple DynamoDB tables to mash together into a global table.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.StackProps`\ 
+   :extends: :py:class:`@aws-cdk/aws-dynamodb.TableOptions`\ 
+
+
+   .. py:attribute:: regions
+
+      Array of environments to create DynamoDB tables in. The tables will all be created in the same account.
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: tableName
+
+      Name of the DynamoDB table to use across all regional tables. This is required for global tables.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: partitionKey
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.partitionKey>`
+
+      Partition key attribute definition.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-dynamodb.Attribute`\  *(readonly)*
+
+
+   .. py:attribute:: billingMode
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.billingMode>`
+
+      Specify how you are charged for read and write throughput and how you manage capacity.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-dynamodb.BillingMode`\  *(optional)* *(readonly)*
+      :default: Provisioned
+
+
+   .. py:attribute:: pitrEnabled
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.pitrEnabled>`
+
+      Whether point-in-time recovery is enabled.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: undefined, point-in-time recovery is disabled
+
+
+   .. py:attribute:: readCapacity
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.readCapacity>`
+
+      The read capacity for the table.
+
+      
+
+      Careful if you add Global Secondary Indexes, as
+
+      those will share the table's provisioned throughput.
+
+      
+
+      Can only be provided if billingMode is Provisioned.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: sortKey
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.sortKey>`
+
+      Table sort key attribute definition.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-dynamodb.Attribute`\  *(optional)* *(readonly)*
+      :default: no sort key
+
+
+   .. py:attribute:: sseEnabled
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.sseEnabled>`
+
+      Whether server-side encryption with an AWS managed customer master key is enabled.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: undefined, server-side encryption is enabled with an AWS owned customer master key
+
+
+   .. py:attribute:: streamSpecification
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.streamSpecification>`
+
+      When an item in the table is modified, StreamViewType determines what information is written to the stream for this table.
+
+      
+
+      Valid values for StreamViewType are:
+
+
+
+      :type: :py:class:`@aws-cdk/aws-dynamodb.StreamViewType`\  *(optional)* *(readonly)*
+      :default: undefined, streams are disabled
+
+
+   .. py:attribute:: ttlAttributeName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.ttlAttributeName>`
+
+      The name of TTL attribute.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: undefined, TTL is disabled
+
+
+   .. py:attribute:: writeCapacity
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-dynamodb.TableOptions <@aws-cdk/aws-dynamodb.TableOptions.writeCapacity>`
+
+      The write capacity for the table.
+
+      
+
+      Careful if you add Global Secondary Indexes, as
+
+      those will share the table's provisioned throughput.
+
+      
+
+      Can only be provided if billingMode is Provisioned.
+
+
+
+      :type: number *(optional)* *(readonly)*
+      :default: 5
+
+
+   .. py:attribute:: autoDeploy
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackProps <@aws-cdk/cdk.StackProps.autoDeploy>`
+
+      Should the Stack be deployed when running `cdk deploy` without arguments (and listed when running `cdk synth` without arguments). Setting this to `false` is useful when you have a Stack in your CDK app that you don't want to deploy using the CDK toolkit - for example, because you're planning on deploying it through CodePipeline.
+
+
+
+      :type: boolean *(optional)* *(readonly)*
+      :default: true
+
+
+   .. py:attribute:: env
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackProps <@aws-cdk/cdk.StackProps.env>`
+
+      The AWS environment (account/region) where this stack will be deployed.
+
+      
+
+      If not supplied, the `default-account` and `default-region` context parameters will be
+
+      used. If they are undefined, it will not be possible to deploy the stack.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Environment`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: namingScheme
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackProps <@aws-cdk/cdk.StackProps.namingScheme>`
+
+      Strategy for logical ID generation.
+
+      
+
+      Optional. If not supplied, the HashedNamingScheme will be used.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IAddressingScheme`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: stackName
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackProps <@aws-cdk/cdk.StackProps.stackName>`
+
+      Name to deploy the stack with.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: Derived from construct path
+
+
